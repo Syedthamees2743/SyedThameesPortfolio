@@ -1,0 +1,625 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Syed Thameesudeen - Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="Image/Logo.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="scroll-progress" id="scrollProgress"></div>
+    <canvas id="particleCanvas"></canvas>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="dot-grid"></div>
+    <div class="noise"></div>
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <div class="preloader" id="preloader">
+      <div class="preloader-logo"><span>ST</span></div>
+      <div class="preloader-bar"><div class="preloader-fill"></div></div>
+    </div>
+
+    <nav id="nav">
+      <div class="nav-left">
+        <a href="#home" class="nav-logo">ST</a>
+        <div class="nav-logo-dot"></div>
+      </div>
+      <div class="nav-center">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#certificates">Certificates</a></li>
+        </ul>
+      </div>
+      <div class="nav-right">
+        <a href="#contact" class="nav-cta magnetic">Let's Talk</a>
+        <button class="nav-toggle" id="navToggle">
+          <span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <div class="mobile-nav" id="mobileNav">
+      <button class="mobile-nav-close" id="mobileClose">
+        <i class="fas fa-times"></i>
+      </button>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#certificates">Certificates</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="#contact" class="mobile-nav-cta">Let's Talk</a>
+    </div>
+    <div class="mob-overlay" id="mobOverlay"></div>
+
+    <section id="home">
+      <div class="hero-ring"></div>
+      <div class="hero-ring"></div>
+      <h1 class="hero-title">
+        <span class="hero-line"
+          ><span class="hero-line-inner">Creative</span></span
+        >
+        <span class="hero-line"
+          ><span class="hero-line-inner hero-accent">Developer</span></span
+        >
+      </h1>
+      <h2 class="hero-sub"><span class="typed" id="typedEl"></span></h2>
+      <p class="hero-desc">
+        Passionate about building innovative digital solutions with modern web
+        technologies, AI integration, and clean design.
+      </p>
+      <div class="hero-btns">
+        <a href="#about" class="btn btn-primary magnetic"
+          ><i class="fas fa-arrow-down"></i> Explore</a
+        >
+        <a href="#contact" class="btn btn-outline magnetic"
+          ><i class="fas fa-paper-plane"></i> Contact</a
+        >
+      </div>
+      <div class="scroll-hint">
+        <span>Scroll</span>
+        <div class="scroll-mouse"></div>
+      </div>
+    </section>
+
+    <div class="marquee">
+      <div class="marquee-track">
+        <div class="marquee-item">
+          Web Development <span class="sep"></span>
+        </div>
+        <div class="marquee-item">Python <span class="sep"></span></div>
+        <div class="marquee-item">
+          AI & Machine Learning <span class="sep"></span>
+        </div>
+        <div class="marquee-item">Java <span class="sep"></span></div>
+        <div class="marquee-item">React <span class="sep"></span></div>
+        <div class="marquee-item">Django <span class="sep"></span></div>
+        <div class="marquee-item">MySQL <span class="sep"></span></div>
+        <div class="marquee-item">Power BI <span class="sep"></span></div>
+        <div class="marquee-item">
+          Web Development <span class="sep"></span>
+        </div>
+        <div class="marquee-item">Python <span class="sep"></span></div>
+        <div class="marquee-item">
+          AI & Machine Learning <span class="sep"></span>
+        </div>
+        <div class="marquee-item">Java <span class="sep"></span></div>
+        <div class="marquee-item">React <span class="sep"></span></div>
+        <div class="marquee-item">Django <span class="sep"></span></div>
+        <div class="marquee-item">MySQL <span class="sep"></span></div>
+        <div class="marquee-item">Power BI <span class="sep"></span></div>
+      </div>
+    </div>
+
+    <!-- ═══ ABOUT — FITTED PHOTO ═══ -->
+    <section id="about">
+      <div class="section-head reveal">
+        <div class="section-tag"><i class="fas fa-user"></i> About</div>
+        <h2 class="section-title">Who <em>I Am</em></h2>
+        <p class="section-sub">
+          A brief look into my journey, passion, and what drives me forward.
+        </p>
+      </div>
+      <div class="about-grid">
+        <div class="about-img-wrap reveal-left">
+          <img src="./Image/profile-photo.png" alt="Syed Thameesudeen" />
+        </div>
+        <div class="about-text reveal-right">
+          <h3>Aspiring Web & Software Developer</h3>
+          <p>
+            I'm a Computer Science Engineering graduate with a passion for
+            creating innovative, user-focused solutions. My technical skills
+            include Java, Python, Web Development, MySQL, GitHub, Excel, and
+            Power BI.
+          </p>
+          <p>
+            I'm eager to contribute my problem-solving skills, adaptability, and
+            commitment to continuous learning in a dynamic team environment. I
+            have hands-on experience in designing and implementing AI models and
+            developing scalable web applications.
+          </p>
+          <div class="about-btns">
+            <a href="#contact" class="btn btn-primary magnetic"
+              ><i class="fas fa-handshake"></i> Hire Me</a
+            >
+            <a
+              href="./Image/SyedThamees_Resume.pdf"
+              class="btn btn-outline magnetic"
+              ><i class="fas fa-download"></i> Resume</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-card reveal d1">
+          <div class="stat-num" data-target="3">0</div>
+          <div class="stat-label">Projects</div>
+        </div>
+        <div class="stat-card reveal d2">
+          <div class="stat-num" data-target="2">0</div>
+          <div class="stat-label">Internships</div>
+        </div>
+        <div class="stat-card reveal d3">
+          <div class="stat-num" data-target="3">0</div>
+          <div class="stat-label">Certificates</div>
+        </div>
+        <div class="stat-card reveal d4">
+          <div class="stat-num" data-target="8">0</div>
+          <div class="stat-label">Technologies</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="section-head reveal">
+        <div class="section-tag">
+          <i class="fas fa-graduation-cap"></i> Education
+        </div>
+        <h2 class="section-title">Academic <em>Journey</em></h2>
+        <p class="section-sub">
+          The foundation that shaped my technical knowledge.
+        </p>
+      </div>
+      <div class="card edu-card reveal-scale">
+        <h3>B.E. in Computer Science</h3>
+        <div class="school">NELLAI COLLEGE OF ENGINEERING</div>
+        <div class="edu-meta">
+          <span><i class="fas fa-calendar-alt"></i> 2021 - 2025</span>
+          <span><i class="fas fa-chart-line"></i> CGPA: 7.5</span>
+        </div>
+        <div class="courses-label">Relevant Coursework</div>
+        <div class="courses-wrap">
+          <div class="course-chip">
+            <i class="fas fa-code"></i> Software Engineering
+          </div>
+          <div class="course-chip"><i class="fas fa-sitemap"></i> DSA</div>
+          <div class="course-chip">
+            <i class="fas fa-laptop-code"></i> Web Development
+          </div>
+          <div class="course-chip"><i class="fas fa-database"></i> DBMS</div>
+          <div class="course-chip">
+            <i class="fas fa-cloud"></i> Cloud Computing
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="section-head reveal">
+        <div class="section-tag">
+          <i class="fas fa-briefcase"></i> Experience
+        </div>
+        <h2 class="section-title">Where I've <em>Worked</em></h2>
+        <p class="section-sub">
+          Real-world experience building and shipping products.
+        </p>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item reveal d1">
+          <div class="card t-card">
+            <h3>Python Django Developer Intern</h3>
+            <div class="company">Futura Lab, Kochi</div>
+            <div class="date">Present</div>
+            <ul>
+              <li>
+                Currently undergoing hands-on training in Python and Django for
+                full-stack web application development.
+              </li>
+              <li>
+                Developing dynamic, database-driven web applications using
+                Django framework and RESTful architecture.
+              </li>
+              <li>
+                Working with frontend technologies, backend logic, and database
+                integration to build scalable solutions.
+              </li>
+              <li>
+                Improving problem-solving, debugging, and real-world project
+                development skills through practical implementation.
+              </li>
+              <li>
+                Collaborating with mentors and team members in an agile learning
+                environment.
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="timeline-item reveal d2">
+          <div class="card t-card">
+            <h3>AI & ML and Web App Developer Intern</h3>
+            <div class="company">NEURAL TRANSFORMERS.AI</div>
+            <div class="date">AUG 2024</div>
+            <ul>
+              <li>
+                Completed a 30-day Internship focused on AI & ML and Web
+                Application development.
+              </li>
+              <li>
+                Gained hands-on experience in designing and implementing AI
+                models and developing scalable web applications.
+              </li>
+              <li>
+                Collaborated on innovative projects, enhancing technical and
+                Problem-solving skills.
+              </li>
+              <li>
+                Achieved recognition for Exceptional Performance during AI & ML
+                Internship.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="section-head reveal">
+        <div class="section-tag"><i class="fas fa-cogs"></i> Skills</div>
+        <h2 class="section-title">Technical <em>Arsenal</em></h2>
+        <p class="section-sub">
+          Tools and technologies I use to bring ideas to life.
+        </p>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-col reveal d1">
+          <div class="card">
+            <div class="skill-col-title">Languages</div>
+            <div class="skill-items">
+              <div class="skill-item">
+                <i class="fab fa-js-square"></i><span>JavaScript</span>
+              </div>
+              <div class="skill-item">
+                <i class="fab fa-python"></i><span>Python</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="skill-col reveal d2">
+          <div class="card">
+            <div class="skill-col-title">Frontend</div>
+            <div class="skill-items">
+              <div class="skill-item">
+                <i class="fab fa-html5"></i><span>HTML5</span>
+              </div>
+              <div class="skill-item">
+                <i class="fab fa-css3-alt"></i><span>CSS3</span>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-wind"></i><span>Tailwind CSS</span>
+              </div>
+              <div class="skill-item">
+                <i class="fab fa-react"></i><span>React</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="skill-col reveal d3">
+          <div class="card">
+            <div class="skill-col-title">Backend & Tools</div>
+            <div class="skill-items">
+              <div class="skill-item">
+                <i class="fas fa-server"></i><span>Django</span>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-database"></i><span>MongoDB</span>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-database"></i><span>MySQL</span>
+              </div>
+              <div class="skill-item">
+                <i class="fab fa-github"></i><span>GitHub</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="section-head reveal">
+        <div class="section-tag"><i class="fas fa-rocket"></i> Projects</div>
+        <h2 class="section-title">What I've <em>Built</em></h2>
+        <p class="section-sub">
+          Hands-on projects that demonstrate real skills.
+        </p>
+      </div>
+
+      <div class="projects-bento">
+        <!-- 🔥 FEATURED PROJECT -->
+        <div class="proj-featured reveal-scale">
+          <div class="proj-featured-img">
+            <video autoplay muted loop playsinline class="proj-video">
+              <source src="./Image/Foodie-Zone Video.mp4" type="video/mp4" />
+            </video>
+
+            <div class="proj-overlay"></div>
+          </div>
+
+          <div class="proj-featured-body">
+            <div class="proj-label">Featured Project</div>
+            <h3>FoodieZone - Food Ordering App</h3>
+
+            <div class="proj-date">
+              <i
+                class="fas fa-calendar-alt"
+                style="margin-right: 6px; color: var(--text-muted)"
+              ></i>
+              2026
+            </div>
+
+            <p>
+              Built a React-based food ordering application with state
+              management and API integration. Users can browse food items,
+              manage cart, and place orders through a dynamic UI.
+            </p>
+
+            <div class="proj-tech">
+              <span>React</span>
+              <span>State Management</span>
+              <span>REST API</span>
+              <span>JavaScript</span>
+            </div>
+
+            <div class="proj-actions">
+              <a
+                href="https://github.com/Syedthamees2743/Foodie-Zone"
+                class="proj-act-ghost"
+              >
+                <i class="fab fa-github"></i> Source Code
+              </a>
+              <a href="#" class="proj-act-fill">
+                <i class="fas fa-external-link-alt"></i> Live View
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ▶️ STOCK MARKET TRACKER -->
+        <div class="proj-sm reveal d2">
+          <div class="proj-sm-img">
+            <div class="proj-icon-fallback">
+              <img src="./Image/stock project photo.png" alt="Stock Image" />
+            </div>
+          </div>
+          <div class="proj-sm-body">
+            <div class="proj-label">Full Stack App</div>
+            <h3>Stock Market Tracker & Prediction</h3>
+            <div class="proj-date">2025</div>
+            <p>
+              Working with a real-time stock tracking and prediction system that
+              provides live market data, interactive visualizations, and stock
+              comparison tools. Incorporates an LSTM-based deep learning model
+              to forecast future stock trends using historical data.
+            </p>
+            <div class="proj-tech">
+              <span>React</span>
+              <span>Node.js</span>
+              <span>MongoDB</span>
+              <span>Python</span>
+            </div>
+            <div class="proj-actions">
+              <a href="#" class="proj-act-ghost">
+                <i class="fab fa-github"></i> Source Code
+              </a>
+              <a href="#" class="proj-act-fill">
+                <i class="fas fa-external-link-alt"></i> Live View
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 🌦 SKYCAST -->
+        <div class="proj-sm reveal d1">
+          <div class="proj-sm-img">
+            <div class="proj-icon-fallback">
+              <img src="./Image/skycast.png" alt="SKYCAST Image" />
+            </div>
+          </div>
+          <div class="proj-sm-body">
+            <div class="proj-label">React App</div>
+            <h3>SkyCast Weather Tracker</h3>
+            <div class="proj-date">2026</div>
+            <p>
+              Developed a weather tracking app using React with real-time API
+              data fetching to display current weather conditions and forecasts.
+            </p>
+            <div class="proj-tech">
+              <span>React</span>
+              <span>API Fetch</span>
+              <span>JavaScript</span>
+            </div>
+            <div class="proj-actions">
+              <a
+                href="https://github.com/Syedthamees2743/weather-tracker"
+                class="proj-act-ghost"
+              >
+                <i class="fab fa-github"></i> Source Code
+              </a>
+              <a
+                href="https://skycast-weather-tracker.netlify.app/"
+                class="proj-act-fill"
+              >
+                <i class="fas fa-external-link-alt"></i> Live View
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="certificates">
+      <div class="section-head reveal">
+        <div class="section-tag"><i class="fas fa-award"></i> Certificates</div>
+        <h2 class="section-title">Certifications & <em>Achievements</em></h2>
+        <p class="section-sub">Verified credentials that support my skills.</p>
+      </div>
+
+      <div class="certs-grid">
+        <!-- Full Stack -->
+        <div class="card cert-card reveal d1">
+          <div class="cert-icon"><i class="fas fa-code"></i></div>
+          <h3>Full Stack Web Development Bootcamp</h3>
+          <div class="issuer">Udemy</div>
+          <div class="cert-date">Apr 2026</div>
+          <a href="./Image/FullStack.jpg" target="_blank" class="cert-btn">
+            <span>View Certificate</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- React -->
+        <div class="card cert-card reveal d2">
+          <div class="cert-icon"><i class="fab fa-react"></i></div>
+          <h3>React JS for Ecommerce</h3>
+          <div class="issuer">Udemy</div>
+          <div class="cert-date">Apr 2026</div>
+          <a href="./Image/Reactjs.jpg" target="_blank" class="cert-btn">
+            <span>View Certificate</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- Internship -->
+        <div class="card cert-card reveal d3">
+          <div class="cert-icon"><i class="fas fa-briefcase"></i></div>
+          <h3>AI & ML Internship</h3>
+          <div class="issuer">Neural Transformers AI</div>
+          <div class="cert-date">Sep 2024</div>
+          <a
+            href="./certificates/react-cert.jpg"
+            target="_blank"
+            class="cert-btn"
+          >
+            <span>View Certificate</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="section-head reveal">
+        <div class="section-tag"><i class="fas fa-envelope"></i> Contact</div>
+        <h2 class="section-title">Let's <em>Talk</em></h2>
+        <p class="section-sub">
+          Have a project in mind? Let's make it happen together.
+        </p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="ci-card reveal d1">
+            <div class="ci-icon"><i class="fas fa-phone"></i></div>
+            <span>+91 7092960618</span>
+          </div>
+          <div class="ci-card reveal d2">
+            <div class="ci-icon"><i class="fas fa-envelope"></i></div>
+            <span>thameessyed2743@gmail.com</span>
+          </div>
+          <div class="ci-card reveal d3">
+            <div class="ci-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <span>Madurai, TamilNadu</span>
+          </div>
+        </div>
+        <div class="card contact-form reveal d2">
+          <form id="contactForm">
+            <div class="f-group">
+              <label for="name">Your Name</label>
+              <input
+                type="text"
+                id="name"
+                required
+                placeholder="Enter your full name"
+              />
+            </div>
+            <div class="f-group">
+              <label for="email">Your Email</label>
+              <input
+                type="email"
+                id="email"
+                required
+                placeholder="Enter your email address"
+              />
+            </div>
+            <div class="f-group">
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                required
+                placeholder="Tell me about your project or message..."
+              ></textarea>
+            </div>
+            <button type="submit" class="f-submit magnetic">
+              <i class="fas fa-paper-plane"></i>&nbsp; Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <button class="footer-top" id="footerTop">
+        <i class="fas fa-arrow-up"></i>
+      </button>
+      <div class="footer-socials">
+        <a href="https://www.linkedin.com/in/syedthamees2743/" target="_blank"
+          ><i class="fab fa-linkedin-in"></i
+        ></a>
+        <a href="https://github.com/Syedthamees2743" target="_blank"
+          ><i class="fab fa-github"></i
+        ></a>
+        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+      </div>
+      <p class="footer-copy">
+        &copy; 2025 Syed Thameesudeen. All Rights Reserved.
+      </p>
+    </footer>
+
+    <div class="toast" id="toast">
+      <i class="fas fa-check-circle ok-i" id="toastIcon"></i>
+      <span id="toastMsg"></span>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
