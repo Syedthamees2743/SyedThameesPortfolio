@@ -662,7 +662,7 @@ body.has-cursor [data-cursor] {
   }
 }
 
-/* MENU */
+/* MENU OVERLAY */
 .menu {
   position: fixed;
   inset: 0;
@@ -1068,38 +1068,6 @@ body.has-cursor [data-cursor] {
   font-size: 10px;
   letter-spacing: 0.2em;
   color: var(--ink-3);
-}
-
-@media (max-width: 899px) {
-  .hero {
-    min-height: 100svh;
-    height: auto;
-    padding: 100px var(--pad) 40px;
-    align-items: flex-start;
-  }
-  .hero-desktop-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-  .hm-1, .hm-2, .hm-3, .hero-side, .hero-index { display: none; }
-  .hero-portrait {
-    max-width: 320px;
-    margin: 18px 0 0;
-  }
-  .portrait {
-    clip-path: none;
-    aspect-ratio: 4/5;
-  }
-  .portrait-label {
-    opacity: 1;
-    transform: none;
-  }
-  .hero-scroll {
-    position: relative;
-    left: auto;
-    bottom: auto;
-    margin-top: 20px;
-  }
 }
 
 /* SECTIONS SHARED */
@@ -1522,7 +1490,9 @@ body.has-cursor [data-cursor] {
   .exp-sticky { position: static; }
 }
 
-/* TECHNOLOGY CONSTELLATION */
+/* ============================================================
+   TECHNOLOGY CONSTELLATION & CRISP SVG ICON ENGINE
+============================================================ */
 .wall-wrap {
   position: relative;
   overflow: visible;
@@ -1557,18 +1527,36 @@ body.has-cursor [data-cursor] {
   padding: 2vh 0;
 }
 
+/* Tech Nodes with Icon Styling */
 .tech {
   position: relative;
-  display: inline-block;
+  display: inline-flex !important;
+  align-items: center;
+  gap: clamp(8px, 1.2vw, 16px);
   background: none;
   border: 0;
   text-align: left;
   color: var(--ink);
   transform: translate(var(--px, 0px), calc(var(--py, 0px) + var(--ny, 0em)));
   transition: transform 0.4s var(--ease), opacity 0.4s, color 0.3s;
-  padding: 6px 4px;
+  padding: 6px 8px;
   min-height: 40px;
   -webkit-tap-highlight-color: transparent;
+}
+
+.tech-icon-wrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.tech-icon {
+  width: 1em;
+  height: 1em;
+  object-fit: contain;
+  vertical-align: middle;
+  transition: transform 0.35s var(--ease), filter 0.35s var(--ease);
 }
 
 .tech.t1 {
@@ -1578,12 +1566,20 @@ body.has-cursor [data-cursor] {
   line-height: 1;
   letter-spacing: -0.01em;
 }
+.tech.t1 .tech-icon {
+  width: clamp(28px, 4.2vw, 56px);
+  height: clamp(28px, 4.2vw, 56px);
+}
 
 .tech.t2 {
   font-family: var(--f-d);
   font-weight: 500;
   font-size: clamp(20px, 3.6vw, 54px);
   line-height: 1.05;
+}
+.tech.t2 .tech-icon {
+  width: clamp(20px, 2.8vw, 36px);
+  height: clamp(20px, 2.8vw, 36px);
 }
 
 .tech.t3 {
@@ -1592,6 +1588,10 @@ body.has-cursor [data-cursor] {
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--ink-2);
+}
+.tech.t3 .tech-icon {
+  width: clamp(15px, 1.6vw, 20px);
+  height: clamp(15px, 1.6vw, 20px);
 }
 
 .tech.t-serif {
@@ -1613,6 +1613,30 @@ body.has-cursor [data-cursor] {
 
 .tech.is-dim {
   opacity: 0.16;
+}
+
+.tech:hover .tech-icon,
+.tech.is-active .tech-icon {
+  transform: scale(1.18) rotate(5deg);
+  filter: drop-shadow(0 0 10px rgba(201, 161, 95, 0.6));
+}
+
+.tech.is-dim .tech-icon {
+  opacity: 0.25;
+  filter: grayscale(1);
+}
+
+/* Dark mode invert for black GitHub and Django icons */
+[data-theme="dark"] .tech[data-id="github"] .tech-icon,
+[data-theme="dark"] .tech[data-id="django"] .tech-icon {
+  filter: brightness(0) invert(1);
+}
+
+[data-theme="dark"] .tech[data-id="github"]:hover .tech-icon,
+[data-theme="dark"] .tech[data-id="django"]:hover .tech-icon,
+[data-theme="dark"] .tech.is-active[data-id="github"] .tech-icon,
+[data-theme="dark"] .tech.is-active[data-id="django"] .tech-icon {
+  filter: drop-shadow(0 0 8px rgba(201, 161, 95, 0.8));
 }
 
 .wall-reader {
@@ -3588,7 +3612,7 @@ body.has-cursor [data-cursor] {
 
     gap: 8px;
 
-    padding: 12px 15px;
+    padding: 35px 18px;
 
     text-align: center;
 
@@ -3602,11 +3626,10 @@ body.has-cursor [data-cursor] {
   }
 
   .footer button {
-    font-size: 12px;
+    font-size: 13px;
     text-align: center;
   }
 }
-
 @media (max-width: 700px) {
 
   .finale-stage {
@@ -3632,755 +3655,139 @@ body.has-cursor [data-cursor] {
     margin-top: 25px;
   }
 }
-
 /* =========================================
    PROJECT 02 — RAILWAY VIDEO
-   PREMIUM CURVE ANIMATION
 ========================================= */
-
 .rail-video-wrap {
   position: relative;
   overflow: hidden;
   isolation: isolate;
-
   width: 100%;
   height: 100%;
   min-height: 420px;
-
   background: #0c1727;
-
-  /* Premium rounded shape */
   border-radius: 30px;
-
-  /* Smooth shadow */
-  box-shadow:
-    0 25px 60px rgba(0, 0, 0, 0.22),
-    0 8px 25px rgba(0, 0, 0, 0.12);
-
-  /* Entrance animation */
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.22), 0 8px 25px rgba(0, 0, 0, 0.12);
   animation: railwayFloat 6s ease-in-out infinite;
 }
 
-
-/* -----------------------------------------
-   VIDEO
------------------------------------------ */
-
 .rail-video {
   display: block;
-
   width: 100%;
   height: 100%;
   min-height: 420px;
-
   object-fit: cover;
   object-position: center;
-
   border-radius: inherit;
-
   transform: scale(1.015);
-
-  filter:
-    saturate(0.92)
-    contrast(1.05)
-    brightness(0.96);
-
-  transition:
-    transform 1.2s cubic-bezier(.16,1,.3,1),
-    filter 0.8s ease;
+  filter: saturate(0.92) contrast(1.05) brightness(0.96);
+  transition: transform 1.2s cubic-bezier(.16,1,.3,1), filter 0.8s ease;
 }
-
-
-/* Hover zoom */
 
 .rail-video-wrap:hover .rail-video {
   transform: scale(1.075);
-
-  filter:
-    saturate(1)
-    contrast(1.06)
-    brightness(1);
+  filter: saturate(1) contrast(1.06) brightness(1);
 }
-
-
-/* -----------------------------------------
-   CINEMATIC OVERLAY
------------------------------------------ */
 
 .video-overlay {
   position: absolute;
   inset: 0;
-
   z-index: 2;
-
   pointer-events: none;
-
-  background:
-    linear-gradient(
-      135deg,
-      rgba(0, 0, 0, 0.30),
-      transparent 38%,
-      rgba(0, 0, 0, 0.10) 65%,
-      rgba(0, 0, 0, 0.25)
-    );
-
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.30), transparent 38%, rgba(0, 0, 0, 0.10) 65%, rgba(0, 0, 0, 0.25));
   border-radius: inherit;
 }
 
-
-/* -----------------------------------------
-   ANIMATED CURVE — 1
------------------------------------------ */
-
 .rail-curve {
   position: absolute;
-
   z-index: 3;
-
   pointer-events: none;
-
   border-radius: 50%;
-
   opacity: 0.28;
-
   mix-blend-mode: screen;
 }
-
-
-/* Big curved light */
 
 .rail-curve-1 {
   width: 420px;
   height: 420px;
-
   right: -190px;
   bottom: -240px;
-
   border: 1px solid rgba(255,255,255,0.45);
-
-  animation:
-    curveMoveOne 7s ease-in-out infinite;
+  animation: curveMoveOne 7s ease-in-out infinite;
 }
-
-
-/* Second curve */
 
 .rail-curve-2 {
   width: 300px;
   height: 300px;
-
   left: -170px;
   top: -180px;
-
   border: 1px solid rgba(255,255,255,0.30);
-
-  animation:
-    curveMoveTwo 9s ease-in-out infinite;
+  animation: curveMoveTwo 9s ease-in-out infinite;
 }
-
-
-/* -----------------------------------------
-   CURVE ANIMATIONS
------------------------------------------ */
 
 @keyframes curveMoveOne {
-
-  0% {
-    transform:
-      translate(0, 0)
-      rotate(0deg)
-      scale(1);
-  }
-
-  50% {
-    transform:
-      translate(-35px, -25px)
-      rotate(18deg)
-      scale(1.12);
-  }
-
-  100% {
-    transform:
-      translate(0, 0)
-      rotate(0deg)
-      scale(1);
-  }
+  0% { transform: translate(0, 0) rotate(0deg) scale(1); }
+  50% { transform: translate(-35px, -25px) rotate(18deg) scale(1.12); }
+  100% { transform: translate(0, 0) rotate(0deg) scale(1); }
 }
-
 
 @keyframes curveMoveTwo {
-
-  0% {
-    transform:
-      translate(0, 0)
-      rotate(0deg)
-      scale(1);
-  }
-
-  50% {
-    transform:
-      translate(30px, 25px)
-      rotate(-15deg)
-      scale(1.08);
-  }
-
-  100% {
-    transform:
-      translate(0, 0)
-      rotate(0deg)
-      scale(1);
-  }
+  0% { transform: translate(0, 0) rotate(0deg) scale(1); }
+  50% { transform: translate(30px, 25px) rotate(-15deg) scale(1.08); }
+  100% { transform: translate(0, 0) rotate(0deg) scale(1); }
 }
-
-
-/* -----------------------------------------
-   FLOATING CARD ANIMATION
------------------------------------------ */
 
 @keyframes railwayFloat {
-
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-5px);
-  }
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
 }
-
-
-/* -----------------------------------------
-   LIVE PROJECT BADGE
------------------------------------------ */
 
 .video-badge {
   position: absolute;
-
   top: 22px;
   right: 22px;
-
   z-index: 5;
-
   display: flex;
   align-items: center;
   gap: 9px;
-
   padding: 11px 16px;
-
   color: #fff;
-
   font-family: var(--f-mono);
-
   font-size: 10px;
   font-weight: 600;
-
   letter-spacing: 0.12em;
-
   background: rgba(20, 25, 32, 0.58);
-
   border: 1px solid rgba(255,255,255,0.20);
-
   border-radius: 999px;
-
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-
-  box-shadow:
-    0 8px 25px rgba(0,0,0,0.18);
-
-  transition:
-    transform 0.5s cubic-bezier(.16,1,.3,1),
-    background 0.4s ease;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.18);
+  transition: transform 0.5s cubic-bezier(.16,1,.3,1), background 0.4s ease;
 }
-
 
 .rail-video-wrap:hover .video-badge {
   transform: translateY(-3px);
-
   background: rgba(20, 25, 32, 0.72);
 }
-
-
-/* -----------------------------------------
-   LIVE DOT
------------------------------------------ */
 
 .video-dot {
   width: 8px;
   height: 8px;
-
   flex: 0 0 8px;
-
   border-radius: 50%;
-
   background: #d59a18;
-
-  box-shadow:
-    0 0 0 0 rgba(213,154,24,0.55),
-    0 0 12px rgba(213,154,24,0.65);
-
+  box-shadow: 0 0 0 0 rgba(213,154,24,0.55), 0 0 12px rgba(213,154,24,0.65);
   animation: livePulse 1.7s ease-in-out infinite;
 }
 
-
 @keyframes livePulse {
-
-  0% {
-    transform: scale(0.85);
-
-    box-shadow:
-      0 0 0 0 rgba(213,154,24,0.55),
-      0 0 8px rgba(213,154,24,0.45);
-  }
-
-  50% {
-    transform: scale(1.15);
-
-    box-shadow:
-      0 0 0 8px rgba(213,154,24,0),
-      0 0 18px rgba(213,154,24,0.75);
-  }
-
-  100% {
-    transform: scale(0.85);
-
-    box-shadow:
-      0 0 0 0 rgba(213,154,24,0),
-      0 0 8px rgba(213,154,24,0.45);
-  }
-}
-
-
-/* -----------------------------------------
-   MOBILE
------------------------------------------ */
-
-@media (max-width: 700px) {
-
-  .rail-video-wrap {
-    min-height: 300px;
-    border-radius: 22px;
-  }
-
-  .rail-video {
-    min-height: 300px;
-  }
-
-  .video-badge {
-    top: 14px;
-    right: 14px;
-
-    padding: 8px 11px;
-
-    font-size: 8px;
-  }
-
-  .rail-curve-1 {
-    width: 280px;
-    height: 280px;
-  }
-
-  .rail-curve-2 {
-    width: 220px;
-    height: 220px;
-  }
-}
-
-
-/* -----------------------------------------
-   REDUCED MOTION
------------------------------------------ */
-
-@media (prefers-reduced-motion: reduce) {
-
-  .rail-video-wrap,
-  .rail-curve-1,
-  .rail-curve-2,
-  .video-dot {
-    animation: none;
-  }
-
-  .rail-video {
-    transition: none;
-  }
-}
-
-/* =========================================
-   PROJECT 02 — RAILWAY VIDEO
-   PREMIUM CURVE ANIMATION
-========================================= */
-
-.rail-video-wrap {
-  position: relative;
-  overflow: hidden;
-  isolation: isolate;
-
-  width: 100%;
-  height: 100%;
-  min-height: 420px;
-
-  background: #0c1727;
-
-  /* Premium rounded shape */
-  border-radius: 30px;
-
-  /* Smooth shadow */
-  box-shadow:
-    0 25px 60px rgba(0, 0, 0, 0.22),
-    0 8px 25px rgba(0, 0, 0, 0.12);
-
-  /* Entrance animation */
-  animation: railwayFloat 6s ease-in-out infinite;
-}
-
-
-/* -----------------------------------------
-   VIDEO
------------------------------------------ */
-
-.rail-video {
-  display: block;
-
-  width: 100%;
-  height: 100%;
-  min-height: 420px;
-
-  object-fit: cover;
-  object-position: center;
-
-  border-radius: inherit;
-
-  transform: scale(1.015);
-
-  filter:
-    saturate(0.92)
-    contrast(1.05)
-    brightness(0.96);
-
-  transition:
-    transform 1.2s cubic-bezier(.16,1,.3,1),
-    filter 0.8s ease;
-}
-
-
-/* Hover zoom */
-
-.rail-video-wrap:hover .rail-video {
-  transform: scale(1.075);
-
-  filter:
-    saturate(1)
-    contrast(1.06)
-    brightness(1);
-}
-
-
-/* -----------------------------------------
-   CINEMATIC OVERLAY
------------------------------------------ */
-
-.video-overlay {
-  position: absolute;
-  inset: 0;
-
-  z-index: 2;
-
-  pointer-events: none;
-
-  background:
-    linear-gradient(
-      135deg,
-      rgba(0, 0, 0, 0.30),
-      transparent 38%,
-      rgba(0, 0, 0, 0.10) 65%,
-      rgba(0, 0, 0, 0.25)
-    );
-
-  border-radius: inherit;
-}
-
-
-/* -----------------------------------------
-   ANIMATED CURVE — 1
------------------------------------------ */
-
-.rail-curve {
-  position: absolute;
-
-  z-index: 3;
-
-  pointer-events: none;
-
-  border-radius: 50%;
-
-  opacity: 0.28;
-
-  mix-blend-mode: screen;
-}
-
-
-/* Big curved light */
-
-.rail-curve-1 {
-  width: 420px;
-  height: 420px;
-
-  right: -190px;
-  bottom: -240px;
-
-  border: 1px solid rgba(255,255,255,0.45);
-
-  animation:
-    curveMoveOne 7s ease-in-out infinite;
-}
-
-
-/* Second curve */
-
-.rail-curve-2 {
-  width: 300px;
-  height: 300px;
-
-  left: -170px;
-  top: -180px;
-
-  border: 1px solid rgba(255,255,255,0.30);
-
-  animation:
-    curveMoveTwo 9s ease-in-out infinite;
-}
-
-
-/* -----------------------------------------
-   CURVE ANIMATIONS
------------------------------------------ */
-
-@keyframes curveMoveOne {
-
-  0% {
-    transform:
-      translate(0, 0)
-      rotate(0deg)
-      scale(1);
-  }
-
-  50% {
-    transform:
-      translate(-35px, -25px)
-      rotate(18deg)
-      scale(1.12);
-  }
-
-  100% {
-    transform:
-      translate(0, 0)
-      rotate(0deg)
-      scale(1);
-  }
-}
-
-
-@keyframes curveMoveTwo {
-
-  0% {
-    transform:
-      translate(0, 0)
-      rotate(0deg)
-      scale(1);
-  }
-
-  50% {
-    transform:
-      translate(30px, 25px)
-      rotate(-15deg)
-      scale(1.08);
-  }
-
-  100% {
-    transform:
-      translate(0, 0)
-      rotate(0deg)
-      scale(1);
-  }
-}
-
-
-/* -----------------------------------------
-   FLOATING CARD ANIMATION
------------------------------------------ */
-
-@keyframes railwayFloat {
-
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-5px);
-  }
-}
-
-
-/* -----------------------------------------
-   LIVE PROJECT BADGE
------------------------------------------ */
-
-.video-badge {
-  position: absolute;
-
-  top: 22px;
-  right: 22px;
-
-  z-index: 5;
-
-  display: flex;
-  align-items: center;
-  gap: 9px;
-
-  padding: 11px 16px;
-
-  color: #fff;
-
-  font-family: var(--f-mono);
-
-  font-size: 10px;
-  font-weight: 600;
-
-  letter-spacing: 0.12em;
-
-  background: rgba(20, 25, 32, 0.58);
-
-  border: 1px solid rgba(255,255,255,0.20);
-
-  border-radius: 999px;
-
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-
-  box-shadow:
-    0 8px 25px rgba(0,0,0,0.18);
-
-  transition:
-    transform 0.5s cubic-bezier(.16,1,.3,1),
-    background 0.4s ease;
-}
-
-
-.rail-video-wrap:hover .video-badge {
-  transform: translateY(-3px);
-
-  background: rgba(20, 25, 32, 0.72);
-}
-
-
-/* -----------------------------------------
-   LIVE DOT
------------------------------------------ */
-
-.video-dot {
-  width: 8px;
-  height: 8px;
-
-  flex: 0 0 8px;
-
-  border-radius: 50%;
-
-  background: #d59a18;
-
-  box-shadow:
-    0 0 0 0 rgba(213,154,24,0.55),
-    0 0 12px rgba(213,154,24,0.65);
-
-  animation: livePulse 1.7s ease-in-out infinite;
-}
-
-
-@keyframes livePulse {
-
-  0% {
-    transform: scale(0.85);
-
-    box-shadow:
-      0 0 0 0 rgba(213,154,24,0.55),
-      0 0 8px rgba(213,154,24,0.45);
-  }
-
-  50% {
-    transform: scale(1.15);
-
-    box-shadow:
-      0 0 0 8px rgba(213,154,24,0),
-      0 0 18px rgba(213,154,24,0.75);
-  }
-
-  100% {
-    transform: scale(0.85);
-
-    box-shadow:
-      0 0 0 0 rgba(213,154,24,0),
-      0 0 8px rgba(213,154,24,0.45);
-  }
-}
-
-
-/* -----------------------------------------
-   MOBILE
------------------------------------------ */
-
-@media (max-width: 700px) {
-
-  .rail-video-wrap {
-    min-height: 300px;
-    border-radius: 22px;
-  }
-
-  .rail-video {
-    min-height: 300px;
-  }
-
-  .video-badge {
-    top: 14px;
-    right: 14px;
-
-    padding: 8px 11px;
-
-    font-size: 8px;
-  }
-
-  .rail-curve-1 {
-    width: 280px;
-    height: 280px;
-  }
-
-  .rail-curve-2 {
-    width: 220px;
-    height: 220px;
-  }
-}
-
-
-/* -----------------------------------------
-   REDUCED MOTION
------------------------------------------ */
-
-@media (prefers-reduced-motion: reduce) {
-
-  .rail-video-wrap,
-  .rail-curve-1,
-  .rail-curve-2,
-  .video-dot {
-    animation: none;
-  }
-
-  .rail-video {
-    transition: none;
-  }
+  0% { transform: scale(0.85); box-shadow: 0 0 0 0 rgba(213,154,24,0.55), 0 0 8px rgba(213,154,24,0.45); }
+  50% { transform: scale(1.15); box-shadow: 0 0 0 8px rgba(213,154,24,0), 0 0 18px rgba(213,154,24,0.75); }
+  100% { transform: scale(0.85); box-shadow: 0 0 0 0 rgba(213,154,24,0), 0 0 8px rgba(213,154,24,0.45); }
 }
 
 /* ============================================================
-   MOBILE CINEMATIC VIEWPORT ENGINE (MOBILE & TABLET)
+   MOBILE & TOUCH REFINED ARCHITECTURE (< 899px)
 ============================================================ */
 @media (max-width: 899px) {
   :root {
@@ -4392,7 +3799,6 @@ body.has-cursor [data-cursor] {
     width: 100%;
   }
 
-  /* Nav Floating Header */
   .nav-holder {
     padding: 12px var(--pad) !important;
   }
@@ -4408,7 +3814,6 @@ body.has-cursor [data-cursor] {
     display: none !important;
   }
 
-  /* Hero Section */
   .hero {
     min-height: 100svh;
     padding: 95px var(--pad) 40px !important;
@@ -4447,7 +3852,6 @@ body.has-cursor [data-cursor] {
     display: none !important;
   }
 
-  /* Stats Grid */
   .about-stats {
     grid-template-columns: repeat(3, 1fr) !important;
     gap: 8px !important;
@@ -4463,14 +3867,10 @@ body.has-cursor [data-cursor] {
     letter-spacing: 0.08em;
   }
 
-  /* ============================================================
-     CASE STUDY (SMART IT SERVICE DESK) - 100% VISIBLE SIDEWAYS SLIDER
-  ============================================================ */
+  /* CASE STUDY (SMART IT SERVICE DESK) - FULLY VISIBLE MOBILE CARDS */
   .work-head {
     padding: 60px var(--pad) 20px !important;
   }
-
-  /* Laptop maadhiriye horizontal scroll mobile-layum irukkum */
   .case-pin {
     height: 100vh !important;
     height: 100svh !important;
@@ -4484,7 +3884,7 @@ body.has-cursor [data-cursor] {
     will-change: transform;
   }
   .panel {
-    width: 92vw !important; /* Screen-oda margin theriya card view */
+    width: 92vw !important;
     margin-right: 4vw;
     height: 82svh !important;
     max-height: 82svh !important;
@@ -4493,12 +3893,11 @@ body.has-cursor [data-cursor] {
     border: 1px solid var(--line-2) !important;
     border-radius: 16px !important;
     background: var(--bg-2) !important;
-    overflow-y: auto !important; /* Card kulla content cut aagadha mathiri scrollable */
+    overflow-y: auto !important;
     -webkit-overflow-scrolling: touch;
     flex-shrink: 0 !important;
   }
 
-  /* Indicator UI bar visible on mobile */
   .case-ui {
     left: var(--pad) !important;
     bottom: 2.2vh !important;
@@ -4509,7 +3908,6 @@ body.has-cursor [data-cursor] {
     width: 80px !important;
   }
 
-  /* Panel 01: Intro */
   .p-intro h3 {
     font-size: 26px !important;
     line-height: 1.1 !important;
@@ -4524,7 +3922,6 @@ body.has-cursor [data-cursor] {
     margin-top: 14px !important;
   }
 
-  /* Panel 04: Architecture SVG scaling */
   .arch {
     width: 100% !important;
     min-width: 320px;
@@ -4532,7 +3929,6 @@ body.has-cursor [data-cursor] {
     transform-origin: left center;
   }
 
-  /* Panel 06: Ticket Workflow */
   .wf li {
     grid-template-columns: 1fr 34px 1fr !important;
     padding: 5px 0 !important;
@@ -4544,14 +3940,13 @@ body.has-cursor [data-cursor] {
     font-size: 7.5px !important;
   }
 
-  /* Panel 08: Smart IT Admin Console Mockup (Mobile-la display on) */
   .mock {
     display: block !important;
     transform: none !important;
     margin-top: 16px;
   }
   .mock-body {
-    grid-template-columns: 1fr !important; /* Sidebar-a top tab-a mathum */
+    grid-template-columns: 1fr !important;
     min-height: auto;
   }
   .mock-nav {
@@ -4570,9 +3965,8 @@ body.has-cursor [data-cursor] {
     height: 50px !important;
   }
 
-  /* Railway project */
   .route {
-    display: none !important; /* Incomplete dots disappear */
+    display: none !important;
   }
   .ticket-stub {
     flex-direction: column !important;
@@ -4593,7 +3987,6 @@ body.has-cursor [data-cursor] {
     height: 220px !important;
   }
 
-  /* Stock radar chart */
   .chart-wrap {
     padding: 14px !important;
   }
@@ -4605,7 +3998,6 @@ body.has-cursor [data-cursor] {
     gap: 8px !important;
   }
 
-  /* Certifications Accordion */
   .doc-head {
     display: grid !important;
     grid-template-columns: 75px 1fr 20px !important;
@@ -4619,7 +4011,6 @@ body.has-cursor [data-cursor] {
   .d-year { display: none; }
   .d-plus { grid-area: plus; }
 
-  /* Contact & CTA */
   .contact-title {
     font-size: clamp(40px, 12vw, 68px) !important;
   }

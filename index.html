@@ -1,1244 +1,2184 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" data-theme="dark">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Syed Thameesudeen — Python Django Full Stack Developer</title>
-<meta name="description" content="Syed Thameesudeen — Python Django Full Stack Developer, Kochi. Engineering precision × cinematic storytelling.">
-<link rel="preconnect" href="https://api.fontshare.com">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-<a class="skip" href="#about">Skip to content</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <title>Syed Thameesudeen — Python Django Full Stack Developer</title>
+    <meta
+      name="description"
+      content="Syed Thameesudeen — Python Django Full Stack Developer, Kochi. Engineering precision × cinematic storytelling."
+    />
+    <link rel="preconnect" href="https://api.fontshare.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&f[]=satoshi@400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <a class="skip" href="#about">Skip to content</a>
 
-<!-- Atmosphere -->
-<div class="leak leak-1" aria-hidden="true"></div>
-<div class="leak leak-2" aria-hidden="true"></div>
-<div class="grain" aria-hidden="true"></div>
+    <!-- Atmosphere -->
+    <div class="leak leak-1" aria-hidden="true"></div>
+    <div class="leak leak-2" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
 
-<!-- Cursor Elements -->
-<div class="cursor" aria-hidden="true">
-  <div class="cursor-ring"><span class="cursor-label">VIEW</span><svg class="cursor-arrow" viewBox="0 0 24 24"><path d="M7 17L17 7M8 7h9v9"/></svg></div>
-  <div class="cursor-dot"></div>
-</div>
-
-<!-- Scroll Rail/Bars -->
-<div class="rail" aria-hidden="true"><div class="rail-fill"></div><span class="rail-num">0%</span></div>
-<div class="mbar" aria-hidden="true"><i></i></div>
-
-<!-- INTRO SEQUENCE -->
-<div id="intro" aria-hidden="true">
-  <div class="intro-ambient"></div>
-  <figure class="intro-portrait"><img src="./assets/images/Intro.png" width="640" height="800" alt=""></figure>
-  <div class="intro-name">
-    <span class="mask"><span class="in-l1">SYED</span></span>
-    <span class="mask"><span class="in-l2">THAMEESUDEEN</span></span>
-  </div>
-  <div class="intro-sweep"></div>
-  <span class="intro-corner ic-tl">ST—26 / Portfolio</span>
-  <span class="intro-corner ic-tr">Kochi · Kerala · IN</span>
-  <span class="intro-corner ic-bl">Python · Django · React</span>
-  <span class="intro-corner ic-br">Cinematic Edition</span>
-  <button class="intro-skip" type="button">Skip intro [ESC]</button>
-</div>
-
-<!-- SMOOTH MORPHING FLOATING GLASS NAVBAR -->
-<div class="nav-holder" id="navHolder">
-  <header class="header" id="header">
-    <a class="logo" href="#hero" data-goto="#hero" aria-label="Syed Thameesudeen — home">S<b>/T</b></a>
-    <div class="nav-controls">
-      <div class="sec-ind" aria-hidden="true"><span class="si-num">01</span><span class="si-name">ABOUT</span></div>
-      
-      <!-- Instant Dark / Light Mode Button -->
-      <button class="theme-btn" id="themeToggle" type="button" aria-label="Toggle Theme">
-        <svg id="themeIcon" viewBox="0 0 24 24">
-          <path id="themeIconPath" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+    <!-- Cursor Elements -->
+    <div class="cursor" aria-hidden="true">
+      <div class="cursor-ring">
+        <span class="cursor-label">VIEW</span>
+        <svg class="cursor-arrow" viewBox="0 0 24 24">
+          <path d="M7 17L17 7M8 7h9v9" />
         </svg>
-        <span id="themeLabel">LIGHT</span>
-      </button>
-
-      <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="menu" aria-label="Open menu">
-        <span class="mb-lines" aria-hidden="true"><i></i><i></i></span><span class="mb-label">MENU</span>
-      </button>
-    </div>
-  </header>
-</div>
-
-<!-- MENU OVERLAY -->
-<div class="menu" id="menu" aria-hidden="true">
-  <div class="menu-content-grid">
-    <nav class="menu-list" aria-label="Primary Navigation">
-      <a class="menu-item" data-sec="about" href="#about"><span class="mi-num">01</span><span class="mi-word mask"><span>ABOUT</span></span><span class="mi-tag">OVERVIEW</span></a>
-      <a class="menu-item" data-sec="experience" href="#experience"><span class="mi-num">02</span><span class="mi-word mask"><span>EXPERIENCE</span></span><span class="mi-tag">TRAJECTORY</span></a>
-      <a class="menu-item" data-sec="technology" href="#technology"><span class="mi-num">03</span><span class="mi-word mask"><span>TECHNOLOGY</span></span><span class="mi-tag">THE STACK</span></a>
-      <a class="menu-item" data-sec="work" href="#work"><span class="mi-num">04</span><span class="mi-word mask"><span>WORK</span></span><span class="mi-tag">CASE STUDY</span></a>
-      <a class="menu-item" data-sec="certs" href="#certs"><span class="mi-num">05</span><span class="mi-word mask"><span>CERTIFICATIONS</span></span><span class="mi-tag">ARCHIVE</span></a>
-      <a class="menu-item" data-sec="contact" href="#contact"><span class="mi-num">06</span><span class="mi-word mask"><span>CONTACT</span></span><span class="mi-tag">SIGNAL</span></a>
-    </nav>
-    <div class="menu-sidebar-info">
-      <div class="ms-block">
-        <span class="mono">DIRECT SIGNAL</span>
-        <a href="mailto:thameessyed2743@gmail.com">thameessyed2743@gmail.com</a>
-        <a href="tel:+917092960618">+91 70929 60618</a>
       </div>
-      <div class="ms-block">
-        <span class="mono">LOCATION & ZONE</span>
-        <span>Kochi, Kerala, India</span>
-        <span style="color: var(--ink-2); font-size: 12.5px;">IST (UTC +5:30)</span>
-      </div>
-      <div class="ms-block">
-        <span class="mono">NETWORK</span>
-        <a href="https://linkedin.com/in/syedthamees2743" target="_blank" rel="noopener">LinkedIn Profile ↗</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<main>
-<!-- HERO SECTION -->
-<section class="hero" id="hero">
-  <div class="hero-bg" data-depth="0.02" aria-hidden="true"><div class="hero-grid" id="heroGrid"></div></div>
-  <div class="hero-glow" id="heroGlow" aria-hidden="true"></div>
-
-  <div class="hero-desktop-grid">
-    <div class="hero-type" data-depth="0.035">
-      <p class="hero-kicker mono">Portfolio — 2026 // Python Django Full Stack</p>
-      <h1 class="hero-title" aria-label="Syed Thameesudeen">
-        <span class="mask"><span class="ht-first">SYED</span></span>
-        <span class="mask"><span class="ht-second">THAMEESUDEEN</span></span>
-      </h1>
-      <div class="hero-role"><span class="hr-rule" aria-hidden="true"></span><p>Python Django <em class="serif">Full Stack</em> Developer</p></div>
-      <p class="hero-stack mono">REACT<b>·</b>PYTHON<b>·</b>DJANGO<b>·</b>REST API<b>·</b>POSTGRESQL</p>
+      <div class="cursor-dot"></div>
     </div>
 
-    <div class="hero-portrait" data-depth="0.11">
-      <figure class="portrait" data-cursor="hover">
-        <img id="heroImg" src="./assets/images/Intro.png" width="720" height="900" alt="Portrait of Syed Thameesudeen" fetchpriority="high">
-        <div class="portrait-overlay" aria-hidden="true"></div>
-        <figcaption class="portrait-label">SYED THAMEESUDEEN — KOCHI · 2026</figcaption>
+    <!-- Scroll Rail/Bars -->
+    <div class="rail" aria-hidden="true">
+      <div class="rail-fill"></div>
+      <span class="rail-num">0%</span>
+    </div>
+    <div class="mbar" aria-hidden="true"><i></i></div>
+
+    <!-- INTRO SEQUENCE -->
+    <div id="intro" aria-hidden="true">
+      <div class="intro-ambient"></div>
+      <figure class="intro-portrait">
+        <img src="./assets/images/Intro.png" width="640" height="800" alt="" />
       </figure>
+      <div class="intro-name">
+        <span class="mask"><span class="in-l1">SYED</span></span>
+        <span class="mask"><span class="in-l2">THAMEESUDEEN</span></span>
+      </div>
+      <div class="intro-sweep"></div>
+      <span class="intro-corner ic-tl">ST—26 / Portfolio</span>
+      <span class="intro-corner ic-tr">Kochi · Kerala · IN</span>
+      <span class="intro-corner ic-bl">Python · Django · React</span>
+      <span class="intro-corner ic-br">Cinematic Edition</span>
+      <button class="intro-skip" type="button">Skip intro [ESC]</button>
     </div>
-  </div>
 
-  <div class="hero-meta" aria-hidden="false">
-    <div class="hm-block hm-1" data-depth="0.07">BASED IN<br>KOCHI, KERALA — IN<br>9.93°N / 76.26°E</div>
-    <div class="hm-block hm-2" data-depth="0.055">CURRENTLY<br>PYTHON FULL STACK INTERN<br><em>FUTURA LABS — KOCHI</em></div>
-    <div class="hm-block hm-3" data-depth="0.09">FOCUS<br>BACKEND · REST API<br>FULL-STACK APPS</div>
-  </div>
+    <!-- FLOATING GLASS NAVBAR -->
+    <div class="nav-holder" id="navHolder">
+      <header class="header" id="header">
+        <a class="logo" href="#hero" data-goto="#hero" aria-label="Syed Thameesudeen — home">S<b>/T</b></a>
+        <div class="nav-controls">
+          <div class="sec-ind" aria-hidden="true">
+            <span class="si-num">01</span><span class="si-name">ABOUT</span>
+          </div>
 
-  <div class="hero-side" data-depth="0.05" aria-hidden="true">FULL STACK — KOCHI, KERALA</div>
-  <div class="hero-scroll mono" aria-hidden="true">SCROLL<span class="scroll-line"></span></div>
-  <div class="hero-index" aria-hidden="true">KOCHI — 2026</div>
-</section>
+          <!-- Instant Dark / Light Mode Button -->
+          <button class="theme-btn" id="themeToggle" type="button" aria-label="Toggle Theme">
+            <svg id="themeIcon" viewBox="0 0 24 24">
+              <path
+                id="themeIconPath"
+                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+              />
+            </svg>
+            <span id="themeLabel">LIGHT</span>
+          </button>
 
-<!-- ABOUT SECTION -->
-<section class="sec" id="about">
-  <header class="sec-head"><span class="sh-num">01</span><span class="sh-name">About — Background</span><span class="sh-line"></span></header>
-  <h2 class="about-statement">
-    <span class="as-line"><span class="w">I</span> <span class="w">BUILD</span></span>
-    <span class="as-line"><span class="w as-serif">digital</span></span>
-    <span class="as-line"><span class="w as-outline" id="asOutline">EXPERIENCES.</span></span>
-  </h2>
-  <div class="about-grid">
-    <figure class="about-fig">
-      <img src="./assets/images/profile-photo.png" width="640" height="800" loading="lazy" alt="Syed Thameesudeen working at his desk">
-      <figcaption>KOCHI — 2026</figcaption>
-    </figure>
-    <div class="about-copy">
-      <p>Python Django Full Stack Developer with hands-on experience building responsive and scalable web applications through structured software internships and production-grade applications.</p>
-      <p>Skilled across Python, Django, Django REST Framework, React.js and modern CSS — focusing strictly on robust backend design, decoupled API architectures, session security and relational PostgreSQL database engineering.</p>
-      <dl class="about-facts">
-        <div class="fact"><dt>Currently</dt><dd>Python Full Stack Intern — Futura Labs, Kochi</dd></div>
-        <div class="fact"><dt>Education</dt><dd>B.E. Computer Science — Nellai College of Engineering, 2021–2025 · CGPA 7.3/10</dd></div>
-        <div class="fact"><dt>Location</dt><dd>Kochi, Kerala / Tamil Nadu, India</dd></div>
-        <div class="fact"><dt>Languages</dt><dd>Tamil (Native) · English (Professional Working) · Malayalam (Working)</dd></div>
-      </dl>
+          <button
+            class="menu-btn"
+            id="menuBtn"
+            type="button"
+            aria-expanded="false"
+            aria-controls="menu"
+            aria-label="Open menu"
+          >
+            <span class="mb-lines" aria-hidden="true"><i></i><i></i></span>
+            <span class="mb-label">MENU</span>
+          </button>
+        </div>
+      </header>
     </div>
-    <div class="about-focus">
-      <h3>Focus Areas</h3>
-      <div class="focus-item"><span>F.01</span>Backend Architecture</div>
-      <div class="focus-item"><span>F.02</span>REST API Integration</div>
-      <div class="focus-item"><span>F.03</span>Full-Stack Applications</div>
-      <div class="focus-item"><span>F.04</span>Database Optimization</div>
-    </div>
-  </div>
 
-  <!-- Number Counters In Horizontal Boxes (HUGE BOLD SCALE) -->
-  <div class="about-stats">
-    <div class="stat-box">
-      <b><span data-count="3">0</span><i>+</i></b>
-      <span>Projects Built</span>
-    </div>
-    <div class="stat-box">
-      <b><span data-count="4">0</span></b>
-      <span>Certifications</span>
-    </div>
-    <div class="stat-box">
-      <b><span data-count="15">0</span><i>+</i></b>
-      <span>Tech In Stack</span>
-    </div>
-  </div>
-</section>
-
-<!-- EXPERIENCE SECTION -->
-<section class="sec" id="experience">
-  <header class="sec-head"><span class="sh-num">02</span><span class="sh-name">Experience — Trajectory</span><span class="sh-line"></span></header>
-  <div class="exp-grid">
-    <div class="exp-sticky">
-      <p class="mono exp-co">FUTURA LABS — KOCHI</p>
-      <h3 class="exp-role">Python<br>Full Stack<br><em class="serif">Intern</em></h3>
-      <p class="mono exp-when">JAN 2026 — PRESENT</p>
-      <p class="mono exp-proj">PROJECT — SMART IT SERVICE DESK · DJANGO FULL STACK WEB APPLICATION · AUG 2026</p>
-    </div>
-    <div class="exp-tl">
-      <div class="et-line" aria-hidden="true"><div class="et-fill"></div></div>
-      <ol id="expList"></ol>
-      <div class="exp-impact">
-        <h3>Impact</h3>
-        <ul>
-          <li>Gained hands-on experience in Django REST API and React full-stack development.</li>
-          <li>Engineered JWT authentication, PostgreSQL database structures, API integration and endpoint debugging.</li>
-          <li>Successfully developed a role-based IT Service Desk &amp; Asset Management System with a complete ticket workflow.</li>
-        </ul>
+    <!-- MENU OVERLAY -->
+    <div class="menu" id="menu" aria-hidden="true">
+      <div class="menu-content-grid">
+        <nav class="menu-list" aria-label="Primary Navigation">
+          <a class="menu-item" data-sec="about" href="#about">
+            <span class="mi-num">01</span><span class="mi-word mask"><span>ABOUT</span></span><span class="mi-tag">OVERVIEW</span>
+          </a>
+          <a class="menu-item" data-sec="experience" href="#experience">
+            <span class="mi-num">02</span><span class="mi-word mask"><span>EXPERIENCE</span></span><span class="mi-tag">TRAJECTORY</span>
+          </a>
+          <a class="menu-item" data-sec="technology" href="#technology">
+            <span class="mi-num">03</span><span class="mi-word mask"><span>TECHNOLOGY</span></span><span class="mi-tag">THE STACK</span>
+          </a>
+          <a class="menu-item" data-sec="work" href="#work">
+            <span class="mi-num">04</span><span class="mi-word mask"><span>WORK</span></span><span class="mi-tag">CASE STUDY</span>
+          </a>
+          <a class="menu-item" data-sec="certs" href="#certs">
+            <span class="mi-num">05</span><span class="mi-word mask"><span>CERTIFICATIONS</span></span><span class="mi-tag">ARCHIVE</span>
+          </a>
+          <a class="menu-item" data-sec="contact" href="#contact">
+            <span class="mi-num">06</span><span class="mi-word mask"><span>CONTACT</span></span><span class="mi-tag">SIGNAL</span>
+          </a>
+        </nav>
+        <div class="menu-sidebar-info">
+          <div class="ms-block">
+            <span class="mono">DIRECT SIGNAL</span>
+            <a href="mailto:thameessyed2743@gmail.com">thameessyed2743@gmail.com</a>
+            <a href="tel:+917092960618">+91 70929 60618</a>
+          </div>
+          <div class="ms-block">
+            <span class="mono">LOCATION & ZONE</span>
+            <span>Kochi, Kerala, India</span>
+            <span style="color: var(--ink-2); font-size: 12.5px">IST (UTC +5:30)</span>
+          </div>
+          <div class="ms-block">
+            <span class="mono">NETWORK</span>
+            <a href="https://linkedin.com/in/syedthamees2743" target="_blank" rel="noopener">LinkedIn Profile ↗</a>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
 
-<!-- TECHNOLOGY SECTION -->
-<section class="sec" id="technology">
-  <header class="sec-head"><span class="sh-num">03</span><span class="sh-name">Technology — The Stack</span><span class="sh-line"></span></header>
-  <div class="wall-wrap">
-    <svg id="wallSvg" aria-hidden="true"></svg>
-    <div class="wall" id="techWall" role="list" aria-label="Technologies"></div>
-    <aside class="wall-reader" aria-live="polite">
-      <div><p class="wr-cat" id="wrCat">STACK INDEX</p><h3 class="wr-name" id="wrName">Select a technology</h3></div>
-      <p class="wr-desc" id="wrDesc">Select any node to evaluate system relationships, architectural roles, and upstream dependencies.</p>
-      <div class="wr-rel" id="wrRel"></div>
-    </aside>
-  </div>
-</section>
-
-<!-- WORK / CASE STUDY SECTION -->
-<section id="work">
-  <div class="work-head">
-    <header class="sec-head" style="margin-bottom:0"><span class="sh-num">04</span><span class="sh-name">Work — Case Study</span><span class="sh-line"></span></header>
-  </div>
-
-  <div class="case-pin" id="casePin">
-    <div class="case-track" id="caseTrack">
-
-      <!-- 01 INTRO -->
-      <article class="panel p-intro">
-        <div class="p-head"><span class="p-num">01</span><span class="p-label">Intro</span><span class="p-rule"></span></div>
-        <p class="mono cs-kicker rv">FUTURA LABS, KOCHI — DJANGO FULL STACK — AUG 2026</p>
-        <h3><span class="rv">SMART IT</span><span class="rv">SERVICE DESK</span><span class="serif rv">&amp; Ticket Management System</span></h3>
-        <p class="cs-sub rv">A role-based IT support platform built end-to-end with Django, Django REST Framework, React and PostgreSQL — where every ticket has a role, an owner, a status and a clock.</p>
-        <div class="cs-meta rv">
-          <div>ROLE<br><b>Python Full Stack Intern</b></div>
-          <div>BUILT WITH<br><b>Django · DRF · React · PostgreSQL</b></div>
-          <div>STATUS<br><b>Delivered — Aug 2026</b></div>
+    <main>
+      <!-- HERO SECTION -->
+      <section class="hero" id="hero">
+        <div class="hero-bg" data-depth="0.02" aria-hidden="true">
+          <div class="hero-grid" id="heroGrid"></div>
         </div>
-        <div class="cs-hint" aria-hidden="true">THE CASE PANS SIDEWAYS</div>
-      </article>
+        <div class="hero-glow" id="heroGlow" aria-hidden="true"></div>
 
-      <!-- 02 PROBLEM -->
-      <article class="panel p-problem">
-        <div class="p-head"><span class="p-num">02</span><span class="p-label">The Problem</span><span class="p-rule"></span></div>
-        <h4 class="p-state rv">Support requests don't fail loudly — <em class="serif">they get lost between roles.</em></h4>
-        <div class="p-points">
-          <div class="p-point rv"><b>P.01</b><div><h5>Three roles, one workflow</h5><p>Admin, Employee and Technician each require dedicated portal states without fragmenting collaboration.</p></div></div>
-          <div class="p-point rv"><b>P.02</b><div><h5>Status without visibility</h5><p>Once a request is filed, progress must be trackable — ownership and status updates cannot live in inboxes.</p></div></div>
-          <div class="p-point rv"><b>P.03</b><div><h5>Time that must be tracked</h5><p>Response and resolution windows require explicit SLA timers rather than loose estimates.</p></div></div>
+        <div class="hero-desktop-grid">
+          <div class="hero-type" data-depth="0.035">
+            <p class="hero-kicker mono">Portfolio — 2026 // Python Django Full Stack</p>
+            <h1 class="hero-title" aria-label="Syed Thameesudeen">
+              <span class="mask"><span class="ht-first">SYED</span></span>
+              <span class="mask"><span class="ht-second">THAMEESUDEEN</span></span>
+            </h1>
+            <div class="hero-role">
+              <span class="hr-rule" aria-hidden="true"></span>
+              <p>Python Django <em class="serif">Full Stack</em> Developer</p>
+            </div>
+            <p class="hero-stack mono">REACT<b>·</b>PYTHON<b>·</b>DJANGO<b>·</b>REST API<b>·</b>POSTGRESQL</p>
+          </div>
+
+          <div class="hero-portrait" data-depth="0.11">
+            <figure class="portrait" data-cursor="hover">
+              <img
+                id="heroImg"
+                src="./assets/images/Intro.png"
+                width="720"
+                height="900"
+                alt="Portrait of Syed Thameesudeen"
+                fetchpriority="high"
+              />
+              <div class="portrait-overlay" aria-hidden="true"></div>
+              <figcaption class="portrait-label">SYED THAMEESUDEEN — KOCHI · 2026</figcaption>
+            </figure>
+          </div>
         </div>
-      </article>
 
-      <!-- 03 SOLUTION -->
-      <article class="panel p-solution">
-        <div class="p-head"><span class="p-num">03</span><span class="p-label">The Solution</span><span class="p-rule"></span></div>
-        <h4 class="p-state rv">A unified platform where every ticket has a role, an owner, a status — <em class="serif">and a clock.</em></h4>
-        <div class="p-points">
-          <div class="p-point rv"><b>S.01</b><div><h5>Role-based access with JWT authentication</h5><p>Secure token-based sessions across Admin, Employee and Technician roles.</p></div></div>
-          <div class="p-point rv"><b>S.02</b><div><h5>React frontend over Django REST APIs</h5><p>State hydration handled via Axios into a fast responsive interface.</p></div></div>
-          <div class="p-point rv"><b>S.03</b><div><h5>PostgreSQL as single source of truth</h5><p>Relational consistency enforced through Django ORM across tickets, assets and audit logs.</p></div></div>
+        <div class="hero-meta" aria-hidden="false">
+          <div class="hm-block hm-1" data-depth="0.07">BASED IN<br />KOCHI, KERALA — IN<br />9.93°N / 76.26°E</div>
+          <div class="hm-block hm-2" data-depth="0.055">CURRENTLY<br />PYTHON FULL STACK INTERN<br /><em>FUTURA LABS — KOCHI</em></div>
+          <div class="hm-block hm-3" data-depth="0.09">FOCUS<br />BACKEND · REST API<br />FULL-STACK APPS</div>
         </div>
-      </article>
 
-      <!-- 04 ARCHITECTURE -->
-      <article class="panel p-arch">
-        <div class="p-head"><span class="p-num">04</span><span class="p-label">Architecture</span><span class="p-rule"></span></div>
-        <svg class="arch rv" viewBox="0 0 860 440" role="img" aria-label="System architecture diagram">
-          <g fill="none">
-            <path class="edge" d="M250 100 H340"/><path class="edge flow" d="M250 100 H340"/>
-            <path class="edge" d="M580 100 H660"/><path class="edge flow" d="M580 100 H660"/>
-            <path class="edge" d="M460 132 V210"/><path class="edge flow" d="M460 132 V210"/>
-            <path class="edge" d="M460 258 V320"/><path class="edge flow" d="M460 258 V320"/>
-            <path class="edge" d="M580 344 H660"/><path class="edge flow" d="M580 344 H660"/>
-          </g>
-          <text class="arch-edge-label" x="295" y="88">REST · AXIOS</text>
-          <text class="arch-edge-label" x="620" y="88">SMTP</text>
-          <text class="arch-edge-label" x="474" y="176">GUARDS</text>
-          <text class="arch-edge-label" x="474" y="294">MODELS</text>
-          <text class="arch-edge-label" x="620" y="332">SQL</text>
-          <g class="arch-node"><rect x="60" y="68" width="190" height="64" rx="6"/><text x="155" y="102">REACT FRONTEND</text><text class="n2" x="155" y="119">BOOTSTRAP / CSS · AXIOS</text></g>
-          <g class="arch-node"><rect x="340" y="68" width="240" height="64" rx="6"/><text x="460" y="102">DJANGO REST API</text><text class="n2" x="460" y="119">DJANGO REST FRAMEWORK</text></g>
-          <g class="arch-node"><rect x="660" y="68" width="150" height="64" rx="6"/><text x="735" y="102">SMTP EMAIL</text><text class="n2" x="735" y="119">NOTIFICATIONS</text></g>
-          <g class="arch-node"><rect x="340" y="210" width="240" height="48" rx="6"/><text x="460" y="239">JWT AUTH</text></g>
-          <g class="arch-node"><rect x="340" y="320" width="240" height="48" rx="6"/><text x="460" y="349">DJANGO ORM</text></g>
-          <g class="arch-node"><rect x="660" y="320" width="150" height="48" rx="6"/><text x="735" y="349">POSTGRESQL</text></g>
-        </svg>
-        <p class="arch-cap rv">JWT-SECURED REST LAYER BETWEEN REACT AND POSTGRESQL — SMTP NOTIFICATIONS</p>
-      </article>
+        <div class="hero-side" data-depth="0.05" aria-hidden="true">FULL STACK — KOCHI, KERALA</div>
+        <div class="hero-scroll mono" aria-hidden="true">SCROLL<span class="scroll-line"></span></div>
+        <div class="hero-index" aria-hidden="true">KOCHI — 2026</div>
+      </section>
 
-      <!-- 05 FEATURES (FIXED EMAIL NOTIFICATION DESIGN) -->
-      <article class="panel p-features">
-        <div class="p-head"><span class="p-num">05</span><span class="p-label">Features</span><span class="p-rule"></span></div>
-        <div class="feat-list">
-          <div class="feat rv"><b>F.01</b><svg viewBox="0 0 24 24"><path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/><path d="M13 5v2M13 11v2M13 17v2"/></svg><div><h5>Ticket Management</h5><p>Assignment, queue priority and status updates across authenticated roles.</p></div></div>
-          <div class="feat rv"><b>F.02</b><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><h5>SLA Tracking</h5><p>Enforces response and resolution milestones based on priority tiers.</p></div></div>
-          
-          <div class="feat feat-email rv">
-            <b>F.03</b>
-            <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+      <!-- ABOUT SECTION -->
+      <section class="sec" id="about">
+        <header class="sec-head">
+          <span class="sh-num">01</span><span class="sh-name">About — Background</span><span class="sh-line"></span>
+        </header>
+        <h2 class="about-statement">
+          <span class="as-line"><span class="w">I</span> <span class="w">BUILD</span></span>
+          <span class="as-line"><span class="w as-serif">digital</span></span>
+          <span class="as-line"><span class="w as-outline" id="asOutline">EXPERIENCES.</span></span>
+        </h2>
+        <div class="about-grid">
+          <figure class="about-fig">
+            <img
+              src="./assets/images/profile-photo.png"
+              width="640"
+              height="800"
+              loading="lazy"
+              alt="Syed Thameesudeen working at his desk"
+            />
+            <figcaption>KOCHI — 2026</figcaption>
+          </figure>
+          <div class="about-copy">
+            <p>
+              Python Django Full Stack Developer with hands-on experience
+              building responsive and scalable web applications through
+              structured software internships and production-grade applications.
+            </p>
+            <p>
+              Skilled across Python, Django, Django REST Framework, React.js and
+              modern CSS — focusing strictly on robust backend design, decoupled
+              API architectures, session security and relational PostgreSQL
+              database engineering.
+            </p>
+            <dl class="about-facts">
+              <div class="fact">
+                <dt>Currently</dt>
+                <dd>Python Full Stack Intern — Futura Labs, Kochi</dd>
+              </div>
+              <div class="fact">
+                <dt>Education</dt>
+                <dd>B.E. Computer Science — Nellai College of Engineering, 2021–2025 · CGPA 7.3/10</dd>
+              </div>
+              <div class="fact">
+                <dt>Location</dt>
+                <dd>Kochi, Kerala / Tamil Nadu, India</dd>
+              </div>
+              <div class="fact">
+                <dt>Languages</dt>
+                <dd>Tamil (Native) · English (Professional Working) · Malayalam (Working)</dd>
+              </div>
+            </dl>
+          </div>
+          <div class="about-focus">
+            <h3>Focus Areas</h3>
+            <div class="focus-item"><span>F.01</span>Backend Architecture</div>
+            <div class="focus-item"><span>F.02</span>REST API Integration</div>
+            <div class="focus-item"><span>F.03</span>Full-Stack Applications</div>
+            <div class="focus-item"><span>F.04</span>Database Optimization</div>
+          </div>
+        </div>
+
+        <!-- Number Counters In Horizontal Boxes -->
+        <div class="about-stats">
+          <div class="stat-box">
+            <b class="stat-num"><span data-count="3">0</span><i>+</i></b>
+            <span class="stat-label">Projects Built</span>
+          </div>
+          <div class="stat-box">
+            <b class="stat-num"><span data-count="4">0</span></b>
+            <span class="stat-label">Certifications</span>
+          </div>
+          <div class="stat-box">
+            <b class="stat-num"><span data-count="15">0</span><i>+</i></b>
+            <span class="stat-label">Tech In Stack</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- EXPERIENCE SECTION -->
+      <section class="sec" id="experience">
+        <header class="sec-head">
+          <span class="sh-num">02</span><span class="sh-name">Experience — Trajectory</span><span class="sh-line"></span>
+        </header>
+        <div class="exp-grid">
+          <div class="exp-sticky">
+            <p class="mono exp-co">FUTURA LABS — KOCHI</p>
+            <h3 class="exp-role">Python<br />Full Stack<br /><em class="serif">Intern</em></h3>
+            <p class="mono exp-when">JAN 2026 — PRESENT</p>
+            <p class="mono exp-proj">PROJECT — SMART IT SERVICE DESK · DJANGO FULL STACK WEB APPLICATION · AUG 2026</p>
+          </div>
+          <div class="exp-tl">
+            <div class="et-line" aria-hidden="true">
+              <div class="et-fill"></div>
+            </div>
+            <ol id="expList"></ol>
+            <div class="exp-impact">
+              <h3>Impact</h3>
+              <ul>
+                <li>Gained hands-on experience in Django REST API and React full-stack development.</li>
+                <li>Engineered JWT authentication, PostgreSQL database structures, API integration and endpoint debugging.</li>
+                <li>Successfully developed a role-based IT Service Desk &amp; Asset Management System with a complete ticket workflow.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TECHNOLOGY SECTION (ALL 15 ICONS) -->
+      <section class="sec" id="technology">
+        <header class="sec-head">
+          <span class="sh-num">03</span><span class="sh-name">Technology — The Stack</span><span class="sh-line"></span>
+        </header>
+        <div class="wall-wrap">
+          <svg id="wallSvg" aria-hidden="true"></svg>
+          <div class="wall" id="techWall" role="list" aria-label="Technologies"></div>
+          <aside class="wall-reader" aria-live="polite">
             <div>
-              <h5>Email Notifications <span class="smtp-pill">SMTP TRIGGER</span></h5>
-              <p>Automated transactional alerts fired on ticket creation, technician assignment, status escalation, and closure confirmation.</p>
+              <p class="wr-cat" id="wrCat">STACK INDEX</p>
+              <h3 class="wr-name" id="wrName">Select a technology</h3>
             </div>
-          </div>
-          
-          <div class="feat rv"><b>F.04</b><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2Z"/></svg><div><h5>Feedback Validation</h5><p>Employees acknowledge and verify ticket resolution before closing.</p></div></div>
-          <div class="feat rv"><b>F.05</b><svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg><div><h5>Knowledge Base</h5><p>Self-service documentation portal for troubleshooting recurring issues.</p></div></div>
-          <div class="feat rv"><b>F.06</b><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/></svg><div><h5>PDF Reports</h5><p>Structured audit trails exported on demand for operational reviews.</p></div></div>
+            <p class="wr-desc" id="wrDesc">Select any node to evaluate system relationships, architectural roles, and upstream dependencies.</p>
+            <div class="wr-rel" id="wrRel"></div>
+          </aside>
         </div>
-      </article>
+      </section>
 
-      <!-- 06 WORKFLOW -->
-      <article class="panel p-workflow">
-        <div class="p-head"><span class="p-num">06</span><span class="p-label">Ticket Workflow</span><span class="p-rule"></span></div>
-        <div class="wf-wrap">
-          <ol class="wf" id="wf">
-            <div class="wf-line" aria-hidden="true"><div class="wf-fill" id="wfFill"></div></div>
-            <li><div class="wf-c"><h5>EMPLOYEE</h5><span>CREATES ISSUE</span></div><span class="wf-dot" aria-hidden="true"></span></li>
-            <li><span class="wf-dot" aria-hidden="true"></span><div class="wf-c"><h5>CREATE TICKET</h5><span>SUBJECT + DETAILS</span></div></li>
-            <li><div class="wf-c"><h5>ADMIN REVIEW</h5><span>CATEGORISE + ASSIGN</span></div><span class="wf-dot" aria-hidden="true"></span></li>
-            <li><span class="wf-dot" aria-hidden="true"></span><div class="wf-c"><h5>TECHNICIAN ASSIGNED</h5><span>OWNERSHIP ACTIVATED</span></div></li>
-            <li><div class="wf-c"><h5>IN PROGRESS</h5><span>SLA TIMER RUNNING</span></div><span class="wf-dot" aria-hidden="true"></span></li>
-            <li><span class="wf-dot" aria-hidden="true"></span><div class="wf-c"><h5>RESOLVED</h5><span>FIX SUBMITTED</span></div></li>
-            <li><div class="wf-c"><h5>EMPLOYEE CONFIRMATION</h5><span>FEEDBACK RECORDED</span></div><span class="wf-dot" aria-hidden="true"></span></li>
-            <li><span class="wf-dot" aria-hidden="true"></span><div class="wf-c"><h5>CLOSED</h5><span>RECORD ARCHIVED</span></div></li>
-          </ol>
+      <!-- WORK / CASE STUDY SECTION -->
+      <section id="work">
+        <div class="work-head">
+          <header class="sec-head" style="margin-bottom: 0">
+            <span class="sh-num">04</span><span class="sh-name">Work — Case Study</span><span class="sh-line"></span>
+          </header>
         </div>
-      </article>
 
-      <!-- 07 TECHNOLOGY -->
-      <article class="panel p-spec">
-        <div class="p-head"><span class="p-num">07</span><span class="p-label">Technology</span><span class="p-rule"></span></div>
-        <dl class="spec">
-          <div class="spec-row rv"><dt>Frontend</dt><dd>React.js <em>BOOTSTRAP / CSS · AXIOS</em></dd></div>
-          <div class="spec-row rv"><dt>API</dt><dd>Django REST Framework <em>REST PIPELINE</em></dd></div>
-          <div class="spec-row rv"><dt>Auth</dt><dd>JWT <em>ADMIN / EMPLOYEE / TECHNICIAN</em></dd></div>
-          <div class="spec-row rv"><dt>Database</dt><dd>PostgreSQL <em>DJANGO ORM</em></dd></div>
-          <div class="spec-row rv"><dt>Email</dt><dd>SMTP Notifications</dd></div>
-          <div class="spec-row rv"><dt>Reporting</dt><dd>Dashboard Analytics · PDF Reports</dd></div>
-          <div class="spec-row rv"><dt>Testing</dt><dd>Postman <em>API ENDPOINTS + WORKFLOWS</em></dd></div>
-        </dl>
-      </article>
-
-      <!-- 08 RESULT (UPGRADED CONSOLE TERMINAL) -->
-      <article class="panel p-result">
-        <div class="p-head"><span class="p-num">08</span><span class="p-label">Result</span><span class="p-rule"></span></div>
-        <div class="p-body">
-          <div>
-            <ul class="impact-list">
-              <li class="rv"><b>R.01</b>Production-grade Django REST API endpoints connected seamlessly with React component views.</li>
-              <li class="rv"><b>R.02</b>Implemented robust JWT session tokens, scoped permissions, and indexed PostgreSQL relationships.</li>
-              <li class="rv"><b>R.03</b>Built a complete role-based IT Service Desk with full end-to-end SLA tracking and audit logging.</li>
-            </ul>
-          </div>
-          
-          <div class="mock rv" aria-hidden="true">
-            <div class="mock-top">
-              <span class="mt-dots"><i></i><i></i><i></i></span>
-              <span class="mono">IT SERVICE DESK // ADMIN CONSOLE</span>
-              <span class="mono mt-live"><i></i>CONNECTED</span>
-            </div>
-            <div class="mock-body">
-              <div class="mock-nav">
-                <span class="on">DASHBOARD</span>
-                <span>TICKETS</span>
-                <span>SLA WATCH</span>
-                <span>ASSETS</span>
-                <span>AUDIT LOG</span>
+        <div class="case-pin" id="casePin">
+          <div class="case-track" id="caseTrack">
+            <!-- 01 INTRO -->
+            <article class="panel p-intro">
+              <div class="p-head">
+                <span class="p-num">01</span><span class="p-label">Intro</span><span class="p-rule"></span>
               </div>
-              <div class="mock-main">
-                <div class="mock-tiles">
-                  <span>TOTAL<b>148</b></span>
-                  <span>PENDING<b>12</b></span>
-                  <span>RESOLVED<b>136</b></span>
-                  <span>SLA<b>99.4%</b></span>
-                </div>
-                <div class="mock-chart" id="mockChart">
-                  <i style="--h:34%"></i><i class="a" style="--h:58%"></i><i style="--h:42%"></i><i style="--h:70%"></i>
-                  <i class="a" style="--h:50%"></i><i style="--h:76%"></i><i style="--h:40%"></i><i class="a" style="--h:86%"></i>
-                  <i style="--h:62%"></i><i style="--h:48%"></i><i class="a" style="--h:75%"></i><i style="--h:56%"></i>
-                </div>
-                <div class="mock-rows">
-                  <div class="mrow">
-                    <span class="mono mr-id">#TK-8942 · POSTGRES DEADLOCK ISSUE</span>
-                    <span class="chip chip-a">HIGH PRIORITY</span>
-                    <span class="mr-bar"><i style="--w:88%"></i></span>
+              <p class="mono cs-kicker rv">FUTURA LABS, KOCHI — DJANGO FULL STACK — AUG 2026</p>
+              <h3>
+                <span class="rv">SMART IT</span><span class="rv">SERVICE DESK</span><span class="serif rv">&amp; Ticket Management System</span>
+              </h3>
+              <p class="cs-sub rv">
+                A role-based IT support platform built end-to-end with Django,
+                Django REST Framework, React and PostgreSQL — where every ticket
+                has a role, an owner, a status and a clock.
+              </p>
+              <div class="cs-meta rv">
+                <div>ROLE<br /><b>Python Full Stack Intern</b></div>
+                <div>BUILT WITH<br /><b>Django · DRF · React · PostgreSQL</b></div>
+                <div>STATUS<br /><b>Delivered — Aug 2026</b></div>
+              </div>
+              <div class="cs-hint" aria-hidden="true">THE CASE PANS SIDEWAYS</div>
+            </article>
+
+            <!-- 02 PROBLEM -->
+            <article class="panel p-problem">
+              <div class="p-head">
+                <span class="p-num">02</span><span class="p-label">The Problem</span><span class="p-rule"></span>
+              </div>
+              <h4 class="p-state rv">
+                Support requests don't fail loudly —
+                <em class="serif">they get lost between roles.</em>
+              </h4>
+              <div class="p-points">
+                <div class="p-point rv">
+                  <b>P.01</b>
+                  <div>
+                    <h5>Three roles, one workflow</h5>
+                    <p>Admin, Employee and Technician each require dedicated portal states without fragmenting collaboration.</p>
                   </div>
-                  <div class="mrow">
-                    <span class="mono mr-id">#TK-8941 · JWT TOKEN EXPIRATION FIX</span>
-                    <span class="chip">IN PROGRESS</span>
-                    <span class="mr-bar"><i style="--w:45%"></i></span>
+                </div>
+                <div class="p-point rv">
+                  <b>P.02</b>
+                  <div>
+                    <h5>Status without visibility</h5>
+                    <p>Once a request is filed, progress must be trackable — ownership and status updates cannot live in inboxes.</p>
                   </div>
-                  <div class="mrow">
-                    <span class="mono mr-id">#TK-8939 · NEW EMPLOYEE ASSET ALLOC</span>
-                    <span class="chip">CLOSED</span>
-                    <span class="mr-bar"><i style="--w:100%"></i></span>
+                </div>
+                <div class="p-point rv">
+                  <b>P.03</b>
+                  <div>
+                    <h5>Time that must be tracked</h5>
+                    <p>Response and resolution windows require explicit SLA timers rather than loose estimates.</p>
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
+            </article>
 
+            <!-- 03 SOLUTION -->
+            <article class="panel p-solution">
+              <div class="p-head">
+                <span class="p-num">03</span><span class="p-label">The Solution</span><span class="p-rule"></span>
+              </div>
+              <h4 class="p-state rv">
+                A unified platform where every ticket has a role, an owner, a status — <em class="serif">and a clock.</em>
+              </h4>
+              <div class="p-points">
+                <div class="p-point rv">
+                  <b>S.01</b>
+                  <div>
+                    <h5>Role-based access with JWT authentication</h5>
+                    <p>Secure token-based sessions across Admin, Employee and Technician roles.</p>
+                  </div>
+                </div>
+                <div class="p-point rv">
+                  <b>S.02</b>
+                  <div>
+                    <h5>React frontend over Django REST APIs</h5>
+                    <p>State hydration handled via Axios into a fast responsive interface.</p>
+                  </div>
+                </div>
+                <div class="p-point rv">
+                  <b>S.03</b>
+                  <div>
+                    <h5>PostgreSQL as single source of truth</h5>
+                    <p>Relational consistency enforced through Django ORM across tickets, assets and audit logs.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- 04 ARCHITECTURE -->
+            <article class="panel p-arch">
+              <div class="p-head">
+                <span class="p-num">04</span><span class="p-label">Architecture</span><span class="p-rule"></span>
+              </div>
+              <svg class="arch rv" viewBox="0 0 860 440" role="img" aria-label="System architecture diagram">
+                <g fill="none">
+                  <path class="edge" d="M250 100 H340" />
+                  <path class="edge flow" d="M250 100 H340" />
+                  <path class="edge" d="M580 100 H660" />
+                  <path class="edge flow" d="M580 100 H660" />
+                  <path class="edge" d="M460 132 V210" />
+                  <path class="edge flow" d="M460 132 V210" />
+                  <path class="edge" d="M460 258 V320" />
+                  <path class="edge flow" d="M460 258 V320" />
+                  <path class="edge" d="M580 344 H660" />
+                  <path class="edge flow" d="M580 344 H660" />
+                </g>
+                <text class="arch-edge-label" x="295" y="88">REST · AXIOS</text>
+                <text class="arch-edge-label" x="620" y="88">SMTP</text>
+                <text class="arch-edge-label" x="474" y="176">GUARDS</text>
+                <text class="arch-edge-label" x="474" y="294">MODELS</text>
+                <text class="arch-edge-label" x="620" y="332">SQL</text>
+                <g class="arch-node">
+                  <rect x="60" y="68" width="190" height="64" rx="6" />
+                  <text x="155" y="102">REACT FRONTEND</text>
+                  <text class="n2" x="155" y="119">BOOTSTRAP / CSS · AXIOS</text>
+                </g>
+                <g class="arch-node">
+                  <rect x="340" y="68" width="240" height="64" rx="6" />
+                  <text x="460" y="102">DJANGO REST API</text>
+                  <text class="n2" x="460" y="119">DJANGO REST FRAMEWORK</text>
+                </g>
+                <g class="arch-node">
+                  <rect x="660" y="68" width="150" height="64" rx="6" />
+                  <text x="735" y="102">SMTP EMAIL</text>
+                  <text class="n2" x="735" y="119">NOTIFICATIONS</text>
+                </g>
+                <g class="arch-node">
+                  <rect x="340" y="210" width="240" height="48" rx="6" />
+                  <text x="460" y="239">JWT AUTH</text>
+                </g>
+                <g class="arch-node">
+                  <rect x="340" y="320" width="240" height="48" rx="6" />
+                  <text x="460" y="349">DJANGO ORM</text>
+                </g>
+                <g class="arch-node">
+                  <rect x="660" y="320" width="150" height="48" rx="6" />
+                  <text x="735" y="349">POSTGRESQL</text>
+                </g>
+              </svg>
+              <p class="arch-cap rv">JWT-SECURED REST LAYER BETWEEN REACT AND POSTGRESQL — SMTP NOTIFICATIONS</p>
+            </article>
+
+            <!-- 05 FEATURES -->
+            <article class="panel p-features">
+              <div class="p-head">
+                <span class="p-num">05</span><span class="p-label">Features</span><span class="p-rule"></span>
+              </div>
+              <div class="feat-list">
+                <div class="feat rv">
+                  <b>F.01</b>
+                  <svg viewBox="0 0 24 24">
+                    <path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z" />
+                    <path d="M13 5v2M13 11v2M13 17v2" />
+                  </svg>
+                  <div>
+                    <h5>Ticket Management</h5>
+                    <p>Assignment, queue priority and status updates across authenticated roles.</p>
+                  </div>
+                </div>
+                <div class="feat rv">
+                  <b>F.02</b>
+                  <svg viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="9" />
+                    <path d="M12 7v5l3 2" />
+                  </svg>
+                  <div>
+                    <h5>SLA Tracking</h5>
+                    <p>Enforces response and resolution milestones based on priority tiers.</p>
+                  </div>
+                </div>
+                <div class="feat feat-email rv">
+                  <b>F.03</b>
+                  <svg viewBox="0 0 24 24">
+                    <rect x="3" y="5" width="18" height="14" rx="2" />
+                    <path d="M3 7l9 6 9-6" />
+                  </svg>
+                  <div>
+                    <h5>Email Notifications <span class="smtp-pill">SMTP TRIGGER</span></h5>
+                    <p>Automated transactional alerts fired on ticket creation, technician assignment, status escalation, and closure confirmation.</p>
+                  </div>
+                </div>
+                <div class="feat rv">
+                  <b>F.04</b>
+                  <svg viewBox="0 0 24 24">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2Z" />
+                  </svg>
+                  <div>
+                    <h5>Feedback Validation</h5>
+                    <p>Employees acknowledge and verify ticket resolution before closing.</p>
+                  </div>
+                </div>
+                <div class="feat rv">
+                  <b>F.05</b>
+                  <svg viewBox="0 0 24 24">
+                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                  </svg>
+                  <div>
+                    <h5>Knowledge Base</h5>
+                    <p>Self-service documentation portal for troubleshooting recurring issues.</p>
+                  </div>
+                </div>
+                <div class="feat rv">
+                  <b>F.06</b>
+                  <svg viewBox="0 0 24 24">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z" />
+                    <path d="M14 2v6h6" />
+                  </svg>
+                  <div>
+                    <h5>PDF Reports</h5>
+                    <p>Structured audit trails exported on demand for operational reviews.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- 06 WORKFLOW -->
+            <article class="panel p-workflow">
+              <div class="p-head">
+                <span class="p-num">06</span><span class="p-label">Ticket Workflow</span><span class="p-rule"></span>
+              </div>
+              <div class="wf-wrap">
+                <ol class="wf" id="wf">
+                  <div class="wf-line" aria-hidden="true">
+                    <div class="wf-fill" id="wfFill"></div>
+                  </div>
+                  <li>
+                    <div class="wf-c">
+                      <h5>EMPLOYEE</h5>
+                      <span>CREATES ISSUE</span>
+                    </div>
+                    <span class="wf-dot" aria-hidden="true"></span>
+                  </li>
+                  <li>
+                    <span class="wf-dot" aria-hidden="true"></span>
+                    <div class="wf-c">
+                      <h5>CREATE TICKET</h5>
+                      <span>SUBJECT + DETAILS</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="wf-c">
+                      <h5>ADMIN REVIEW</h5>
+                      <span>CATEGORISE + ASSIGN</span>
+                    </div>
+                    <span class="wf-dot" aria-hidden="true"></span>
+                  </li>
+                  <li>
+                    <span class="wf-dot" aria-hidden="true"></span>
+                    <div class="wf-c">
+                      <h5>TECHNICIAN ASSIGNED</h5>
+                      <span>OWNERSHIP ACTIVATED</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="wf-c">
+                      <h5>IN PROGRESS</h5>
+                      <span>SLA TIMER RUNNING</span>
+                    </div>
+                    <span class="wf-dot" aria-hidden="true"></span>
+                  </li>
+                  <li>
+                    <span class="wf-dot" aria-hidden="true"></span>
+                    <div class="wf-c">
+                      <h5>RESOLVED</h5>
+                      <span>FIX SUBMITTED</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="wf-c">
+                      <h5>EMPLOYEE CONFIRMATION</h5>
+                      <span>FEEDBACK RECORDED</span>
+                    </div>
+                    <span class="wf-dot" aria-hidden="true"></span>
+                  </li>
+                  <li>
+                    <span class="wf-dot" aria-hidden="true"></span>
+                    <div class="wf-c">
+                      <h5>CLOSED</h5>
+                      <span>RECORD ARCHIVED</span>
+                    </div>
+                  </li>
+                </ol>
+              </div>
+            </article>
+
+            <!-- 07 TECHNOLOGY -->
+            <article class="panel p-spec">
+              <div class="p-head">
+                <span class="p-num">07</span><span class="p-label">Technology</span><span class="p-rule"></span>
+              </div>
+              <dl class="spec">
+                <div class="spec-row rv">
+                  <dt>Frontend</dt>
+                  <dd>React.js <em>BOOTSTRAP / CSS · AXIOS</em></dd>
+                </div>
+                <div class="spec-row rv">
+                  <dt>API</dt>
+                  <dd>Django REST Framework <em>REST PIPELINE</em></dd>
+                </div>
+                <div class="spec-row rv">
+                  <dt>Auth</dt>
+                  <dd>JWT <em>ADMIN / EMPLOYEE / TECHNICIAN</em></dd>
+                </div>
+                <div class="spec-row rv">
+                  <dt>Database</dt>
+                  <dd>PostgreSQL <em>DJANGO ORM</em></dd>
+                </div>
+                <div class="spec-row rv">
+                  <dt>Email</dt>
+                  <dd>SMTP Notifications</dd>
+                </div>
+                <div class="spec-row rv">
+                  <dt>Reporting</dt>
+                  <dd>Dashboard Analytics · PDF Reports</dd>
+                </div>
+                <div class="spec-row rv">
+                  <dt>Testing</dt>
+                  <dd>Postman <em>API ENDPOINTS + WORKFLOWS</em></dd>
+                </div>
+              </dl>
+            </article>
+
+            <!-- 08 RESULT -->
+            <article class="panel p-result">
+              <div class="p-head">
+                <span class="p-num">08</span><span class="p-label">Result</span><span class="p-rule"></span>
+              </div>
+              <div class="p-body">
+                <div>
+                  <ul class="impact-list">
+                    <li class="rv">
+                      <b>R.01</b>Production-grade Django REST API endpoints connected seamlessly with React component views.
+                    </li>
+                    <li class="rv">
+                      <b>R.02</b>Implemented robust JWT session tokens, scoped permissions, and indexed PostgreSQL relationships.
+                    </li>
+                    <li class="rv">
+                      <b>R.03</b>Built a complete role-based IT Service Desk with full end-to-end SLA tracking and audit logging.
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="mock rv" aria-hidden="true">
+                  <div class="mock-top">
+                    <span class="mt-dots"><i></i><i></i><i></i></span>
+                    <span class="mono">IT SERVICE DESK // ADMIN CONSOLE</span>
+                    <span class="mono mt-live"><i></i>CONNECTED</span>
+                  </div>
+                  <div class="mock-body">
+                    <div class="mock-nav">
+                      <span class="on">DASHBOARD</span>
+                      <span>TICKETS</span>
+                      <span>SLA WATCH</span>
+                      <span>ASSETS</span>
+                      <span>AUDIT LOG</span>
+                    </div>
+                    <div class="mock-main">
+                      <div class="mock-tiles">
+                        <span>TOTAL<b>148</b></span>
+                        <span>PENDING<b>12</b></span>
+                        <span>RESOLVED<b>136</b></span>
+                        <span>SLA<b>99.4%</b></span>
+                      </div>
+                      <div class="mock-chart" id="mockChart">
+                        <i style="--h: 34%"></i>
+                        <i class="a" style="--h: 58%"></i>
+                        <i style="--h: 42%"></i><i style="--h: 70%"></i>
+                        <i class="a" style="--h: 50%"></i>
+                        <i style="--h: 76%"></i><i style="--h: 40%"></i>
+                        <i class="a" style="--h: 86%"></i>
+                        <i style="--h: 62%"></i><i style="--h: 48%"></i>
+                        <i class="a" style="--h: 75%"></i>
+                        <i style="--h: 56%"></i>
+                      </div>
+                      <div class="mock-rows">
+                        <div class="mrow">
+                          <span class="mono mr-id">#TK-8942 · POSTGRES DEADLOCK ISSUE</span>
+                          <span class="chip chip-a">HIGH PRIORITY</span>
+                          <span class="mr-bar"><i style="--w: 88%"></i></span>
+                        </div>
+                        <div class="mrow">
+                          <span class="mono mr-id">#TK-8941 · JWT TOKEN EXPIRATION FIX</span>
+                          <span class="chip">IN PROGRESS</span>
+                          <span class="mr-bar"><i style="--w: 45%"></i></span>
+                        </div>
+                        <div class="mrow">
+                          <span class="mono mr-id">#TK-8939 · NEW EMPLOYEE ASSET ALLOC</span>
+                          <span class="chip">CLOSED</span>
+                          <span class="mr-bar"><i style="--w: 100%"></i></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="case-ui" aria-hidden="true">
+            <span id="caseIdx">01</span>
+            <span class="case-bar"><i id="caseFill"></i></span><span>08</span>
+          </div>
         </div>
-      </article>
 
-    </div>
-    <div class="case-ui" aria-hidden="true"><span id="caseIdx">01</span><span class="case-bar"><i id="caseFill"></i></span><span>08</span></div>
-  </div>
+        <!-- OTHER PROJECTS -->
+        <div class="other">
+          <!-- PROJECT 02: RAILWAY RESERVATION SYSTEM -->
+          <article class="proj" id="projRail">
+            <div class="proj-head">
+              <span class="proj-num">PROJECT / 02 — TRANSACTIONAL DATABASE SYSTEM</span>
+              <span class="proj-meta" style="color: var(--accent)">STATUS // DEPARTED</span>
+            </div>
+            <h3 class="proj-title">
+              RAILWAY <span class="serif">Reservation System</span>
+            </h3>
 
-  <!-- OTHER PROJECTS -->
-  <div class="other">
-    <!-- PROJECT 02: RAILWAY RESERVATION SYSTEM -->
-    <article class="proj" id="projRail">
-      <div class="proj-head">
-        <span class="proj-num">PROJECT / 02 — TRANSACTIONAL DATABASE SYSTEM</span>
-        <span class="proj-meta" style="color: var(--accent);">STATUS // DEPARTED</span>
-      </div>
-      <h3 class="proj-title">RAILWAY <span class="serif">Reservation System</span></h3>
-
-      <div class="route" aria-hidden="true">
-        <div class="rline"></div>
-        <div class="rline-progress" id="railProg"></div>
-        <div id="trainDot"></div>
-        <div class="station" style="left: 0%;"><i></i><span class="s-code">ERS</span><span class="s-name">KOCHI</span></div>
-        <div class="station" style="left: 25%;"><i></i><span class="s-code">TCR</span><span class="s-name">THRISSUR</span></div>
-        <div class="station" style="left: 50%;"><i></i><span class="s-code">PGT</span><span class="s-name">PALAKKAD</span></div>
-        <div class="station" style="left: 75%;"><i></i><span class="s-code">CBE</span><span class="s-name">COIMBATORE</span></div>
-        <div class="station" style="left: calc(100% - 2px);"><i></i><span class="s-code">MAS</span><span class="s-name">CHENNAI</span></div>
-      </div>
-
-      <div class="pr-grid">
-        <div>
-          <p class="proj-desc">A full-scale railway reservation flow engineered around strict transactional database integrity — resolving concurrency challenges during live coach booking, seat inventory matrix allocation, automated waiting list escalations, and ticket cancellation audits.</p>
-          <div class="proj-tech">
-            <span>PYTHON</span>
-            <span>DJANGO ORM</span>
-            <span>POSTGRESQL</span>
-            <span>ATOMIC TRANSACTIONS</span>
-            <span>JAVASCRIPT</span>
-          </div>
-          
-          <div class="ticket-stub">
-            <div class="ts-main">
-              <span class="mono">AUTHENTICATED BOARDING PASS // SYSTEM GENERATED</span>
-              <b>PNR 4265-8821-90</b>
-              <div class="ts-details">
-                <span>TRAIN: 12678 / INTERCITY EXP</span>
-                <span>ORIGIN: ERS ➔ MAS</span>
+            <div class="route" aria-hidden="true">
+              <div class="rline"></div>
+              <div class="rline-progress" id="railProg"></div>
+              <div id="trainDot"></div>
+              <div class="station" style="left: 0%">
+                <i></i><span class="s-code">ERS</span><span class="s-name">KOCHI</span>
+              </div>
+              <div class="station" style="left: 25%">
+                <i></i><span class="s-code">TCR</span><span class="s-name">THRISSUR</span>
+              </div>
+              <div class="station" style="left: 50%">
+                <i></i><span class="s-code">PGT</span><span class="s-name">PALAKKAD</span>
+              </div>
+              <div class="station" style="left: 75%">
+                <i></i><span class="s-code">CBE</span><span class="s-name">COIMBATORE</span>
+              </div>
+              <div class="station" style="left: calc(100% - 2px)">
+                <i></i><span class="s-code">MAS</span><span class="s-name">CHENNAI</span>
               </div>
             </div>
-            <div class="ts-side">
-              <span>CLASS</span><b>3A</b>
-              <span>COACH</span><b>B-2</b>
-              <span>BERTH</span><b>42 (MB)</b>
+
+            <div class="pr-grid">
+              <div>
+                <p class="proj-desc">
+                  A full-scale railway reservation flow engineered around strict
+                  transactional database integrity — resolving concurrency
+                  challenges during live coach booking, seat inventory matrix
+                  allocation, automated waiting list escalations, and ticket
+                  cancellation audits.
+                </p>
+                <div class="proj-tech">
+                  <span>PYTHON</span>
+                  <span>DJANGO ORM</span>
+                  <span>POSTGRESQL</span>
+                  <span>ATOMIC TRANSACTIONS</span>
+                  <span>JAVASCRIPT</span>
+                </div>
+
+                <div class="ticket-stub">
+                  <div class="ts-main">
+                    <span class="mono">AUTHENTICATED BOARDING PASS // SYSTEM GENERATED</span>
+                    <b>PNR 4265-8821-90</b>
+                    <div class="ts-details">
+                      <span>TRAIN: 12678 / INTERCITY EXP</span>
+                      <span>ORIGIN: ERS ➔ MAS</span>
+                    </div>
+                  </div>
+                  <div class="ts-side">
+                    <span>CLASS</span><b>3A</b> <span>COACH</span><b>B-2</b>
+                    <span>BERTH</span><b>42 (MB)</b>
+                  </div>
+                </div>
+              </div>
+
+              <figure class="r-img rail-video-wrap" data-cursor="VIEW PROJECT">
+                <video
+                  id="railVideo"
+                  class="rail-video"
+                  autoplay
+                  muted
+                  loop
+                  playsinline
+                  preload="metadata"
+                  poster="./assets/images/railway-poster.jpg"
+                  aria-label="Railway Reservation System project preview"
+                >
+                  <source src="./assets/images/Django Project.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+
+                <div class="rail-curve rail-curve-1"></div>
+                <div class="rail-curve rail-curve-2"></div>
+                <div class="video-overlay"></div>
+
+                <div class="video-badge">
+                  <span class="video-dot"></span>
+                  LIVE PROJECT PREVIEW
+                </div>
+              </figure>
             </div>
+          </article>
+
+          <!-- PROJECT 03: STOCK MARKET PREDICTION & TRACKER -->
+          <article class="proj" id="projStock" style="border-bottom: none">
+            <div class="proj-head">
+              <span class="proj-num">PROJECT / 03 — DATA INTELLIGENCE & FORECASTING</span>
+              <span class="proj-meta" style="color: var(--accent)">REALTIME SIMULATION // LIVE</span>
+            </div>
+            <h3 class="proj-title">
+              STOCK MARKET <span class="serif">Prediction &amp; Tracker</span>
+            </h3>
+            <p class="proj-desc">
+              A comprehensive financial monitoring suite featuring automated
+              historical data ingestion, statistical trend forecast projections,
+              and an interactive real-time dashboard engineered with sub-second
+              chart rendering.
+            </p>
+            <div class="proj-tech">
+              <span>PYTHON</span>
+              <span>DJANGO REST</span>
+              <span>REACT.JS</span>
+              <span>PREDICTIVE MODELS</span>
+              <span>CHART VISUALS</span>
+            </div>
+
+            <div class="chart-wrap">
+              <svg id="stockSvg" viewBox="0 0 900 380" role="img" aria-label="Market trend chart with projection">
+                <defs>
+                  <linearGradient id="chartGlow" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="var(--accent)" stop-opacity="0.25" />
+                    <stop offset="100%" stop-color="var(--accent)" stop-opacity="0" />
+                  </linearGradient>
+                </defs>
+                <path class="sg" d="M0,76 H900 M0,152 H900 M0,228 H900 M0,304 H900" />
+                <path class="sg" d="M112,0 V380 M225,0 V380 M337,0 V380 M450,0 V380 M562,0 V380 M675,0 V380 M787,0 V380" />
+                <text class="sl" x="12" y="70">24,850.00</text>
+                <text class="sl" x="12" y="146">24,620.00</text>
+                <text class="sl" x="12" y="222">24,380.00</text>
+                <text class="sl" x="12" y="298">24,100.00</text>
+
+                <path
+                  id="stockAreaF"
+                  fill="url(#chartGlow)"
+                  d="M30,318 L100,286 L170,300 L240,252 L310,266 L380,214 L450,230 L520,176 L590,192 L660,128 L730,142 L800,88 L860,58 L860,372 L30,372 Z"
+                />
+                <path
+                  id="stockLine"
+                  d="M30,318 L100,286 L170,300 L240,252 L310,266 L380,214 L450,230 L520,176 L590,192 L660,128 L730,142 L800,88 L860,58"
+                />
+                <path id="stockProj" d="M860,58 L898,38" />
+
+                <circle class="sp-pt" cx="240" cy="252" r="4" />
+                <circle class="sp-pt" cx="450" cy="230" r="4" />
+                <circle class="sp-pt" cx="660" cy="128" r="4" />
+                <circle class="sp-pt" cx="860" cy="58" r="4" />
+                <text class="sl" x="60" y="368">09:15 AM</text>
+                <text class="sl" x="430" y="368">12:30 PM</text>
+                <text class="sl" x="812" y="368">03:30 PM</text>
+              </svg>
+
+              <div class="tick-col" aria-hidden="true">
+                <div class="tk">
+                  <span class="mono">NIFTY 50</span><span class="tk-v" data-tk="24">—</span>
+                </div>
+                <div class="tk">
+                  <span class="mono">SENSEX</span><span class="tk-v" data-tk="81">—</span>
+                </div>
+                <div class="tk">
+                  <span class="mono">BANK NIFTY</span><span class="tk-v" data-tk="51">—</span>
+                </div>
+                <div class="tk">
+                  <span class="mono">INFOSYS</span><span class="tk-v" data-tk="1">—</span>
+                </div>
+              </div>
+              <p class="mono feed-note">PREDICTIVE TREND ENGINE // CONFIDENCE SCORE: 94.2%</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- CERTIFICATIONS ARCHIVE -->
+      <section id="certs" tabindex="-1" aria-label="Certification archive">
+        <div class="sec-head" style="padding: 9vh 5vw 4vh; max-width: 1100px; margin: 0 auto">
+          <p class="mono sec-index" style="margin-bottom: 14px">
+            <span class="acc" style="color: var(--accent)">05 /</span> CREDENTIALS
+          </p>
+          <h2 class="sec-title" style="font-family: var(--f-d); font-size: clamp(30px, 5.5vw, 64px); line-height: 0.96">
+            CERTIFICATION <span class="serif">archive.</span>
+          </h2>
+        </div>
+
+        <div class="cert-list">
+          <!-- ARC-001: PYTHON DJANGO FULL STACK (FUTURA LABS) -->
+          <article class="doc" data-cursor="OPEN FILE">
+            <button class="doc-head" aria-expanded="false">
+              <span class="d-no">ARCH-001</span>
+              <span class="d-title">PYTHON DJANGO FULL STACK</span>
+              <span class="d-org">FUTURA LABS</span>
+              <span class="d-year">2026</span>
+              <span class="d-plus" aria-hidden="true"></span>
+            </button>
+            <div class="doc-body">
+              <div class="doc-inner">
+                <div>
+                  <div class="doc-grid">
+                    <div><h4>CREDENTIAL</h4><p>Python Django Internship</p></div>
+                    <div><h4>ORGANIZATION</h4><p>Futura Labs — Kochi</p></div>
+                    <div><h4>STATUS</h4><p style="color: var(--accent)">VERIFIED RECORD</p></div>
+                    <div><h4>DOMAINS</h4><p>Django REST, React, PostgreSQL &amp; JWT</p></div>
+                  </div>
+                  <div class="stamp-wrap">
+                    <svg class="stamp" viewBox="0 0 120 120" aria-hidden="true">
+                      <g class="st-rot">
+                        <defs>
+                          <path id="cp1" d="M60,60 m-42,0 a42,42 0 1,1 84,0 a42,42 0 1,1 -84,0" />
+                        </defs>
+                        <text><textPath href="#cp1">FUTURA LABS · VERIFIED CREDENTIAL · COMPLETE ·</textPath></text>
+                      </g>
+                      <circle cx="60" cy="60" r="54" />
+                      <circle cx="60" cy="60" r="30" />
+                      <path class="st-check" d="M50,60 l7,8 l14,-16" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- ARC-002: REACT.JS FOR ECOMMERCE APPS (UDEMY) -->
+          <article class="doc" data-cursor="OPEN FILE">
+            <button class="doc-head" aria-expanded="false">
+              <span class="d-no">ARCH-002</span>
+              <span class="d-title">REACT.JS FOR ECOMMERCE APPS</span>
+              <span class="d-org">UDEMY</span>
+              <span class="d-year">2024</span>
+              <span class="d-plus" aria-hidden="true"></span>
+            </button>
+            <div class="doc-body">
+              <div class="doc-inner">
+                <div>
+                  <div class="doc-grid">
+                    <div><h4>CREDENTIAL</h4><p>Advanced React UI Architecture</p></div>
+                    <div><h4>ORGANIZATION</h4><p>Udemy Academy</p></div>
+                    <div><h4>STATUS</h4><p style="color: var(--accent)">VERIFIED RECORD</p></div>
+                    <div><h4>DOMAINS</h4><p>Hooks, State Management, Axios &amp; Dynamic UI</p></div>
+                  </div>
+                  <div class="stamp-wrap">
+                    <svg class="stamp" viewBox="0 0 120 120" aria-hidden="true">
+                      <g class="st-rot">
+                        <defs>
+                          <path id="cp2" d="M60,60 m-42,0 a42,42 0 1,1 84,0 a42,42 0 1,1 -84,0" />
+                        </defs>
+                        <text><textPath href="#cp2">UDEMY · REACT.JS CERTIFIED · ECOMMERCE ·</textPath></text>
+                      </g>
+                      <circle cx="60" cy="60" r="54" />
+                      <circle cx="60" cy="60" r="30" />
+                      <path class="st-check" d="M50,60 l7,8 l14,-16" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- ARC-003: THE COMPLETE FULL STACK BOOTCAMP (UDEMY) -->
+          <article class="doc" data-cursor="OPEN FILE">
+            <button class="doc-head" aria-expanded="false">
+              <span class="d-no">ARCH-003</span>
+              <span class="d-title">THE COMPLETE FULL STACK BOOTCAMP</span>
+              <span class="d-org">UDEMY</span>
+              <span class="d-year">2024</span>
+              <span class="d-plus" aria-hidden="true"></span>
+            </button>
+            <div class="doc-body">
+              <div class="doc-inner">
+                <div>
+                  <div class="doc-grid">
+                    <div><h4>CREDENTIAL</h4><p>Certified Full Stack Web Track</p></div>
+                    <div><h4>ORGANIZATION</h4><p>Udemy Academy</p></div>
+                    <div><h4>STATUS</h4><p style="color: var(--accent)">VERIFIED RECORD</p></div>
+                    <div><h4>DOMAINS</h4><p>Frontend Foundations, Node.js, Python &amp; Databases</p></div>
+                  </div>
+                  <div class="stamp-wrap">
+                    <svg class="stamp" viewBox="0 0 120 120" aria-hidden="true">
+                      <g class="st-rot">
+                        <defs>
+                          <path id="cp3" d="M60,60 m-42,0 a42,42 0 1,1 84,0 a42,42 0 1,1 -84,0" />
+                        </defs>
+                        <text><textPath href="#cp3">UDEMY · VERIFIED CREDENTIAL · COMPLETE ·</textPath></text>
+                      </g>
+                      <circle cx="60" cy="60" r="54" />
+                      <circle cx="60" cy="60" r="30" />
+                      <path class="st-check" d="M50,60 l7,8 l14,-16" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- ARC-004: AI & MACHINE LEARNING INTERNSHIP (NEURAL TRANSFORMERS) -->
+          <article class="doc" data-cursor="OPEN FILE">
+            <button class="doc-head" aria-expanded="false">
+              <span class="d-no">ARCH-004</span>
+              <span class="d-title">AI &amp; MACHINE LEARNING INTERNSHIP</span>
+              <span class="d-org">NEURAL TRANSFORMERS AI</span>
+              <span class="d-year">2024</span>
+              <span class="d-plus" aria-hidden="true"></span>
+            </button>
+            <div class="doc-body">
+              <div class="doc-inner">
+                <div>
+                  <div class="doc-grid">
+                    <div><h4>CREDENTIAL</h4><p>Practical Internship Completion</p></div>
+                    <div><h4>ORGANIZATION</h4><p>Neural Transformers AI — Chennai</p></div>
+                    <div><h4>STATUS</h4><p style="color: var(--accent)">COMPLETED &amp; VERIFIED</p></div>
+                    <div><h4>DOMAINS</h4><p>Model Training, Data Preprocessing &amp; Pipelines</p></div>
+                  </div>
+                  <div class="stamp-wrap">
+                    <svg class="stamp" viewBox="0 0 120 120" aria-hidden="true">
+                      <g class="st-rot">
+                        <defs>
+                          <path id="cp4" d="M60,60 m-42,0 a42,42 0 1,1 84,0 a42,42 0 1,1 -84,0" />
+                        </defs>
+                        <text><textPath href="#cp4">NEURAL TRANSFORMERS · AI &amp; ML · CHENNAI ·</textPath></text>
+                      </g>
+                      <circle cx="60" cy="60" r="54" />
+                      <circle cx="60" cy="60" r="30" />
+                      <path class="st-check" d="M50,60 l7,8 l14,-16" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- CONTACT SECTION -->
+      <section class="sec" id="contact">
+        <header class="sec-head">
+          <span class="sh-num">06</span><span class="sh-name">Contact — Signal</span><span class="sh-line"></span>
+        </header>
+        <h2 class="contact-title">
+          <span class="ct-l mask"><span>LET'S</span></span>
+          <span class="ct-l mask"><span class="ct-out">BUILD</span></span>
+          <span class="ct-l mask"><span class="ct-serif">something.</span></span>
+        </h2>
+        <p class="contact-sub rv">
+          Have a role, an engineering challenge, or an enterprise application to design? Transmit a signal below.
+        </p>
+        <div class="contact-ctas">
+          <a class="btn magnetic" href="mailto:thameessyed2743@gmail.com">
+            <span>Email</span><svg viewBox="0 0 24 24"><path d="M7 17L17 7M8 7h9v9" /></svg>
+          </a>
+          <a class="btn magnetic" href="https://linkedin.com/in/syedthamees2743" target="_blank" rel="noopener">
+            <span>LinkedIn</span><svg viewBox="0 0 24 24"><path d="M7 17L17 7M8 7h9v9" /></svg>
+          </a>
+          <a class="btn magnetic" href="tel:+917092960618">
+            <span>Phone</span><svg viewBox="0 0 24 24"><path d="M7 17L17 7M8 7h9v9" /></svg>
+          </a>
+        </div>
+        <div class="contact-meta mono">
+          <span>KOCHI · KERALA · INDIA</span>
+          <span>THAMEESSYED2743@GMAIL.COM</span>
+          <span>+91 70929 60618</span>
+        </div>
+      </section>
+    </main>
+
+    <!-- FINALE SECTION -->
+    <section id="finale" aria-label="Closing">
+      <div class="finale-stage">
+        <div class="bar bar-top" aria-hidden="true"></div>
+        <div class="bar bar-bottom" aria-hidden="true"></div>
+        <figure class="finale-portrait">
+          <img
+            id="finaleImg"
+            src="https://picsum.photos/seed/st-portrait/640/800.jpg"
+            width="640"
+            height="800"
+            loading="lazy"
+            alt=""
+          />
+        </figure>
+        <div class="finale-type">
+          <p class="ft-thanks">THANK YOU FOR VISITING</p>
+          <h2 class="ft-name">SYED<br />THAMEESUDEEN</h2>
+          <p class="ft-role">PYTHON DJANGO FULL STACK DEVELOPER — KOCHI</p>
+          <div class="finale-social">
+            <a href="mailto:thameessyed2743@gmail.com">EMAIL</a>
+            <a href="https://linkedin.com/in/syedthamees2743" target="_blank" rel="noopener">LINKEDIN</a>
+            <a href="tel:+917092960618">PHONE</a>
           </div>
         </div>
-        
-        <figure class="r-img rail-video-wrap" data-cursor="VIEW PROJECT">
-
-  <video
-    id="railVideo"
-    class="rail-video"
-    autoplay
-    muted
-    loop
-    playsinline
-    preload="metadata"
-    poster="./assets/images/railway-poster.jpg"
-    aria-label="Railway Reservation System project preview"
-  >
-    <source
-      src="./assets/images/Django Project.mp4"
-      type="video/mp4"
-    >
-    Your browser does not support the video tag.
-  </video>
-
-  <!-- Animated curve layer -->
-  <div class="rail-curve rail-curve-1"></div>
-  <div class="rail-curve rail-curve-2"></div>
-
-  <!-- Dark cinematic overlay -->
-  <div class="video-overlay"></div>
-
-  <!-- Live badge -->
-  <div class="video-badge">
-    <span class="video-dot"></span>
-    LIVE PROJECT PREVIEW
-  </div>
-
-</figure>
+        <footer class="footer">
+          <span>© 2026 SYED THAMEESUDEEN — KOCHI, KERALA</span>
+          <span>PYTHON · DJANGO · REACT · POSTGRESQL</span>
+          <button type="button" id="toTop">BACK TO TOP ↑</button>
+        </footer>
       </div>
-    </article>
+    </section>
 
-    <!-- PROJECT 03: STOCK MARKET PREDICTION & TRACKER -->
-    <article class="proj" id="projStock" style="border-bottom: none;">
-      <div class="proj-head">
-        <span class="proj-num">PROJECT / 03 — DATA INTELLIGENCE & FORECASTING</span>
-        <span class="proj-meta" style="color: var(--accent);">REALTIME SIMULATION // LIVE</span>
-      </div>
-      <h3 class="proj-title">STOCK MARKET <span class="serif">Prediction &amp; Tracker</span></h3>
-      <p class="proj-desc">A comprehensive financial monitoring suite featuring automated historical data ingestion, statistical trend forecast projections, and an interactive real-time dashboard engineered with sub-second chart rendering.</p>
-      <div class="proj-tech">
-        <span>PYTHON</span>
-        <span>DJANGO REST</span>
-        <span>REACT.JS</span>
-        <span>PREDICTIVE MODELS</span>
-        <span>CHART VISUALS</span>
-      </div>
+    <!-- SCRIPTS & GSAP ENGINE -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+    <script>
+      (function () {
+        "use strict";
+        const qs = (s, c = document) => c.querySelector(s);
+        const qsa = (s, c = document) => [...c.querySelectorAll(s)];
+        const REDUCED = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        const FINE = window.matchMedia("(pointer: fine)").matches;
+        const hasGSAP = typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined";
 
-      <div class="chart-wrap">
-        <svg id="stockSvg" viewBox="0 0 900 380" role="img" aria-label="Market trend chart with projection">
-          <defs>
-            <linearGradient id="chartGlow" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stop-color="var(--accent)" stop-opacity="0.25"/>
-              <stop offset="100%" stop-color="var(--accent)" stop-opacity="0"/>
-            </linearGradient>
-          </defs>
-          <path class="sg" d="M0,76 H900 M0,152 H900 M0,228 H900 M0,304 H900"/>
-          <path class="sg" d="M112,0 V380 M225,0 V380 M337,0 V380 M450,0 V380 M562,0 V380 M675,0 V380 M787,0 V380"/>
-          <text class="sl" x="12" y="70">24,850.00</text><text class="sl" x="12" y="146">24,620.00</text>
-          <text class="sl" x="12" y="222">24,380.00</text><text class="sl" x="12" y="298">24,100.00</text>
-          
-          <path id="stockAreaF" fill="url(#chartGlow)" d="M30,318 L100,286 L170,300 L240,252 L310,266 L380,214 L450,230 L520,176 L590,192 L660,128 L730,142 L800,88 L860,58 L860,372 L30,372 Z"/>
-          <path id="stockLine" d="M30,318 L100,286 L170,300 L240,252 L310,266 L380,214 L450,230 L520,176 L590,192 L660,128 L730,142 L800,88 L860,58"/>
-          <path id="stockProj" d="M860,58 L898,38"/>
-          
-          <circle class="sp-pt" cx="240" cy="252" r="4"/><circle class="sp-pt" cx="450" cy="230" r="4"/>
-          <circle class="sp-pt" cx="660" cy="128" r="4"/><circle class="sp-pt" cx="860" cy="58" r="4"/>
-          <text class="sl" x="60" y="368">09:15 AM</text><text class="sl" x="430" y="368">12:30 PM</text><text class="sl" x="812" y="368">03:30 PM</text>
-        </svg>
-        
-        <div class="tick-col" aria-hidden="true">
-          <div class="tk"><span class="mono">NIFTY 50</span><span class="tk-v" data-tk="24">—</span></div>
-          <div class="tk"><span class="mono">SENSEX</span><span class="tk-v" data-tk="81">—</span></div>
-          <div class="tk"><span class="mono">BANK NIFTY</span><span class="tk-v" data-tk="51">—</span></div>
-          <div class="tk"><span class="mono">INFOSYS</span><span class="tk-v" data-tk="1">—</span></div>
-        </div>
-        <p class="mono feed-note">PREDICTIVE TREND ENGINE // CONFIDENCE SCORE: 94.2%</p>
-      </div>
-    </article>
-  </div>
-</section>
+        if (!hasGSAP) {
+          const i = qs("#intro");
+          if (i) i.remove();
+          return;
+        }
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.defaults({ ease: "power3.out" });
 
-<!-- ================= CERTIFICATIONS ARCHIVE (COMPLETE 4 RECORDS) ================= -->
-<section id="certs" tabindex="-1" aria-label="Certification archive">
-  <div class="sec-head" style="padding: 9vh 5vw 4vh; max-width: 1100px; margin: 0 auto;">
-    <p class="mono sec-index" style="margin-bottom: 14px;"><span class="acc" style="color: var(--accent);">05 /</span> CREDENTIALS</p>
-    <h2 class="sec-title" style="font-family: var(--f-d); font-size: clamp(30px, 5.5vw, 64px); line-height: 0.96;">CERTIFICATION <span class="serif">archive.</span></h2>
-  </div>
+        /* Theme Toggle Engine */
+        const themeToggle = qs("#themeToggle");
+        const themeLabel = qs("#themeLabel");
+        const themeIconPath = qs("#themeIconPath");
 
-  <div class="cert-list">
-    <!-- ARC-001: PYTHON DJANGO FULL STACK (FUTURA LABS) -->
-    <article class="doc" data-cursor="OPEN FILE">
-      <button class="doc-head" aria-expanded="false">
-        <span class="d-no">ARCH-001</span>
-        <span class="d-title">PYTHON DJANGO FULL STACK</span>
-        <span class="d-org">FUTURA LABS</span>
-        <span class="d-year">2026</span>
-        <span class="d-plus" aria-hidden="true"></span>
-      </button>
-      <div class="doc-body"><div class="doc-inner"><div>
-        <div class="doc-grid">
-          <div><h4>CREDENTIAL</h4><p>Python Django Internship</p></div>
-          <div><h4>ORGANIZATION</h4><p>Futura Labs — Kochi</p></div>
-          <div><h4>STATUS</h4><p style="color: var(--accent);">VERIFIED RECORD</p></div>
-          <div><h4>DOMAINS</h4><p>Django REST, React, PostgreSQL &amp; JWT</p></div>
-        </div>
-        <div class="stamp-wrap">
-          <svg class="stamp" viewBox="0 0 120 120" aria-hidden="true">
-            <g class="st-rot">
-              <defs><path id="cp1" d="M60,60 m-42,0 a42,42 0 1,1 84,0 a42,42 0 1,1 -84,0"/></defs>
-              <text><textPath href="#cp1">FUTURA LABS · VERIFIED CREDENTIAL · COMPLETE ·</textPath></text>
-            </g>
-            <circle cx="60" cy="60" r="54"/><circle cx="60" cy="60" r="30"/>
-            <path class="st-check" d="M50,60 l7,8 l14,-16"/>
-          </svg>
-        </div>
-      </div></div></div>
-    </article>
+        const SUN_PATH =
+          "M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z";
+        const MOON_PATH = "M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z";
 
-    <!-- ARC-002: REACT.JS FOR ECOMMERCE APPS (UDEMY) - RESTORED -->
-    <article class="doc" data-cursor="OPEN FILE">
-      <button class="doc-head" aria-expanded="false">
-        <span class="d-no">ARCH-002</span>
-        <span class="d-title">REACT.JS FOR ECOMMERCE APPS</span>
-        <span class="d-org">UDEMY</span>
-        <span class="d-year">2024</span>
-        <span class="d-plus" aria-hidden="true"></span>
-      </button>
-      <div class="doc-body"><div class="doc-inner"><div>
-        <div class="doc-grid">
-          <div><h4>CREDENTIAL</h4><p>Advanced React UI Architecture</p></div>
-          <div><h4>ORGANIZATION</h4><p>Udemy Academy</p></div>
-          <div><h4>STATUS</h4><p style="color: var(--accent);">VERIFIED RECORD</p></div>
-          <div><h4>DOMAINS</h4><p>Hooks, State Management, Axios &amp; Dynamic UI</p></div>
-        </div>
-        <div class="stamp-wrap">
-          <svg class="stamp" viewBox="0 0 120 120" aria-hidden="true">
-            <g class="st-rot">
-              <defs><path id="cp2" d="M60,60 m-42,0 a42,42 0 1,1 84,0 a42,42 0 1,1 -84,0"/></defs>
-              <text><textPath href="#cp2">UDEMY · REACT.JS CERTIFIED · ECOMMERCE ·</textPath></text>
-            </g>
-            <circle cx="60" cy="60" r="54"/><circle cx="60" cy="60" r="30"/>
-            <path class="st-check" d="M50,60 l7,8 l14,-16"/>
-          </svg>
-        </div>
-      </div></div></div>
-    </article>
+        function applyTheme(target) {
+          document.documentElement.setAttribute("data-theme", target);
+          localStorage.setItem("theme", target);
+          if (target === "dark") {
+            themeLabel.textContent = "LIGHT";
+            themeIconPath.setAttribute("d", SUN_PATH);
+          } else {
+            themeLabel.textContent = "DARK";
+            themeIconPath.setAttribute("d", MOON_PATH);
+          }
+        }
 
-    <!-- ARC-003: THE COMPLETE FULL STACK BOOTCAMP (UDEMY) -->
-    <article class="doc" data-cursor="OPEN FILE">
-      <button class="doc-head" aria-expanded="false">
-        <span class="d-no">ARCH-003</span>
-        <span class="d-title">THE COMPLETE FULL STACK BOOTCAMP</span>
-        <span class="d-org">UDEMY</span>
-        <span class="d-year">2024</span>
-        <span class="d-plus" aria-hidden="true"></span>
-      </button>
-      <div class="doc-body"><div class="doc-inner"><div>
-        <div class="doc-grid">
-          <div><h4>CREDENTIAL</h4><p>Certified Full Stack Web Track</p></div>
-          <div><h4>ORGANIZATION</h4><p>Udemy Academy</p></div>
-          <div><h4>STATUS</h4><p style="color: var(--accent);">VERIFIED RECORD</p></div>
-          <div><h4>DOMAINS</h4><p>Frontend Foundations, Node.js, Python &amp; Databases</p></div>
-        </div>
-        <div class="stamp-wrap">
-          <svg class="stamp" viewBox="0 0 120 120" aria-hidden="true">
-            <g class="st-rot">
-              <defs><path id="cp3" d="M60,60 m-42,0 a42,42 0 1,1 84,0 a42,42 0 1,1 -84,0"/></defs>
-              <text><textPath href="#cp3">UDEMY · VERIFIED CREDENTIAL · COMPLETE ·</textPath></text>
-            </g>
-            <circle cx="60" cy="60" r="54"/><circle cx="60" cy="60" r="30"/>
-            <path class="st-check" d="M50,60 l7,8 l14,-16"/>
-          </svg>
-        </div>
-      </div></div></div>
-    </article>
+        const currentTheme = localStorage.getItem("theme") || "dark";
+        applyTheme(currentTheme);
 
-    <!-- ARC-004: AI & MACHINE LEARNING INTERNSHIP (NEURAL TRANSFORMERS) -->
-    <article class="doc" data-cursor="OPEN FILE">
-      <button class="doc-head" aria-expanded="false">
-        <span class="d-no">ARCH-004</span>
-        <span class="d-title">AI &amp; MACHINE LEARNING INTERNSHIP</span>
-        <span class="d-org">NEURAL TRANSFORMERS AI</span>
-        <span class="d-year">2024</span>
-        <span class="d-plus" aria-hidden="true"></span>
-      </button>
-      <div class="doc-body"><div class="doc-inner"><div>
-        <div class="doc-grid">
-          <div><h4>CREDENTIAL</h4><p>Practical Internship Completion</p></div>
-          <div><h4>ORGANIZATION</h4><p>Neural Transformers AI — Chennai</p></div>
-          <div><h4>STATUS</h4><p style="color: var(--accent);">COMPLETED &amp; VERIFIED</p></div>
-          <div><h4>DOMAINS</h4><p>Model Training, Data Preprocessing &amp; Pipelines</p></div>
-        </div>
-        <div class="stamp-wrap">
-          <svg class="stamp" viewBox="0 0 120 120" aria-hidden="true">
-            <g class="st-rot">
-              <defs><path id="cp4" d="M60,60 m-42,0 a42,42 0 1,1 84,0 a42,42 0 1,1 -84,0"/></defs>
-              <text><textPath href="#cp4">NEURAL TRANSFORMERS · AI &amp; ML · CHENNAI ·</textPath></text>
-            </g>
-            <circle cx="60" cy="60" r="54"/><circle cx="60" cy="60" r="30"/>
-            <path class="st-check" d="M50,60 l7,8 l14,-16"/>
-          </svg>
-        </div>
-      </div></div></div>
-    </article>
-  </div>
-</section>
-
-<!-- CONTACT SECTION -->
-<section class="sec" id="contact">
-  <header class="sec-head"><span class="sh-num">06</span><span class="sh-name">Contact — Signal</span><span class="sh-line"></span></header>
-  <h2 class="contact-title">
-    <span class="ct-l mask"><span>LET'S</span></span>
-    <span class="ct-l mask"><span class="ct-out">BUILD</span></span>
-    <span class="ct-l mask"><span class="ct-serif">something.</span></span>
-  </h2>
-  <p class="contact-sub rv">Have a role, an engineering challenge, or an enterprise application to design? Transmit a signal below.</p>
-  <div class="contact-ctas">
-    <a class="btn magnetic" href="mailto:thameessyed2743@gmail.com"><span>Email</span><svg viewBox="0 0 24 24"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
-    <a class="btn magnetic" href="https://linkedin.com/in/syedthamees2743" target="_blank" rel="noopener"><span>LinkedIn</span><svg viewBox="0 0 24 24"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
-    <a class="btn magnetic" href="tel:+917092960618"><span>Phone</span><svg viewBox="0 0 24 24"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
-  </div>
-  <div class="contact-meta mono">
-    <span>KOCHI · KERALA · INDIA</span>
-    <span>THAMEESSYED2743@GMAIL.COM</span>
-    <span>+91 70929 60618</span>
-  </div>
-</section>
-</main>
-
-<!-- FINALE SECTION -->
-<section id="finale" aria-label="Closing">
-  <div class="finale-stage">
-    <div class="bar bar-top" aria-hidden="true"></div>
-    <div class="bar bar-bottom" aria-hidden="true"></div>
-    <figure class="finale-portrait"><img id="finaleImg" src="https://picsum.photos/seed/st-portrait/640/800.jpg" width="640" height="800" loading="lazy" alt=""></figure>
-    <div class="finale-type">
-      <p class="ft-thanks">THANK YOU FOR VISITING</p>
-      <h2 class="ft-name">SYED<br>THAMEESUDEEN</h2>
-      <p class="ft-role">PYTHON DJANGO FULL STACK DEVELOPER — KOCHI</p>
-      <div class="finale-social">
-        <a href="mailto:thameessyed2743@gmail.com">EMAIL</a>
-        <a href="https://linkedin.com/in/syedthamees2743" target="_blank" rel="noopener">LINKEDIN</a>
-        <a href="tel:+917092960618">PHONE</a>
-      </div>
-    </div>
-    <footer class="footer">
-      <span>© 2026 SYED THAMEESUDEEN — KOCHI, KERALA</span>
-      <span>PYTHON · DJANGO · REACT · POSTGRESQL</span>
-      <button type="button" id="toTop">BACK TO TOP ↑</button>
-    </footer>
-  </div>
-</section>
-
-<!-- SCRIPTS & GSAP ENGINE -->
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
-<script>
-(function(){
-'use strict';
-const qs  = (s,c=document)=> c.querySelector(s);
-const qsa = (s,c=document)=> [...c.querySelectorAll(s)];
-const REDUCED = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-const FINE    = window.matchMedia('(pointer: fine)').matches;
-const hasGSAP = typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined';
-
-if(!hasGSAP){ const i=qs('#intro'); if(i) i.remove(); return; }
-gsap.registerPlugin(ScrollTrigger);
-gsap.defaults({ease:'power3.out'});
-
-/* Theme Toggle Engine */
-const themeToggle = qs('#themeToggle');
-const themeLabel = qs('#themeLabel');
-const themeIconPath = qs('#themeIconPath');
-
-const SUN_PATH = "M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z";
-const MOON_PATH = "M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z";
-
-function applyTheme(target){
-  document.documentElement.setAttribute('data-theme', target);
-  localStorage.setItem('theme', target);
-  if(target === 'dark'){
-    themeLabel.textContent = 'LIGHT';
-    themeIconPath.setAttribute('d', SUN_PATH);
-  } else {
-    themeLabel.textContent = 'DARK';
-    themeIconPath.setAttribute('d', MOON_PATH);
-  }
-}
-
-const currentTheme = localStorage.getItem('theme') || 'dark';
-applyTheme(currentTheme);
-
-themeToggle.addEventListener('click', () => {
-  const active = document.documentElement.getAttribute('data-theme');
-  applyTheme(active === 'dark' ? 'light' : 'dark');
-});
-
-const EXP = [
- {t:'Developed a role-based IT support system', d:'Built with Django, DRF, React and PostgreSQL — featuring isolated views per authenticated role.', tags:['Django','DRF','React','PostgreSQL']},
- {t:'Implemented JWT authentication', d:'Configured secure token-based user sessions across Admin, Employee and Technician users.', tags:['JWT','Auth']},
- {t:'Built ticket management', d:'Handled ticket dispatch, SLA tracking, status transitions, email notices and confirmations.', tags:['SLA','SMTP','Workflow']},
- {t:'Integrated PostgreSQL via Django ORM', d:'Maintained data integrity, relational queries and migrations across models.', tags:['PostgreSQL','ORM']},
- {t:'Connected React with Django REST APIs', d:'Asynchronous state updates driven by Axios into responsive components.', tags:['Axios','REST','Bootstrap']},
- {t:'Shipped the support feature set', d:'Email notifications, feedback, knowledge base, dashboard analytics and PDF reports.', tags:['Analytics','PDF','FAQ']},
- {t:'Tested API endpoints & workflows', d:'Verified endpoint performance and payload validation with Postman.', tags:['Postman','Debugging','QA']}
-];
-
-const TECH = [
- {id:'python',    name:'Python', tier:1, cat:'Language',  desc:'Primary language for backend logic — powering Django applications and data processing.', rel:['django','drf','postgresql','node']},
- {id:'react',     name:'React.js', tier:1, cat:'Frontend', desc:'Interactive UI dashboards, state hydration and ticket components connected via Axios.', rel:['javascript','drf','tailwind']},
- {id:'django',    name:'Django', tier:1, cat:'Backend',   desc:'Core framework driving the IT Service Desk — handling ORM, sessions and application logic.', rel:['python','drf','postgresql']},
- {id:'drf',       name:'Django REST Framework', tier:2, serif:true, cat:'API Layer', desc:'Serializes complex data models into secure REST endpoints consumed by React.', rel:['django','react','postman']},
- {id:'javascript',name:'JavaScript', tier:2, cat:'Language', desc:'Underlying client-side language enabling dynamic SPAs and asynchronous UI updates.', rel:['react','node','html5']},
- {id:'postgresql',name:'PostgreSQL', tier:2, cat:'Database', desc:'ACID-compliant relational database engine managing data models via Django ORM.', rel:['django','python','mongodb']},
- {id:'tailwind',  name:'Tailwind CSS', tier:2, cat:'Style',  desc:'Utility styling framework for disciplined layout systems.', rel:['css3','react']},
- {id:'node',      name:'Node.js', tier:2, cat:'Runtime',   desc:'Server-side JavaScript runtime expanding tooling and full-stack horizons.', rel:['javascript','mongodb']},
- {id:'bootstrap', name:'Bootstrap', tier:2, cat:'UI Kit',  desc:'Rapid responsive framework utilized across dashboard cards and control bars.', rel:['css3','html5']},
- {id:'html5',     name:'HTML5', tier:3, cat:'Markup',     desc:'Semantic document architecture built with accessibility in mind.', rel:['css3','javascript']},
- {id:'css3',      name:'CSS3', tier:3, cat:'Style',     desc:'Keyframe animations, Flexbox, CSS Grid layouts and custom properties.', rel:['html5','bootstrap','tailwind']},
- {id:'mongodb',   name:'MongoDB', tier:3, serif:true, cat:'Database', desc:'Document store experience for schema-less data requirements.', rel:['postgresql','node']},
- {id:'github',    name:'GitHub', tier:3, cat:'Tool',     desc:'Distributed version control, branches, PRs and code repositories.', rel:['vscode']},
- {id:'vscode',    name:'VS Code', tier:3, cat:'Tool',     desc:'Primary development environment for Django and React engineering.', rel:['github','postman']},
- {id:'postman',   name:'Postman', tier:3, cat:'Tool',     desc:'Comprehensive testing suite for mocking and debugging REST endpoints.', rel:['drf']}
-];
-
-const TECH_NY = [-.3,.2,-.15,.35,-.25,.15,-.35,.25,-.2,.3,-.15,.25,-.3,.2,-.25];
-
-function renderData(){
-  qs('#expList').innerHTML = EXP.map((e,i)=>`
-    <li class="exp-item"><h4><span>E.0${i+1}</span>${e.t}</h4><p>${e.d}</p>
-    <div class="exp-tags">${e.tags.map(t=>`<i>${t}</i>`).join('')}</div></li>`).join('');
-
-  const wall = qs('#techWall');
-  wall.innerHTML = TECH.map((t,i)=>`<button type="button" class="tech t${t.tier}${t.serif?' t-serif':''}" role="listitem" data-id="${t.id}" style="--ny:${TECH_NY[i]}em" aria-label="${t.name} — ${t.cat}">${t.name}</button>`).join('');
-}
-renderData();
-
-/* Smooth Scroll Setup (Lenis) */
-let lenis = null;
-if(!REDUCED && typeof Lenis !== 'undefined'){
-  lenis = new Lenis({duration:1.15, easing:t=>Math.min(1,1.001-Math.pow(2,-10*t))});
-  lenis.on('scroll', ScrollTrigger.update);
-  gsap.ticker.add(t=>lenis.raf(t*1000));
-  gsap.ticker.lagSmoothing(0);
-}
-function goTo(target){
-  const el = typeof target==='string' ? qs(target) : target;
-  if(!el) return;
-  if(lenis) lenis.scrollTo(el,{duration:1.5});
-  else el.scrollIntoView({behavior: REDUCED?'auto':'smooth'});
-}
-qsa('[data-goto]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();goTo(a.dataset.goto);}));
-qs('#toTop').addEventListener('click',()=>{ if(lenis) lenis.scrollTo(0,{duration:1.6}); else window.scrollTo({top:0,behavior:REDUCED?'auto':'smooth'}); });
-
-/* Dynamic Curved Glass Nav Morph */
-const navHolder = qs('#navHolder');
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 35) {
-    navHolder.classList.add('scrolled');
-  } else {
-    navHolder.classList.remove('scrolled');
-  }
-}, { passive: true });
-
-/* Custom Cursor */
-(function initCursor(){
-  if(!FINE) return;
-  document.body.classList.add('has-cursor');
-  const cursor=qs('.cursor'), dot=qs('.cursor-dot'), ring=qs('.cursor-ring'), label=qs('.cursor-label');
-  let mx=innerWidth/2,my=innerHeight/2, rx=mx,ry=my, dx=mx,dy=my;
-  addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;});
-  addEventListener('mousedown',()=>cursor.classList.add('is-down'));
-  addEventListener('mouseup',()=>cursor.classList.remove('is-down'));
-  gsap.ticker.add(()=>{
-    dx+=(mx-dx)*.55; dy+=(my-dy)*.55; rx+=(mx-rx)*.16; ry+=(my-ry)*.16;
-    dot.style.transform=`translate(${dx}px,${dy}px)`;
-    ring.style.transform=`translate(${rx}px,${ry}px)`;
-  });
-  document.addEventListener('mouseover',e=>{
-    const t=e.target.closest('[data-cursor],a,button');
-    let state='default';
-    if(t){ state=t.dataset.cursor||'link';
-      if(state==='link'&&t.tagName==='A'&&(t.hostname!==location.hostname||t.target==='_blank')) state='ext';
-      if(state==='link'&&t.classList.contains('magnetic')) state='link';
-    }
-    cursor.classList.remove('is-link','is-view','is-ext','is-scroll');
-    label.textContent = state==='view'?'VIEW':state==='scroll'?'SCROLL':'';
-    if(state!=='default') cursor.classList.add('is-'+state);
-  });
-  if(!REDUCED) qsa('.magnetic').forEach(el=>{
-    const qx=gsap.quickTo(el,'x',{duration:.4,ease:'power3'}), qy=gsap.quickTo(el,'y',{duration:.4,ease:'power3'});
-    el.addEventListener('mousemove',e=>{const r=el.getBoundingClientRect();qx((e.clientX-r.left-r.width/2)*.28);qy((e.clientY-r.top-r.height/2)*.34);});
-    el.addEventListener('mouseleave',()=>{gsap.to(el,{x:0,y:0,duration:.7,ease:'elastic.out(1,.45)'});});
-  });
-})();
-
-/* Clean Professional Menu */
-const menu=qs('#menu'), menuBtn=qs('#menuBtn');
-let menuTl=null, menuOpen=false;
-if(!REDUCED){
-  menuTl = gsap.timeline({paused:true,
-    onReverseComplete:()=>{menu.classList.remove('open');menu.setAttribute('aria-hidden','true');}})
-    .fromTo(menu,{clipPath:'inset(0 0 100% 0)'},{clipPath:'inset(0 0 0% 0)',duration:.75,ease:'power4.inOut'})
-    .from('.menu-item .mi-word > span',{yPercent:120,duration:.75,stagger:.05},'-=0.35')
-    .from('.menu-item .mi-num',{opacity:0,x:-14,duration:.45,stagger:.05},'<0.04')
-    .from('.menu-item .mi-tag',{opacity:0,duration:.35,stagger:.04},'<0.18')
-    .from('.menu-sidebar-info .ms-block',{y:16,opacity:0,duration:.5,stagger:.08},'-=0.45');
-}
-function setMenu(open){
-  menuOpen=open;
-  menuBtn.setAttribute('aria-expanded',open);
-  menuBtn.setAttribute('aria-label',open?'Close menu':'Open menu');
-  if(REDUCED){ menu.classList.toggle('open',open); menu.setAttribute('aria-hidden',!open); if(lenis){open?lenis.stop():lenis.start();} return; }
-  if(open){ menu.classList.add('open'); menu.setAttribute('aria-hidden','false'); if(lenis)lenis.stop(); menuTl.timeScale(1).play(); qs('.menu-item').focus({preventScroll:true}); }
-  else{ if(lenis)lenis.start(); menuTl.timeScale(1.4).reverse(); }
-}
-menuBtn.addEventListener('click',()=>setMenu(!menuOpen));
-addEventListener('keydown',e=>{if(e.key==='Escape'&&menuOpen)setMenu(false);});
-qsa('.menu-item').forEach(item=>{
-  item.addEventListener('click',e=>{
-    e.preventDefault(); const h=item.getAttribute('href');
-    setMenu(false);
-    setTimeout(()=>goTo(h), REDUCED?0:480);
-  });
-});
-
-/* Hero Entrance Timeline */
-const heroIntro = REDUCED ? null : gsap.timeline({paused:true, defaults:{ease:'power4.out'}})
-  .from('.header > *',{y:-18,opacity:0,duration:.7,stagger:.08})
-  .from('#hero .hero-kicker',{y:18,opacity:0,duration:.6},'-=0.4')
-  .from('.hero-title .mask > span',{yPercent:116,duration:1.15,stagger:.12},'-=0.35')
-  .from('.hr-rule',{scaleX:0,duration:.7,ease:'power3.inOut'},'-=0.7')
-  .from('.hero-role p, .hero-stack',{y:22,opacity:0,duration:.7,stagger:.1},'-=0.5')
-  .fromTo('.portrait',{clipPath:'inset(100% 0 0 0)'},{clipPath:'inset(0% 0 0 0)',duration:1.1,ease:'power4.inOut'},0.4)
-  .from('#heroImg',{scale:1.18,duration:1.4,ease:'power3.out'},0.4)
-  .from('.hm-block',{y:16,opacity:0,duration:.6,stagger:.12},'-=0.9')
-  .from('.hero-side, .hero-scroll, .hero-index',{opacity:0,duration:.8,stagger:.1},'-=0.6');
-
-function finishIntro(fast){
-  const intro=qs('#intro'); if(!intro) return;
-  document.body.classList.remove('is-loading');
-  if(lenis) lenis.start();
-  if(fast && heroIntro) heroIntro.timeScale(2.4).play();
-  else if(heroIntro) heroIntro.play();
-  intro.remove();
-  ScrollTrigger.refresh();
-}
-(function initIntro(){
-  const skip=qs('#intro .intro-skip'); if(skip) skip.addEventListener('click',()=>finishIntro(true));
-  if(REDUCED){ finishIntro(false); return; }
-  document.body.classList.add('is-loading');
-  if(lenis) lenis.stop();
-  const tl=gsap.timeline({onComplete:()=>finishIntro(false)});
-  tl.from('.intro-ambient',{opacity:0,scale:.7,duration:1.3,ease:'power2.inOut'})
-    .from('.intro-corner',{opacity:0,y:10,duration:.6,stagger:.1},'-=0.9')
-    .from('.intro-name .mask > span',{yPercent:118,duration:1.1,stagger:.14},'-=0.4')
-    .fromTo('.in-l1',{letterSpacing:'.16em'},{letterSpacing:'-.01em',duration:1.2,ease:'power3.out'},'<')
-    .fromTo('.in-l2',{letterSpacing:'.16em'},{letterSpacing:'-.01em',duration:1.2,ease:'power3.out'},'<')
-    .fromTo('.intro-sweep',{xPercent:-110},{xPercent:210,duration:1,ease:'power2.inOut'},'-=0.35')
-    .fromTo('.intro-portrait',{clipPath:'inset(0 100% 0 0)'},{clipPath:'inset(0 0% 0 0)',duration:1,ease:'power3.inOut'},'<')
-    .to('.intro-portrait',{clipPath:'inset(0 0 0 100%)',duration:.7,ease:'power3.inOut'},'+=0.45')
-    .to('.intro-corner',{opacity:0,y:-12,duration:.4,stagger:.05},'-=0.2')
-    .to('.intro-name .mask > span',{yPercent:-118,duration:.7,stagger:.08,ease:'power3.in'},'-=0.3')
-    .to('.intro-ambient',{opacity:0,duration:.7},'-=0.5')
-    .to('#intro',{clipPath:'inset(0 0 100% 0)',duration:1,ease:'power4.inOut'},'-=0.2');
-})();
-
-/* Technology Constellation */
-(function initTechConstellation(){
-  const wall=qs('#techWall'), svg=qs('#wallSvg'), NS='http://www.w3.org/2000/svg';
-  const centers=new Map();
-
-  function measure(){
-    centers.clear();
-    const wr=wall.getBoundingClientRect();
-    qsa('.tech',wall).forEach(el=>{
-      const r=el.getBoundingClientRect();
-      centers.set(el,{x:r.left-wr.left+r.width/2, y:r.top-wr.top+r.height/2});
-    });
-  }
-
-  function drawLines(sel){
-    svg.innerHTML='';
-    const t=TECH.find(x=>x.id===sel.dataset.id);
-    const a=centers.get(sel); if(!a) return;
-    t.rel.forEach(rid=>{
-      const el=wall.querySelector(`[data-id="${rid}"]`); 
-      const b=centers.get(el);
-      if(!b) return;
-      const line=document.createElementNS(NS,'line');
-      line.setAttribute('x1',a.x);line.setAttribute('y1',a.y);line.setAttribute('x2',b.x);line.setAttribute('y2',b.y);
-      svg.appendChild(line);
-      const len=Math.hypot(b.x-a.x,b.y-a.y);
-      line.style.strokeDasharray=len; line.style.strokeDashoffset=len;
-      requestAnimationFrame(()=>{line.style.transition='stroke-dashoffset .6s cubic-bezier(.6,0,.3,1)';line.style.strokeDashoffset='0';});
-    });
-  }
-
-  function select(el){
-    const t=TECH.find(x=>x.id===el.dataset.id);
-    qsa('.tech',wall).forEach(s=>{
-      const id=s.dataset.id, rel=t.rel.includes(id);
-      s.classList.toggle('is-active',s===el);
-      s.classList.toggle('is-related',rel&&s!==el);
-      s.classList.toggle('is-dim',s!==el&&!rel);
-    });
-    drawLines(el);
-    qs('#wrCat').textContent=t.cat; 
-    qs('#wrName').textContent=t.name; 
-    qs('#wrDesc').textContent=t.desc;
-    qs('#wrRel').innerHTML=t.rel.map(r=>{
-      const rt=TECH.find(x=>x.id===r);
-      return rt?`<button type="button" data-rel="${r}">${rt.name}</button>`:'';
-    }).join('');
-  }
-
-  qsa('.tech',wall).forEach(el=>{
-    el.addEventListener('mouseenter',()=>{measure();select(el);});
-    el.addEventListener('focus',()=>{measure();select(el);});
-    el.addEventListener('click',()=>{measure();select(el);});
-  });
-
-  qs('#wrRel').addEventListener('click',e=>{
-    const b=e.target.closest('[data-rel]'); if(!b) return;
-    const el=wall.querySelector(`[data-id="${b.dataset.rel}"]`); 
-    measure(); if(el) select(el);
-  });
-
-  let raf=0;
-  function handleMove(clientX, clientY){
-    if(raf) return;
-    raf=requestAnimationFrame(()=>{
-      raf=0;
-      const wr=wall.getBoundingClientRect();
-      const mx=clientX-wr.left, my=clientY-wr.top;
-      centers.forEach((c,el)=>{
-        const dx=c.x-mx, dy=c.y-my, d=Math.hypot(dx,dy)||1;
-        const f=Math.max(0,1-d/340);
-        el.style.setProperty('--px',(dx/d*f*12)+'px');
-        el.style.setProperty('--py',(dy/d*f*10)+'px');
-      });
-    });
-  }
-
-  wall.addEventListener('pointermove',e=>handleMove(e.clientX,e.clientY));
-  wall.addEventListener('touchmove',e=>{
-    if(e.touches[0]) handleMove(e.touches[0].clientX, e.touches[0].clientY);
-  },{passive:true});
-
-  wall.addEventListener('pointerleave',()=>qsa('.tech',wall).forEach(el=>{
-    el.style.setProperty('--px','0px');
-    el.style.setProperty('--py','0px');
-  }));
-
-  addEventListener('resize',measure);
-  if(document.fonts && document.fonts.ready) document.fonts.ready.then(measure);
-  setTimeout(()=>{measure(); const initNode=qs('.tech.t1',wall); if(initNode) select(initNode);},600);
-})();
-
-/* Certifications Archive Accordion */
-qsa('.doc-head').forEach(head => {
-  head.addEventListener('click', () => {
-    const doc = head.closest('.doc');
-    const isOpen = doc.classList.contains('open');
-    qsa('.doc.open').forEach(d => {
-      d.classList.remove('open');
-      qs('.doc-head', d).setAttribute('aria-expanded', 'false');
-    });
-    if(!isOpen) {
-      doc.classList.add('open');
-      head.setAttribute('aria-expanded', 'true');
-    }
-  });
-});
-
-/* Hero Desktop Parallax */
-if(FINE && !REDUCED){
-  const layers=qsa('#hero [data-depth]').map(el=>({
-    d:parseFloat(el.dataset.depth),
-    x:gsap.quickTo(el,'x',{duration:1,ease:'power3'}),
-    y:gsap.quickTo(el,'y',{duration:1,ease:'power3'})
-  }));
-  const gx=gsap.quickTo('#heroGlow','x',{duration:1.4,ease:'power3'});
-  const gy=gsap.quickTo('#heroGlow','y',{duration:1.4,ease:'power3'});
-  const grx=gsap.quickTo('#heroGrid','x',{duration:1.2,ease:'power3'});
-  const gry=gsap.quickTo('#heroGrid','y',{duration:1.2,ease:'power3'});
-  qs('#hero').addEventListener('mousemove',e=>{
-    const nx=e.clientX/innerWidth-.5, ny=e.clientY/innerHeight-.5;
-    layers.forEach(l=>{l.x(nx*320*l.d);l.y(ny*240*l.d);});
-    gx(nx*160); gy(ny*120);
-    grx(nx*-14); gry(ny*-10);
-  });
-}
-
-/* Master Scroll Animations */
-const mm=gsap.matchMedia();
-mm.add({all:'(min-width: 0px)', reduce:'(prefers-reduced-motion: reduce)'},(ctx)=>{
-  const {reduce}=ctx.conditions;
-  if(reduce) return;
-
-  gsap.to('.rail-fill',{scaleY:1,ease:'none',scrollTrigger:{start:0,end:'max',scrub:.3,onUpdate:s=>{qs('.rail-num').textContent=Math.round(s.progress*100)+'%';}}});
-  gsap.to('.mbar i',{scaleX:1,ease:'none',scrollTrigger:{start:0,end:'max',scrub:.3}});
-
-  qsa('.sec-head').forEach(h=>{
-    gsap.from(h.children,{y:22,opacity:0,duration:.8,stagger:.08,scrollTrigger:{trigger:h,start:'top 86%'}});
-  });
-
-  gsap.from('.as-line:nth-child(1) .w',{x:-70,opacity:0,stagger:.08,duration:1,scrollTrigger:{trigger:'.about-statement',start:'top 78%'}});
-  gsap.from('.as-line:nth-child(2) .w',{x:110,opacity:0,duration:1.1,scrollTrigger:{trigger:'.about-statement',start:'top 72%'}});
-  gsap.from('.as-line:nth-child(3) .w',{x:-40,opacity:0,duration:1,scrollTrigger:{trigger:'.about-statement',start:'top 66%'}});
-  gsap.from('.about-fig, .about-copy, .about-focus',{y:44,opacity:0,duration:1,stagger:.14,scrollTrigger:{trigger:'.about-grid',start:'top 82%'}});
-  gsap.from('.about-stats',{y:36,opacity:0,duration:.9,scrollTrigger:{trigger:'.about-stats',start:'top 88%'}});
-
-  /* Dedicated About Numbers Counting Animation */
-  qsa('[data-count]').forEach(el => {
-    const target = +el.dataset.count;
-    const obj = { val: 0 };
-    gsap.to(obj, {
-      val: target,
-      duration: 2.2,
-      ease: 'power2.out',
-      scrollTrigger: {
-        trigger: el,
-        start: 'top 85%',
-        once: true
-      },
-      onUpdate: () => {
-        el.textContent = Math.round(obj.val);
-      }
-    });
-  });
-
-  gsap.from('.exp-sticky > *',{y:30,opacity:0,stagger:.1,duration:.9,scrollTrigger:{trigger:'.exp-grid',start:'top 75%'}});
-  gsap.fromTo('.et-fill',{scaleY:0},{scaleY:1,ease:'none',scrollTrigger:{trigger:'.exp-tl',start:'top 72%',end:'bottom 62%',scrub:true}});
-  qsa('.exp-item').forEach(it=>{
-    gsap.from(it,{y:34,opacity:0,duration:.8,scrollTrigger:{trigger:it,start:'top 84%',onEnter:()=>it.classList.add('is-pass')}});
-  });
-  gsap.from('.exp-impact',{y:30,opacity:0,duration:.9,scrollTrigger:{trigger:'.exp-impact',start:'top 85%'}});
-
-  // UNIFIED HORIZONTAL PINNING FOR CASE STUDY
-  const track=qs('#caseTrack');
-  const dist=()=>track.scrollWidth-innerWidth;
-  const horiz=gsap.to(track,{x:()=>-dist(),ease:'none',scrollTrigger:{
-    trigger:'#casePin',start:'top top',end:()=>'+='+dist(),pin:true,scrub:1,anticipatePin:1,invalidateOnRefresh:true
-  }});
-
-  const wfItems=qsa('#wf li'), wfFill=qs('#wfFill');
-  function wfProgress(p){
-    gsap.set(wfFill,{scaleY:p});
-    wfItems.forEach((li,i)=>li.classList.toggle('is-on',p>=(i+.6)/8));
-  }
-
-  ScrollTrigger.create({
-    trigger:'#casePin',start:'top top',end:()=>'+='+dist(),scrub:true,invalidateOnRefresh:true,
-    onUpdate:s=>{
-      gsap.set('#caseFill',{scaleX:s.progress});
-      qs('#caseIdx').textContent=String(1+Math.round(s.progress*7)).padStart(2,'0');
-      const wfPanel=qs('.p-workflow');
-      if(wfPanel && wfPanel.getBoundingClientRect().right>0 && wfPanel.getBoundingClientRect().left<innerWidth){
-        wfProgress(gsap.utils.clamp(0,1,(s.progress-.52)/.24));
-      }
-    }
-  });
-
-  qsa('.case-track .rv').forEach(el=>{
-    gsap.from(el,{
-      y:38,
-      opacity:0,
-      duration:0.85,
-      scrollTrigger:{trigger:el,containerAnimation:horiz,start:'left 82%'}
-    });
-  });
-
-  const archPanel=qs('.p-arch');
-  qsa('.arch .edge:not(.flow)').forEach(p=>{const l=p.getTotalLength();gsap.set(p,{strokeDasharray:l,strokeDashoffset:l});});
-  gsap.to('.arch .edge:not(.flow)',{strokeDashoffset:0,stagger:.1,ease:'none',
-    scrollTrigger:{trigger:archPanel,containerAnimation:horiz,start:'left 70%',end:'left 15%',scrub:true}});
-  gsap.from('.arch-node',{opacity:0,y:12,stagger:.09,duration:.6,
-    scrollTrigger:{trigger:archPanel,containerAnimation:horiz,start:'left 60%'}});
-  gsap.from('#mockChart i',{scaleY:.15,transformOrigin:'bottom',stagger:.05,duration:.7,ease:'power3.out',
-    scrollTrigger:{trigger:'.p-result',containerAnimation:horiz,start:'left 60%'}});
-
-  // P02 RAILWAY ANIMATION
-  gsap.fromTo('#trainDot', { left: '0%' }, { left: '100%', ease: 'none',
-    scrollTrigger: { trigger: '#projRail', start: 'top 70%', end: 'bottom 55%', scrub: 0.4,
-      onUpdate: s => {
-        const idx = Math.min(4, Math.floor(s.progress * 5 + 0.001));
-        qsa('.station').forEach((st, i) => st.classList.toggle('past', i <= idx));
-        gsap.set('#railProg', { scaleX: s.progress });
-      }
-    }
-  });
-  gsap.to('#railImg', { yPercent: -10, ease: 'none',
-    scrollTrigger: { trigger: '#projRail', start: 'top bottom', end: 'bottom top', scrub: true }
-  });
-
-  // P03 STOCK PREDICTOR CHART ANIMATION
-  const sLine = qs('#stockLine'), sProj = qs('#stockProj');
-  if (sLine) {
-    const sLen = sLine.getTotalLength(), pLen = sProj.getTotalLength();
-    gsap.set(sLine, { strokeDasharray: sLen, strokeDashoffset: sLen });
-    gsap.set(sProj, { strokeDasharray: pLen, strokeDashoffset: pLen, opacity: 0 });
-    gsap.to(sLine, { strokeDashoffset: 0, ease: 'none',
-      scrollTrigger: { trigger: '#projStock', start: 'top 80%', end: 'top 20%', scrub: 0.4 }
-    });
-    gsap.to(sProj, { strokeDashoffset: 0, opacity: 1, ease: 'none',
-      scrollTrigger: { trigger: '#projStock', start: 'top 30%', end: 'top 0%', scrub: 0.4 }
-    });
-    gsap.fromTo('.sp-pt', { scale: 0, transformOrigin: 'center' }, { scale: 1, stagger: 0.12, duration: 0.4,
-      scrollTrigger: { trigger: '#projStock', start: 'top 55%' }
-    });
-
-    const tkVals = qsa('.tk-v'), tkBase = [24850, 81620, 51940, 1640];
-    let liveTk = false, tkInterval = null;
-    new IntersectionObserver(([e]) => {
-      liveTk = e.isIntersecting;
-      if (liveTk && !tkInterval) {
-        tkInterval = setInterval(() => {
-          tkVals.forEach((v, i) => {
-            const d = (Math.random() - 0.48) * tkBase[i] * 0.003;
-            const n = tkBase[i] + d;
-            v.textContent = n.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-            v.classList.toggle('dn', d < 0);
-          });
-        }, 900);
-      }
-      if (!liveTk && tkInterval) { clearInterval(tkInterval); tkInterval = null; }
-    }, { rootMargin: '60px' }).observe(qs('#projStock'));
-  }
-
-  // Contact & Finale
-  gsap.from('.contact-title .ct-l > span',{yPercent:118,duration:1.1,stagger:.12,scrollTrigger:{trigger:'#contact',start:'top 70%'}});
-  gsap.from('.contact-ctas .btn',{y:26,opacity:0,stagger:.1,duration:.8,scrollTrigger:{trigger:'.contact-ctas',start:'top 88%'}});
-  gsap.from('.contact-meta',{opacity:0,y:20,duration:.8,scrollTrigger:{trigger:'.contact-meta',start:'top 92%'}});
-
-  gsap.timeline({scrollTrigger:{trigger:'#finale',start:'top top',end:'+=130%',pin:true,scrub:true,anticipatePin:1}})
-    .to('.bar-top',{scaleY:1,duration:.3,ease:'power2.inOut'},0)
-    .to('.bar-bottom',{scaleY:1,duration:.3,ease:'power2.inOut'},0)
-    .fromTo('.finale-portrait',{clipPath:'inset(38% 22% 38% 22%)'},{clipPath:'inset(4% 4% 4% 4%)',duration:.5,ease:'power3.inOut'},.1)
-    .fromTo('#finaleImg',{scale:1.3},{scale:1.02,duration:.9,ease:'none'},0)
-    .from('.ft-thanks',{opacity:0,y:16,duration:.3},.35)
-    .from('.ft-name',{opacity:0,y:30,duration:.4},.42)
-    .from('.ft-role',{opacity:0,y:16,duration:.3},.5)
-    .from('.finale-social a',{opacity:0,y:14,duration:.3,stagger:.06},.58)
-    .from('.footer',{opacity:0,duration:.3},.7);
-
-  // Section Indicator Tracking
-  const siNum=qs('.si-num'), siName=qs('.si-name');
-  function setIndicator(num,name){
-    if(siName.textContent===name) return;
-    siNum.textContent=num; siName.textContent=name;
-    gsap.fromTo([siNum,siName],{y:10,opacity:0},{y:0,opacity:1,duration:.45,stagger:.05});
-  }
-  [['hero','00','SYED'],['about','01','ABOUT'],['experience','02','EXPERIENCE'],['technology','03','TECHNOLOGY'],
-   ['work','04','WORK'],['certs','05','CERTIFICATIONS'],['contact','06','CONTACT']].forEach(([id,num,name])=>{
-    ScrollTrigger.create({trigger:'#'+id,start:'top 55%',end:'bottom 55%',
-      onToggle:s=>{ if(s.isActive){
-        if(id!=='hero') setIndicator(num,name);
-        qsa('.menu-item').forEach(mi=>{
-          const target = mi.getAttribute('href').replace('#','');
-          mi.classList.toggle('is-active', target===id);
+        themeToggle.addEventListener("click", () => {
+          const active = document.documentElement.getAttribute("data-theme");
+          applyTheme(active === "dark" ? "light" : "dark");
         });
-      }}});
-  });
-  ScrollTrigger.create({trigger:'#finale',start:'top 60%',onEnter:()=>header.classList.add('is-hidden'),onLeaveBack:()=>header.classList.remove('is-hidden')});
-});
 
-addEventListener('load',()=>ScrollTrigger.refresh());
-})();
-</script>
-</body>
+        const EXP = [
+          {
+            t: "Developed a role-based IT support system",
+            d: "Built with Django, DRF, React and PostgreSQL — featuring isolated views per authenticated role.",
+            tags: ["Django", "DRF", "React", "PostgreSQL"],
+          },
+          {
+            t: "Implemented JWT authentication",
+            d: "Configured secure token-based user sessions across Admin, Employee and Technician users.",
+            tags: ["JWT", "Auth"],
+          },
+          {
+            t: "Built ticket management",
+            d: "Handled ticket dispatch, SLA tracking, status transitions, email notices and confirmations.",
+            tags: ["SLA", "SMTP", "Workflow"],
+          },
+          {
+            t: "Integrated PostgreSQL via Django ORM",
+            d: "Maintained data integrity, relational queries and migrations across models.",
+            tags: ["PostgreSQL", "ORM"],
+          },
+          {
+            t: "Connected React with Django REST APIs",
+            d: "Asynchronous state updates driven by Axios into responsive components.",
+            tags: ["Axios", "REST", "Bootstrap"],
+          },
+          {
+            t: "Shipped the support feature set",
+            d: "Email notifications, feedback, knowledge base, dashboard analytics and PDF reports.",
+            tags: ["Analytics", "PDF", "FAQ"],
+          },
+          {
+            t: "Tested API endpoints & workflows",
+            d: "Verified endpoint performance and payload validation with Postman.",
+            tags: ["Postman", "Debugging", "QA"],
+          },
+        ];
+
+        /* Complete 15 Tech items with Official Crisp SVG Icons */
+        const TECH = [
+          {
+            id: "python",
+            name: "Python",
+            tier: 1,
+            cat: "Language",
+            icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+            desc: "Primary language for backend logic — powering Django applications and data processing.",
+            rel: ["django", "drf", "postgresql", "node"],
+          },
+          {
+            id: "react",
+            name: "React.js",
+            tier: 1,
+            cat: "Frontend",
+            icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+            desc: "Interactive UI dashboards, state hydration and ticket components connected via Axios.",
+            rel: ["javascript", "drf", "tailwind"],
+          },
+          {
+            id: "django",
+            name: "Django",
+            tier: 1,
+            cat: "Backend",
+            icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg",
+            desc: "Core framework driving the IT Service Desk — handling ORM, sessions and application logic.",
+            rel: ["python", "drf", "postgresql"],
+          },
+          {
+            id: "drf",
+            name: "Django REST Framework",
+            tier: 2,
+            serif: true,
+            cat: "API Layer",
+            icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg",
+            desc: "Serializes complex data models into secure REST endpoints consumed by React.",
+            rel: ["django", "react", "postman"],
+          },
+          {
+            id: "javascript",
+            name: "JavaScript",
+            tier: 2,
+            cat: "Language",
+            icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+            desc: "Underlying client-side language enabling dynamic SPAs and asynchronous UI updates.",
+            rel: ["react", "node", "html5"],
+          },
+          {
+            id: "postgresql",
+            name: "PostgreSQL",
+            tier: 2,
+            cat: "Database",
+            icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+            desc: "ACID-compliant relational database engine managing data models via Django ORM.",
+            rel: ["django", "python", "mongodb"],
+          },
+          {
+            id: "tailwind",
+            name: "Tailwind CSS",
+            tier: 2,
+            cat: "Style",
+            icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
+            desc: "Utility styling framework for disciplined layout systems.",
+            rel: ["css3", "react"],
+          },
+          {
+            id: "node",
+            name: "Node.js",
+            tier: 2,
+            cat: "Runtime",
+            icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+            desc: "Server-side JavaScript runtime expanding tooling and full-stack horizons.",
+            rel: ["javascript", "mongodb"],
+          },
+          {
+            id: "bootstrap",
+            name: "Bootstrap",
+            tier: 2,
+            cat: "UI Kit",
+            icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
+            desc: "Rapid responsive framework utilized across dashboard cards and control bars.",
+            rel: ["css3", "html5"],
+          },
+          {
+            id: "html5",
+            name: "HTML5",
+            tier: 3,
+            cat: "Markup",
+            icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+            desc: "Semantic document architecture built with accessibility in mind.",
+            rel: ["css3", "javascript"],
+          },
+          {
+            id: "css3",
+            name: "CSS3",
+            tier: 3,
+            cat: "Style",
+            icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+            desc: "Keyframe animations, Flexbox, CSS Grid layouts and custom properties.",
+            rel: ["html5", "bootstrap", "tailwind"],
+          },
+          {
+            id: "mongodb",
+            name: "MongoDB",
+            tier: 3,
+            serif: true,
+            cat: "Database",
+            icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+            desc: "Document store experience for schema-less data requirements.",
+            rel: ["postgresql", "node"],
+          },
+          {
+            id: "github",
+            name: "GitHub",
+            tier: 3,
+            cat: "Tool",
+            icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+            desc: "Distributed version control, branches, PRs and code repositories.",
+            rel: ["vscode"],
+          },
+          {
+            id: "vscode",
+            name: "VS Code",
+            tier: 3,
+            cat: "Tool",
+            icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
+            desc: "Primary development environment for Django and React engineering.",
+            rel: ["github", "postman"],
+          },
+          {
+            id: "postman",
+            name: "Postman",
+            tier: 3,
+            cat: "Tool",
+            icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg",
+            desc: "Comprehensive testing suite for mocking and debugging REST endpoints.",
+            rel: ["drf"],
+          },
+        ];
+
+        const TECH_NY = [
+          -0.3, 0.2, -0.15, 0.35, -0.25, 0.15, -0.35, 0.25, -0.2, 0.3, -0.15,
+          0.25, -0.3, 0.2, -0.25,
+        ];
+
+        function renderData() {
+          qs("#expList").innerHTML = EXP.map(
+            (e, i) => `
+            <li class="exp-item"><h4><span>E.0${i + 1}</span>${e.t}</h4><p>${e.d}</p>
+            <div class="exp-tags">${e.tags.map((t) => `<i>${t}</i>`).join("")}</div></li>`,
+          ).join("");
+
+          const wall = qs("#techWall");
+          wall.innerHTML = TECH.map(
+            (t, i) =>
+              `<button type="button" class="tech t${t.tier}${t.serif ? " t-serif" : ""}" role="listitem" data-id="${t.id}" style="--ny:${TECH_NY[i]}em" aria-label="${t.name} — ${t.cat}">
+                <span class="tech-icon-wrap"><img src="${t.icon}" alt="" class="tech-icon" loading="lazy" /></span>
+                <span class="tech-label">${t.name}</span>
+              </button>`,
+          ).join("");
+        }
+        renderData();
+
+        /* Smooth Scroll Setup (Lenis) */
+        let lenis = null;
+        if (!REDUCED && typeof Lenis !== "undefined") {
+          lenis = new Lenis({
+            duration: 1.15,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+          });
+          lenis.on("scroll", ScrollTrigger.update);
+          gsap.ticker.add((t) => lenis.raf(t * 1000));
+          gsap.ticker.lagSmoothing(0);
+        }
+        function goTo(target) {
+          const el = typeof target === "string" ? qs(target) : target;
+          if (!el) return;
+          if (lenis) lenis.scrollTo(el, { duration: 1.5 });
+          else el.scrollIntoView({ behavior: REDUCED ? "auto" : "smooth" });
+        }
+        qsa("[data-goto]").forEach((a) =>
+          a.addEventListener("click", (e) => {
+            e.preventDefault();
+            goTo(a.dataset.goto);
+          }),
+        );
+        qs("#toTop").addEventListener("click", () => {
+          if (lenis) lenis.scrollTo(0, { duration: 1.6 });
+          else window.scrollTo({ top: 0, behavior: REDUCED ? "auto" : "smooth" });
+        });
+
+        /* Dynamic Curved Glass Nav Morph */
+        const navHolder = qs("#navHolder");
+        window.addEventListener(
+          "scroll",
+          () => {
+            if (window.scrollY > 35) {
+              navHolder.classList.add("scrolled");
+            } else {
+              navHolder.classList.remove("scrolled");
+            }
+          },
+          { passive: true },
+        );
+
+        /* Custom Cursor */
+        (function initCursor() {
+          if (!FINE) return;
+          document.body.classList.add("has-cursor");
+          const cursor = qs(".cursor"),
+            dot = qs(".cursor-dot"),
+            ring = qs(".cursor-ring"),
+            label = qs(".cursor-label");
+          let mx = innerWidth / 2,
+            my = innerHeight / 2,
+            rx = mx,
+            ry = my,
+            dx = mx,
+            dy = my;
+          addEventListener("mousemove", (e) => {
+            mx = e.clientX;
+            my = e.clientY;
+          });
+          addEventListener("mousedown", () => cursor.classList.add("is-down"));
+          addEventListener("mouseup", () => cursor.classList.remove("is-down"));
+          gsap.ticker.add(() => {
+            dx += (mx - dx) * 0.55;
+            dy += (my - dy) * 0.55;
+            rx += (mx - rx) * 0.16;
+            ry += (my - ry) * 0.16;
+            dot.style.transform = `translate(${dx}px,${dy}px)`;
+            ring.style.transform = `translate(${rx}px,${ry}px)`;
+          });
+          document.addEventListener("mouseover", (e) => {
+            const t = e.target.closest("[data-cursor],a,button");
+            let state = "default";
+            if (t) {
+              state = t.dataset.cursor || "link";
+              if (
+                state === "link" &&
+                t.tagName === "A" &&
+                (t.hostname !== location.hostname || t.target === "_blank")
+              )
+                state = "ext";
+              if (state === "link" && t.classList.contains("magnetic"))
+                state = "link";
+            }
+            cursor.classList.remove("is-link", "is-view", "is-ext", "is-scroll");
+            label.textContent = state === "view" ? "VIEW" : state === "scroll" ? "SCROLL" : "";
+            if (state !== "default") cursor.classList.add("is-" + state);
+          });
+          if (!REDUCED)
+            qsa(".magnetic").forEach((el) => {
+              const qx = gsap.quickTo(el, "x", { duration: 0.4, ease: "power3" }),
+                qy = gsap.quickTo(el, "y", { duration: 0.4, ease: "power3" });
+              el.addEventListener("mousemove", (e) => {
+                const r = el.getBoundingClientRect();
+                qx((e.clientX - r.left - r.width / 2) * 0.28);
+                qy((e.clientY - r.top - r.height / 2) * 0.34);
+              });
+              el.addEventListener("mouseleave", () => {
+                gsap.to(el, { x: 0, y: 0, duration: 0.7, ease: "elastic.out(1,.45)" });
+              });
+            });
+        })();
+
+        /* Clean Professional Menu */
+        const menu = qs("#menu"),
+          menuBtn = qs("#menuBtn");
+        let menuTl = null,
+          menuOpen = false;
+        if (!REDUCED) {
+          menuTl = gsap
+            .timeline({
+              paused: true,
+              onReverseComplete: () => {
+                menu.classList.remove("open");
+                menu.setAttribute("aria-hidden", "true");
+              },
+            })
+            .fromTo(
+              menu,
+              { clipPath: "inset(0 0 100% 0)" },
+              { clipPath: "inset(0 0 0% 0)", duration: 0.75, ease: "power4.inOut" },
+            )
+            .from(".menu-item .mi-word > span", { yPercent: 120, duration: 0.75, stagger: 0.05 }, "-=0.35")
+            .from(".menu-item .mi-num", { opacity: 0, x: -14, duration: 0.45, stagger: 0.05 }, "<0.04")
+            .from(".menu-item .mi-tag", { opacity: 0, duration: 0.35, stagger: 0.04 }, "<0.18")
+            .from(".menu-sidebar-info .ms-block", { y: 16, opacity: 0, duration: 0.5, stagger: 0.08 }, "-=0.45");
+        }
+        function setMenu(open) {
+          menuOpen = open;
+          menuBtn.setAttribute("aria-expanded", open);
+          menuBtn.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+          if (REDUCED) {
+            menu.classList.toggle("open", open);
+            menu.setAttribute("aria-hidden", !open);
+            if (lenis) { open ? lenis.stop() : lenis.start(); }
+            return;
+          }
+          if (open) {
+            menu.classList.add("open");
+            menu.setAttribute("aria-hidden", "false");
+            if (lenis) lenis.stop();
+            menuTl.timeScale(1).play();
+            qs(".menu-item").focus({ preventScroll: true });
+          } else {
+            if (lenis) lenis.start();
+            menuTl.timeScale(1.4).reverse();
+          }
+        }
+        menuBtn.addEventListener("click", () => setMenu(!menuOpen));
+        addEventListener("keydown", (e) => {
+          if (e.key === "Escape" && menuOpen) setMenu(false);
+        });
+        qsa(".menu-item").forEach((item) => {
+          item.addEventListener("click", (e) => {
+            e.preventDefault();
+            const h = item.getAttribute("href");
+            setMenu(false);
+            setTimeout(() => goTo(h), REDUCED ? 0 : 480);
+          });
+        });
+
+        /* Hero Entrance Timeline */
+        const heroIntro = REDUCED
+          ? null
+          : gsap
+              .timeline({ paused: true, defaults: { ease: "power4.out" } })
+              .from(".header > *", { y: -18, opacity: 0, duration: 0.7, stagger: 0.08 })
+              .from("#hero .hero-kicker", { y: 18, opacity: 0, duration: 0.6 }, "-=0.4")
+              .from(".hero-title .mask > span", { yPercent: 116, duration: 1.15, stagger: 0.12 }, "-=0.35")
+              .from(".hr-rule", { scaleX: 0, duration: 0.7, ease: "power3.inOut" }, "-=0.7")
+              .from(".hero-role p, .hero-stack", { y: 22, opacity: 0, duration: 0.7, stagger: 0.1 }, "-=0.5")
+              .fromTo(".portrait", { clipPath: "inset(100% 0 0 0)" }, { clipPath: "inset(0% 0 0 0)", duration: 1.1, ease: "power4.inOut" }, 0.4)
+              .from("#heroImg", { scale: 1.18, duration: 1.4, ease: "power3.out" }, 0.4)
+              .from(".hm-block", { y: 16, opacity: 0, duration: 0.6, stagger: 0.12 }, "-=0.9")
+              .from(".hero-side, .hero-scroll, .hero-index", { opacity: 0, duration: 0.8, stagger: 0.1 }, "-=0.6");
+
+        function finishIntro(fast) {
+          const intro = qs("#intro");
+          if (!intro) return;
+          document.body.classList.remove("is-loading");
+          if (lenis) lenis.start();
+          if (fast && heroIntro) heroIntro.timeScale(2.4).play();
+          else if (heroIntro) heroIntro.play();
+          intro.remove();
+          ScrollTrigger.refresh();
+        }
+        (function initIntro() {
+          const skip = qs("#intro .intro-skip");
+          if (skip) skip.addEventListener("click", () => finishIntro(true));
+          if (REDUCED) { finishIntro(false); return; }
+          document.body.classList.add("is-loading");
+          if (lenis) lenis.stop();
+          const tl = gsap.timeline({ onComplete: () => finishIntro(false) });
+          tl.from(".intro-ambient", { opacity: 0, scale: 0.7, duration: 1.3, ease: "power2.inOut" })
+            .from(".intro-corner", { opacity: 0, y: 10, duration: 0.6, stagger: 0.1 }, "-=0.9")
+            .from(".intro-name .mask > span", { yPercent: 118, duration: 1.1, stagger: 0.14 }, "-=0.4")
+            .fromTo(".in-l1", { letterSpacing: ".16em" }, { letterSpacing: "-.01em", duration: 1.2, ease: "power3.out" }, "<")
+            .fromTo(".in-l2", { letterSpacing: ".16em" }, { letterSpacing: "-.01em", duration: 1.2, ease: "power3.out" }, "<")
+            .fromTo(".intro-sweep", { xPercent: -110 }, { xPercent: 210, duration: 1, ease: "power2.inOut" }, "-=0.35")
+            .fromTo(".intro-portrait", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 1, ease: "power3.inOut" }, "<")
+            .to(".intro-portrait", { clipPath: "inset(0 0 0 100%)", duration: 0.7, ease: "power3.inOut" }, "+=0.45")
+            .to(".intro-corner", { opacity: 0, y: -12, duration: 0.4, stagger: 0.05 }, "-=0.2")
+            .to(".intro-name .mask > span", { yPercent: -118, duration: 0.7, stagger: 0.08, ease: "power3.in" }, "-=0.3")
+            .to(".intro-ambient", { opacity: 0, duration: 0.7 }, "-=0.5")
+            .to("#intro", { clipPath: "inset(0 0 100% 0)", duration: 1, ease: "power4.inOut" }, "-=0.2");
+        })();
+
+        /* Technology Constellation with Accurate Dynamic Coordinates */
+        (function initTechConstellation() {
+          const wall = qs("#techWall"),
+            svg = qs("#wallSvg"),
+            NS = "http://www.w3.org/2000/svg";
+          const centers = new Map();
+
+          function measure() {
+            centers.clear();
+            const wr = wall.getBoundingClientRect();
+            qsa(".tech", wall).forEach((el) => {
+              const r = el.getBoundingClientRect();
+              centers.set(el, {
+                x: r.left - wr.left + r.width / 2,
+                y: r.top - wr.top + r.height / 2,
+              });
+            });
+          }
+
+          function drawLines(sel) {
+            svg.innerHTML = "";
+            const t = TECH.find((x) => x.id === sel.dataset.id);
+            const a = centers.get(sel);
+            if (!a) return;
+            t.rel.forEach((rid) => {
+              const el = wall.querySelector(`[data-id="${rid}"]`);
+              const b = centers.get(el);
+              if (!b) return;
+              const line = document.createElementNS(NS, "line");
+              line.setAttribute("x1", a.x);
+              line.setAttribute("y1", a.y);
+              line.setAttribute("x2", b.x);
+              line.setAttribute("y2", b.y);
+              svg.appendChild(line);
+              const len = Math.hypot(b.x - a.x, b.y - a.y);
+              line.style.strokeDasharray = len;
+              line.style.strokeDashoffset = len;
+              requestAnimationFrame(() => {
+                line.style.transition = "stroke-dashoffset .6s cubic-bezier(.6,0,.3,1)";
+                line.style.strokeDashoffset = "0";
+              });
+            });
+          }
+
+          function select(el) {
+            const t = TECH.find((x) => x.id === el.dataset.id);
+            qsa(".tech", wall).forEach((s) => {
+              const id = s.dataset.id,
+                rel = t.rel.includes(id);
+              s.classList.toggle("is-active", s === el);
+              s.classList.toggle("is-related", rel && s !== el);
+              s.classList.toggle("is-dim", s !== el && !rel);
+            });
+            drawLines(el);
+            qs("#wrCat").textContent = t.cat;
+            qs("#wrName").textContent = t.name;
+            qs("#wrDesc").textContent = t.desc;
+            qs("#wrRel").innerHTML = t.rel
+              .map((r) => {
+                const rt = TECH.find((x) => x.id === r);
+                return rt ? `<button type="button" data-rel="${r}">${rt.name}</button>` : "";
+              })
+              .join("");
+          }
+
+          qsa(".tech", wall).forEach((el) => {
+            el.addEventListener("mouseenter", () => { measure(); select(el); });
+            el.addEventListener("focus", () => { measure(); select(el); });
+            el.addEventListener("click", () => { measure(); select(el); });
+          });
+
+          qs("#wrRel").addEventListener("click", (e) => {
+            const b = e.target.closest("[data-rel]");
+            if (!b) return;
+            const el = wall.querySelector(`[data-id="${b.dataset.rel}"]`);
+            measure();
+            if (el) select(el);
+          });
+
+          let raf = 0;
+          function handleMove(clientX, clientY) {
+            if (raf) return;
+            raf = requestAnimationFrame(() => {
+              raf = 0;
+              const wr = wall.getBoundingClientRect();
+              const mx = clientX - wr.left,
+                my = clientY - wr.top;
+              centers.forEach((c, el) => {
+                const dx = c.x - mx,
+                  dy = c.y - my,
+                  d = Math.hypot(dx, dy) || 1;
+                const f = Math.max(0, 1 - d / 340);
+                el.style.setProperty("--px", (dx / d) * f * 12 + "px");
+                el.style.setProperty("--py", (dy / d) * f * 10 + "px");
+              });
+            });
+          }
+
+          wall.addEventListener("pointermove", (e) => handleMove(e.clientX, e.clientY));
+          wall.addEventListener("touchmove", (e) => {
+            if (e.touches[0]) handleMove(e.touches[0].clientX, e.touches[0].clientY);
+          }, { passive: true });
+
+          wall.addEventListener("pointerleave", () =>
+            qsa(".tech", wall).forEach((el) => {
+              el.style.setProperty("--px", "0px");
+              el.style.setProperty("--py", "0px");
+            }),
+          );
+
+          addEventListener("resize", measure);
+          if (document.fonts && document.fonts.ready) document.fonts.ready.then(measure);
+          setTimeout(() => {
+            measure();
+            const initNode = qs(".tech.t1", wall);
+            if (initNode) select(initNode);
+          }, 600);
+        })();
+
+        /* Certifications Archive Accordion */
+        qsa(".doc-head").forEach((head) => {
+          head.addEventListener("click", () => {
+            const doc = head.closest(".doc");
+            const isOpen = doc.classList.contains("open");
+            qsa(".doc.open").forEach((d) => {
+              d.classList.remove("open");
+              qs(".doc-head", d).setAttribute("aria-expanded", "false");
+            });
+            if (!isOpen) {
+              doc.classList.add("open");
+              head.setAttribute("aria-expanded", "true");
+            }
+          });
+        });
+
+        /* Hero Desktop Parallax */
+        if (FINE && !REDUCED) {
+          const layers = qsa("#hero [data-depth]").map((el) => ({
+            d: parseFloat(el.dataset.depth),
+            x: gsap.quickTo(el, "x", { duration: 1, ease: "power3" }),
+            y: gsap.quickTo(el, "y", { duration: 1, ease: "power3" }),
+          }));
+          const gx = gsap.quickTo("#heroGlow", "x", { duration: 1.4, ease: "power3" });
+          const gy = gsap.quickTo("#heroGlow", "y", { duration: 1.4, ease: "power3" });
+          const grx = gsap.quickTo("#heroGrid", "x", { duration: 1.2, ease: "power3" });
+          const gry = gsap.quickTo("#heroGrid", "y", { duration: 1.2, ease: "power3" });
+          qs("#hero").addEventListener("mousemove", (e) => {
+            const nx = e.clientX / innerWidth - 0.5,
+              ny = e.clientY / innerHeight - 0.5;
+            layers.forEach((l) => {
+              l.x(nx * 320 * l.d);
+              l.y(ny * 240 * l.d);
+            });
+            gx(nx * 160);
+            gy(ny * 120);
+            grx(nx * -14);
+            gry(ny * -10);
+          });
+        }
+
+        /* Master Responsive GSAP Engine */
+        const mm = gsap.matchMedia();
+        mm.add(
+          {
+            isDesktop: "(min-width: 900px)",
+            isMobile: "(max-width: 899px)",
+            reduce: "(prefers-reduced-motion: reduce)",
+          },
+          (ctx) => {
+            const { isDesktop, reduce } = ctx.conditions;
+            if (reduce) return;
+
+            if (isDesktop) {
+              gsap.to(".rail-fill", {
+                scaleY: 1,
+                ease: "none",
+                scrollTrigger: {
+                  start: 0,
+                  end: "max",
+                  scrub: 0.3,
+                  onUpdate: (s) => {
+                    qs(".rail-num").textContent = Math.round(s.progress * 100) + "%";
+                  },
+                },
+              });
+            }
+            gsap.to(".mbar i", {
+              scaleX: 1,
+              ease: "none",
+              scrollTrigger: { start: 0, end: "max", scrub: 0.3 },
+            });
+
+            qsa(".sec-head").forEach((h) => {
+              gsap.from(h.children, {
+                y: 22,
+                opacity: 0,
+                duration: 0.8,
+                stagger: 0.08,
+                scrollTrigger: { trigger: h, start: "top 86%" },
+              });
+            });
+
+            gsap.from(".as-line:nth-child(1) .w", {
+              x: -70,
+              opacity: 0,
+              stagger: 0.08,
+              duration: 1,
+              scrollTrigger: { trigger: ".about-statement", start: "top 78%" },
+            });
+            gsap.from(".as-line:nth-child(2) .w", {
+              x: 110,
+              opacity: 0,
+              duration: 1.1,
+              scrollTrigger: { trigger: ".about-statement", start: "top 72%" },
+            });
+            gsap.from(".as-line:nth-child(3) .w", {
+              x: -40,
+              opacity: 0,
+              duration: 1,
+              scrollTrigger: { trigger: ".about-statement", start: "top 66%" },
+            });
+            gsap.from(".about-fig, .about-copy, .about-focus", {
+              y: 44,
+              opacity: 0,
+              duration: 1,
+              stagger: 0.14,
+              scrollTrigger: { trigger: ".about-grid", start: "top 82%" },
+            });
+            gsap.from(".about-stats", {
+              y: 36,
+              opacity: 0,
+              duration: 0.9,
+              scrollTrigger: { trigger: ".about-stats", start: "top 88%" },
+            });
+
+            /* Dedicated About Numbers Counting Animation */
+            qsa("[data-count]").forEach((el) => {
+              const target = +el.dataset.count;
+              const obj = { val: 0 };
+              gsap.to(obj, {
+                val: target,
+                duration: 2.2,
+                ease: "power2.out",
+                scrollTrigger: {
+                  trigger: el,
+                  start: "top 85%",
+                  once: true,
+                },
+                onUpdate: () => {
+                  el.textContent = Math.round(obj.val);
+                },
+              });
+            });
+
+            gsap.from(".exp-sticky > *", {
+              y: 30,
+              opacity: 0,
+              stagger: 0.1,
+              duration: 0.9,
+              scrollTrigger: { trigger: ".exp-grid", start: "top 75%" },
+            });
+            gsap.fromTo(
+              ".et-fill",
+              { scaleY: 0 },
+              {
+                scaleY: 1,
+                ease: "none",
+                scrollTrigger: {
+                  trigger: ".exp-tl",
+                  start: "top 72%",
+                  end: "bottom 62%",
+                  scrub: true,
+                },
+              },
+            );
+            qsa(".exp-item").forEach((it) => {
+              gsap.from(it, {
+                y: 34,
+                opacity: 0,
+                duration: 0.8,
+                scrollTrigger: {
+                  trigger: it,
+                  start: "top 84%",
+                  onEnter: () => it.classList.add("is-pass"),
+                },
+              });
+            });
+            gsap.from(".exp-impact", {
+              y: 30,
+              opacity: 0,
+              duration: 0.9,
+              scrollTrigger: { trigger: ".exp-impact", start: "top 85%" },
+            });
+
+            /* UNIFIED HORIZONTAL PINNING ENGINE (MOBILE & LAPTOP) */
+            const track = qs("#caseTrack");
+            const getDist = () => track.scrollWidth - window.innerWidth + (window.innerWidth < 900 ? 30 : 0);
+
+            const horiz = gsap.to(track, {
+              x: () => -getDist(),
+              ease: "none",
+              scrollTrigger: {
+                trigger: "#casePin",
+                start: "top top",
+                end: () => "+=" + getDist(),
+                pin: true,
+                scrub: 0.8,
+                anticipatePin: 1,
+                invalidateOnRefresh: true,
+              },
+            });
+
+            const wfItems = qsa("#wf li"),
+              wfFill = qs("#wfFill");
+            function wfProgress(p) {
+              if (wfFill) gsap.set(wfFill, { scaleY: p });
+              wfItems.forEach((li, i) =>
+                li.classList.toggle("is-on", p >= (i + 0.5) / 8),
+              );
+            }
+
+            ScrollTrigger.create({
+              trigger: "#casePin",
+              start: "top top",
+              end: () => "+=" + getDist(),
+              scrub: true,
+              invalidateOnRefresh: true,
+              onUpdate: (s) => {
+                gsap.set("#caseFill", { scaleX: s.progress });
+                const idx = Math.min(8, Math.max(1, 1 + Math.floor(s.progress * 8)));
+                qs("#caseIdx").textContent = String(idx).padStart(2, "0");
+                const wfPanel = qs(".p-workflow");
+                if (
+                  wfPanel &&
+                  wfPanel.getBoundingClientRect().right > 0 &&
+                  wfPanel.getBoundingClientRect().left < innerWidth
+                ) {
+                  wfProgress(gsap.utils.clamp(0, 1, (s.progress - 0.5) / 0.25));
+                }
+              },
+            });
+
+            qsa(".case-track .rv").forEach((el) => {
+              gsap.from(el, {
+                y: 28,
+                opacity: 0,
+                duration: 0.7,
+                scrollTrigger: {
+                  trigger: el,
+                  containerAnimation: horiz,
+                  start: "left 85%",
+                },
+              });
+            });
+
+            const archPanel = qs(".p-arch");
+            qsa(".arch .edge:not(.flow)").forEach((p) => {
+              const l = p.getTotalLength();
+              gsap.set(p, { strokeDasharray: l, strokeDashoffset: l });
+            });
+            gsap.to(".arch .edge:not(.flow)", {
+              strokeDashoffset: 0,
+              stagger: 0.08,
+              ease: "none",
+              scrollTrigger: {
+                trigger: archPanel,
+                containerAnimation: horiz,
+                start: "left 75%",
+                end: "left 25%",
+                scrub: true,
+              },
+            });
+            gsap.from(".arch-node", {
+              opacity: 0,
+              y: 10,
+              stagger: 0.08,
+              duration: 0.5,
+              scrollTrigger: {
+                trigger: archPanel,
+                containerAnimation: horiz,
+                start: "left 70%",
+              },
+            });
+            gsap.from("#mockChart i", {
+              scaleY: 0.15,
+              transformOrigin: "bottom",
+              stagger: 0.04,
+              duration: 0.6,
+              ease: "power3.out",
+              scrollTrigger: {
+                trigger: ".p-result",
+                containerAnimation: horiz,
+                start: "left 70%",
+              },
+            });
+
+            // P02 RAILWAY ANIMATION
+            gsap.fromTo(
+              "#trainDot",
+              { left: "0%" },
+              {
+                left: "100%",
+                ease: "none",
+                scrollTrigger: {
+                  trigger: "#projRail",
+                  start: "top 70%",
+                  end: "bottom 55%",
+                  scrub: 0.4,
+                  onUpdate: (s) => {
+                    const idx = Math.min(4, Math.floor(s.progress * 5 + 0.001));
+                    qsa(".station").forEach((st, i) =>
+                      st.classList.toggle("past", i <= idx),
+                    );
+                    gsap.set("#railProg", { scaleX: s.progress });
+                  },
+                },
+              },
+            );
+
+            // P03 STOCK PREDICTOR CHART ANIMATION
+            const sLine = qs("#stockLine"),
+              sProj = qs("#stockProj");
+            if (sLine) {
+              const sLen = sLine.getTotalLength(),
+                pLen = sProj.getTotalLength();
+              gsap.set(sLine, {
+                strokeDasharray: sLen,
+                strokeDashoffset: sLen,
+              });
+              gsap.set(sProj, {
+                strokeDasharray: pLen,
+                strokeDashoffset: pLen,
+                opacity: 0,
+              });
+              gsap.to(sLine, {
+                strokeDashoffset: 0,
+                ease: "none",
+                scrollTrigger: {
+                  trigger: "#projStock",
+                  start: "top 80%",
+                  end: "top 20%",
+                  scrub: 0.4,
+                },
+              });
+              gsap.to(sProj, {
+                strokeDashoffset: 0,
+                opacity: 1,
+                ease: "none",
+                scrollTrigger: {
+                  trigger: "#projStock",
+                  start: "top 30%",
+                  end: "top 0%",
+                  scrub: 0.4,
+                },
+              });
+              gsap.fromTo(
+                ".sp-pt",
+                { scale: 0, transformOrigin: "center" },
+                {
+                  scale: 1,
+                  stagger: 0.12,
+                  duration: 0.4,
+                  scrollTrigger: { trigger: "#projStock", start: "top 55%" },
+                },
+              );
+
+              const tkVals = qsa(".tk-v"),
+                tkBase = [24850, 81620, 51940, 1640];
+              let liveTk = false,
+                tkInterval = null;
+              new IntersectionObserver(
+                ([e]) => {
+                  liveTk = e.isIntersecting;
+                  if (liveTk && !tkInterval) {
+                    tkInterval = setInterval(() => {
+                      tkVals.forEach((v, i) => {
+                        const d = (Math.random() - 0.48) * tkBase[i] * 0.003;
+                        const n = tkBase[i] + d;
+                        v.textContent = n.toLocaleString("en-IN", {
+                          minimumFractionDigits: 2,
+                          maximumFractionDigits: 2,
+                        });
+                        v.classList.toggle("dn", d < 0);
+                      });
+                    }, 900);
+                  }
+                  if (!liveTk && tkInterval) {
+                    clearInterval(tkInterval);
+                    tkInterval = null;
+                  }
+                },
+                { rootMargin: "60px" },
+              ).observe(qs("#projStock"));
+            }
+
+            // Contact & Finale
+            gsap.from(".contact-title .ct-l > span", {
+              yPercent: 118,
+              duration: 1.1,
+              stagger: 0.12,
+              scrollTrigger: { trigger: "#contact", start: "top 70%" },
+            });
+            gsap.from(".contact-ctas .btn", {
+              y: 26,
+              opacity: 0,
+              stagger: 0.1,
+              duration: 0.8,
+              scrollTrigger: { trigger: ".contact-ctas", start: "top 88%" },
+            });
+            gsap.from(".contact-meta", {
+              opacity: 0,
+              y: 20,
+              duration: 0.8,
+              scrollTrigger: { trigger: ".contact-meta", start: "top 92%" },
+            });
+
+            gsap
+              .timeline({
+                scrollTrigger: {
+                  trigger: "#finale",
+                  start: "top top",
+                  end: "+=130%",
+                  pin: true,
+                  scrub: true,
+                  anticipatePin: 1,
+                },
+              })
+              .to(".bar-top", { scaleY: 1, duration: 0.3, ease: "power2.inOut" }, 0)
+              .to(".bar-bottom", { scaleY: 1, duration: 0.3, ease: "power2.inOut" }, 0)
+              .fromTo(
+                ".finale-portrait",
+                { clipPath: "inset(38% 22% 38% 22%)" },
+                { clipPath: "inset(4% 4% 4% 4%)", duration: 0.5, ease: "power3.inOut" },
+                0.1,
+              )
+              .fromTo("#finaleImg", { scale: 1.3 }, { scale: 1.02, duration: 0.9, ease: "none" }, 0)
+              .from(".ft-thanks", { opacity: 0, y: 16, duration: 0.3 }, 0.35)
+              .from(".ft-name", { opacity: 0, y: 30, duration: 0.4 }, 0.42)
+              .from(".ft-role", { opacity: 0, y: 16, duration: 0.3 }, 0.5)
+              .from(".finale-social a", { opacity: 0, y: 14, duration: 0.3, stagger: 0.06 }, 0.58)
+              .from(".footer", { opacity: 0, duration: 0.3 }, 0.7);
+
+            // Section Indicator Tracking
+            const siNum = qs(".si-num"),
+              siName = qs(".si-name");
+            function setIndicator(num, name) {
+              if (siName.textContent === name) return;
+              siNum.textContent = num;
+              siName.textContent = name;
+              gsap.fromTo(
+                [siNum, siName],
+                { y: 10, opacity: 0 },
+                { y: 0, opacity: 1, duration: 0.45, stagger: 0.05 },
+              );
+            }
+            [
+              ["hero", "00", "SYED"],
+              ["about", "01", "ABOUT"],
+              ["experience", "02", "EXPERIENCE"],
+              ["technology", "03", "TECHNOLOGY"],
+              ["work", "04", "WORK"],
+              ["certs", "05", "CERTIFICATIONS"],
+              ["contact", "06", "CONTACT"],
+            ].forEach(([id, num, name]) => {
+              ScrollTrigger.create({
+                trigger: "#" + id,
+                start: "top 55%",
+                end: "bottom 55%",
+                onToggle: (s) => {
+                  if (s.isActive) {
+                    if (id !== "hero") setIndicator(num, name);
+                    qsa(".menu-item").forEach((mi) => {
+                      const target = mi.getAttribute("href").replace("#", "");
+                      mi.classList.toggle("is-active", target === id);
+                    });
+                  }
+                },
+              });
+            });
+            ScrollTrigger.create({
+              trigger: "#finale",
+              start: "top 60%",
+              onEnter: () => header.classList.add("is-hidden"),
+              onLeaveBack: () => header.classList.remove("is-hidden"),
+            });
+          },
+        );
+
+        addEventListener("load", () => ScrollTrigger.refresh());
+      })();
+    </script>
+  </body>
 </html>
