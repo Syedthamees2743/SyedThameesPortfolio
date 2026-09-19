@@ -971,6 +971,7 @@ body.has-cursor [data-cursor] {
   .hero-portrait:hover .portrait-label {
     opacity: 1;
     transform: none;
+    color: whitesmoke;
   }
 }
 
@@ -3410,7 +3411,7 @@ body.has-cursor [data-cursor] {
 
 .footer button {
   font-family: var(--f-m);
-  font-size: 9.5px;
+  font-size: 11px;
   letter-spacing: 0.16em;
   color: var(--ink-2);
   text-transform: uppercase;
@@ -3419,4 +3420,1217 @@ body.has-cursor [data-cursor] {
 
 .footer button:hover {
   color: var(--accent);
+}
+
+/* =========================
+   FINALE — MOBILE CENTER
+========================= */
+
+@media (max-width: 700px) {
+
+  #finale {
+    min-height: 100svh;
+    height: 100svh;
+    overflow: hidden;
+  }
+
+  .finale-stage {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  /* Portrait — perfectly centered */
+  .finale-portrait {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: min(62vw, 260px);
+
+    aspect-ratio: 4 / 5;
+
+    transform: translate(-50%, -50%);
+
+    margin: 0;
+    z-index: 1;
+
+    clip-path: inset(30% 18% 30% 18%);
+
+    border: 1px solid var(--line);
+    border-radius: 12px;
+
+    overflow: hidden;
+  }
+
+  .finale-portrait img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center;
+
+    filter: grayscale(1) brightness(0.72);
+  }
+
+  /* Main text — centered */
+  .finale-type {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: 100%;
+
+    padding: 0 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+  }
+
+  .ft-thanks {
+    margin: 0 0 20px;
+
+    font-size: 9px;
+    letter-spacing: 0.25em;
+
+    text-align: center;
+  }
+
+  .ft-name {
+    margin: 0;
+
+    width: 100%;
+
+    font-size: clamp(34px, 10vw, 58px);
+    line-height: 0.92;
+
+    letter-spacing: -0.02em;
+
+    text-align: center;
+  }
+
+  .ft-role {
+    margin: 18px 0 0;
+
+    max-width: 280px;
+
+    font-size: 8px;
+    line-height: 1.7;
+    letter-spacing: 0.18em;
+
+    text-align: center;
+  }
+
+  /* Social links */
+  .finale-social {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 10px 20px;
+
+    margin-top: 28px;
+
+    text-align: center;
+  }
+
+  .finale-social a {
+    font-size: 9px;
+    letter-spacing: 0.15em;
+
+    text-align: center;
+  }
+
+  /* Top / bottom bars */
+  .bar {
+    width: 100%;
+    height: 7vh;
+  }
+
+  .bar-top {
+    top: 0;
+  }
+
+  .bar-bottom {
+    bottom: 0;
+  }
+
+  /* Footer */
+  .footer {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 12px 15px;
+
+    text-align: center;
+
+    font-size: 8px;
+    line-height: 1.5;
+  }
+
+  .footer span {
+    width: 100%;
+    text-align: center;
+  }
+
+  .footer button {
+    font-size: 12px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 700px) {
+
+  .finale-stage {
+    padding-bottom: 65px;
+  }
+
+  .finale-portrait {
+    width: 250px;
+    opacity: 0.35;
+    z-index: 1;
+  }
+
+  .finale-type {
+    z-index: 5;
+    transform: translateY(-10px);
+  }
+
+  .ft-name {
+    font-size: clamp(38px, 11vw, 58px);
+  }
+
+  .finale-social {
+    margin-top: 25px;
+  }
+}
+
+/* =========================================
+   PROJECT 02 — RAILWAY VIDEO
+   PREMIUM CURVE ANIMATION
+========================================= */
+
+.rail-video-wrap {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+
+  background: #0c1727;
+
+  /* Premium rounded shape */
+  border-radius: 30px;
+
+  /* Smooth shadow */
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.22),
+    0 8px 25px rgba(0, 0, 0, 0.12);
+
+  /* Entrance animation */
+  animation: railwayFloat 6s ease-in-out infinite;
+}
+
+
+/* -----------------------------------------
+   VIDEO
+----------------------------------------- */
+
+.rail-video {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+
+  object-fit: cover;
+  object-position: center;
+
+  border-radius: inherit;
+
+  transform: scale(1.015);
+
+  filter:
+    saturate(0.92)
+    contrast(1.05)
+    brightness(0.96);
+
+  transition:
+    transform 1.2s cubic-bezier(.16,1,.3,1),
+    filter 0.8s ease;
+}
+
+
+/* Hover zoom */
+
+.rail-video-wrap:hover .rail-video {
+  transform: scale(1.075);
+
+  filter:
+    saturate(1)
+    contrast(1.06)
+    brightness(1);
+}
+
+
+/* -----------------------------------------
+   CINEMATIC OVERLAY
+----------------------------------------- */
+
+.video-overlay {
+  position: absolute;
+  inset: 0;
+
+  z-index: 2;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(0, 0, 0, 0.30),
+      transparent 38%,
+      rgba(0, 0, 0, 0.10) 65%,
+      rgba(0, 0, 0, 0.25)
+    );
+
+  border-radius: inherit;
+}
+
+
+/* -----------------------------------------
+   ANIMATED CURVE — 1
+----------------------------------------- */
+
+.rail-curve {
+  position: absolute;
+
+  z-index: 3;
+
+  pointer-events: none;
+
+  border-radius: 50%;
+
+  opacity: 0.28;
+
+  mix-blend-mode: screen;
+}
+
+
+/* Big curved light */
+
+.rail-curve-1 {
+  width: 420px;
+  height: 420px;
+
+  right: -190px;
+  bottom: -240px;
+
+  border: 1px solid rgba(255,255,255,0.45);
+
+  animation:
+    curveMoveOne 7s ease-in-out infinite;
+}
+
+
+/* Second curve */
+
+.rail-curve-2 {
+  width: 300px;
+  height: 300px;
+
+  left: -170px;
+  top: -180px;
+
+  border: 1px solid rgba(255,255,255,0.30);
+
+  animation:
+    curveMoveTwo 9s ease-in-out infinite;
+}
+
+
+/* -----------------------------------------
+   CURVE ANIMATIONS
+----------------------------------------- */
+
+@keyframes curveMoveOne {
+
+  0% {
+    transform:
+      translate(0, 0)
+      rotate(0deg)
+      scale(1);
+  }
+
+  50% {
+    transform:
+      translate(-35px, -25px)
+      rotate(18deg)
+      scale(1.12);
+  }
+
+  100% {
+    transform:
+      translate(0, 0)
+      rotate(0deg)
+      scale(1);
+  }
+}
+
+
+@keyframes curveMoveTwo {
+
+  0% {
+    transform:
+      translate(0, 0)
+      rotate(0deg)
+      scale(1);
+  }
+
+  50% {
+    transform:
+      translate(30px, 25px)
+      rotate(-15deg)
+      scale(1.08);
+  }
+
+  100% {
+    transform:
+      translate(0, 0)
+      rotate(0deg)
+      scale(1);
+  }
+}
+
+
+/* -----------------------------------------
+   FLOATING CARD ANIMATION
+----------------------------------------- */
+
+@keyframes railwayFloat {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+
+/* -----------------------------------------
+   LIVE PROJECT BADGE
+----------------------------------------- */
+
+.video-badge {
+  position: absolute;
+
+  top: 22px;
+  right: 22px;
+
+  z-index: 5;
+
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  padding: 11px 16px;
+
+  color: #fff;
+
+  font-family: var(--f-mono);
+
+  font-size: 10px;
+  font-weight: 600;
+
+  letter-spacing: 0.12em;
+
+  background: rgba(20, 25, 32, 0.58);
+
+  border: 1px solid rgba(255,255,255,0.20);
+
+  border-radius: 999px;
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  box-shadow:
+    0 8px 25px rgba(0,0,0,0.18);
+
+  transition:
+    transform 0.5s cubic-bezier(.16,1,.3,1),
+    background 0.4s ease;
+}
+
+
+.rail-video-wrap:hover .video-badge {
+  transform: translateY(-3px);
+
+  background: rgba(20, 25, 32, 0.72);
+}
+
+
+/* -----------------------------------------
+   LIVE DOT
+----------------------------------------- */
+
+.video-dot {
+  width: 8px;
+  height: 8px;
+
+  flex: 0 0 8px;
+
+  border-radius: 50%;
+
+  background: #d59a18;
+
+  box-shadow:
+    0 0 0 0 rgba(213,154,24,0.55),
+    0 0 12px rgba(213,154,24,0.65);
+
+  animation: livePulse 1.7s ease-in-out infinite;
+}
+
+
+@keyframes livePulse {
+
+  0% {
+    transform: scale(0.85);
+
+    box-shadow:
+      0 0 0 0 rgba(213,154,24,0.55),
+      0 0 8px rgba(213,154,24,0.45);
+  }
+
+  50% {
+    transform: scale(1.15);
+
+    box-shadow:
+      0 0 0 8px rgba(213,154,24,0),
+      0 0 18px rgba(213,154,24,0.75);
+  }
+
+  100% {
+    transform: scale(0.85);
+
+    box-shadow:
+      0 0 0 0 rgba(213,154,24,0),
+      0 0 8px rgba(213,154,24,0.45);
+  }
+}
+
+
+/* -----------------------------------------
+   MOBILE
+----------------------------------------- */
+
+@media (max-width: 700px) {
+
+  .rail-video-wrap {
+    min-height: 300px;
+    border-radius: 22px;
+  }
+
+  .rail-video {
+    min-height: 300px;
+  }
+
+  .video-badge {
+    top: 14px;
+    right: 14px;
+
+    padding: 8px 11px;
+
+    font-size: 8px;
+  }
+
+  .rail-curve-1 {
+    width: 280px;
+    height: 280px;
+  }
+
+  .rail-curve-2 {
+    width: 220px;
+    height: 220px;
+  }
+}
+
+
+/* -----------------------------------------
+   REDUCED MOTION
+----------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .rail-video-wrap,
+  .rail-curve-1,
+  .rail-curve-2,
+  .video-dot {
+    animation: none;
+  }
+
+  .rail-video {
+    transition: none;
+  }
+}
+
+/* =========================================
+   PROJECT 02 — RAILWAY VIDEO
+   PREMIUM CURVE ANIMATION
+========================================= */
+
+.rail-video-wrap {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+
+  background: #0c1727;
+
+  /* Premium rounded shape */
+  border-radius: 30px;
+
+  /* Smooth shadow */
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.22),
+    0 8px 25px rgba(0, 0, 0, 0.12);
+
+  /* Entrance animation */
+  animation: railwayFloat 6s ease-in-out infinite;
+}
+
+
+/* -----------------------------------------
+   VIDEO
+----------------------------------------- */
+
+.rail-video {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+
+  object-fit: cover;
+  object-position: center;
+
+  border-radius: inherit;
+
+  transform: scale(1.015);
+
+  filter:
+    saturate(0.92)
+    contrast(1.05)
+    brightness(0.96);
+
+  transition:
+    transform 1.2s cubic-bezier(.16,1,.3,1),
+    filter 0.8s ease;
+}
+
+
+/* Hover zoom */
+
+.rail-video-wrap:hover .rail-video {
+  transform: scale(1.075);
+
+  filter:
+    saturate(1)
+    contrast(1.06)
+    brightness(1);
+}
+
+
+/* -----------------------------------------
+   CINEMATIC OVERLAY
+----------------------------------------- */
+
+.video-overlay {
+  position: absolute;
+  inset: 0;
+
+  z-index: 2;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(0, 0, 0, 0.30),
+      transparent 38%,
+      rgba(0, 0, 0, 0.10) 65%,
+      rgba(0, 0, 0, 0.25)
+    );
+
+  border-radius: inherit;
+}
+
+
+/* -----------------------------------------
+   ANIMATED CURVE — 1
+----------------------------------------- */
+
+.rail-curve {
+  position: absolute;
+
+  z-index: 3;
+
+  pointer-events: none;
+
+  border-radius: 50%;
+
+  opacity: 0.28;
+
+  mix-blend-mode: screen;
+}
+
+
+/* Big curved light */
+
+.rail-curve-1 {
+  width: 420px;
+  height: 420px;
+
+  right: -190px;
+  bottom: -240px;
+
+  border: 1px solid rgba(255,255,255,0.45);
+
+  animation:
+    curveMoveOne 7s ease-in-out infinite;
+}
+
+
+/* Second curve */
+
+.rail-curve-2 {
+  width: 300px;
+  height: 300px;
+
+  left: -170px;
+  top: -180px;
+
+  border: 1px solid rgba(255,255,255,0.30);
+
+  animation:
+    curveMoveTwo 9s ease-in-out infinite;
+}
+
+
+/* -----------------------------------------
+   CURVE ANIMATIONS
+----------------------------------------- */
+
+@keyframes curveMoveOne {
+
+  0% {
+    transform:
+      translate(0, 0)
+      rotate(0deg)
+      scale(1);
+  }
+
+  50% {
+    transform:
+      translate(-35px, -25px)
+      rotate(18deg)
+      scale(1.12);
+  }
+
+  100% {
+    transform:
+      translate(0, 0)
+      rotate(0deg)
+      scale(1);
+  }
+}
+
+
+@keyframes curveMoveTwo {
+
+  0% {
+    transform:
+      translate(0, 0)
+      rotate(0deg)
+      scale(1);
+  }
+
+  50% {
+    transform:
+      translate(30px, 25px)
+      rotate(-15deg)
+      scale(1.08);
+  }
+
+  100% {
+    transform:
+      translate(0, 0)
+      rotate(0deg)
+      scale(1);
+  }
+}
+
+
+/* -----------------------------------------
+   FLOATING CARD ANIMATION
+----------------------------------------- */
+
+@keyframes railwayFloat {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+
+/* -----------------------------------------
+   LIVE PROJECT BADGE
+----------------------------------------- */
+
+.video-badge {
+  position: absolute;
+
+  top: 22px;
+  right: 22px;
+
+  z-index: 5;
+
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  padding: 11px 16px;
+
+  color: #fff;
+
+  font-family: var(--f-mono);
+
+  font-size: 10px;
+  font-weight: 600;
+
+  letter-spacing: 0.12em;
+
+  background: rgba(20, 25, 32, 0.58);
+
+  border: 1px solid rgba(255,255,255,0.20);
+
+  border-radius: 999px;
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  box-shadow:
+    0 8px 25px rgba(0,0,0,0.18);
+
+  transition:
+    transform 0.5s cubic-bezier(.16,1,.3,1),
+    background 0.4s ease;
+}
+
+
+.rail-video-wrap:hover .video-badge {
+  transform: translateY(-3px);
+
+  background: rgba(20, 25, 32, 0.72);
+}
+
+
+/* -----------------------------------------
+   LIVE DOT
+----------------------------------------- */
+
+.video-dot {
+  width: 8px;
+  height: 8px;
+
+  flex: 0 0 8px;
+
+  border-radius: 50%;
+
+  background: #d59a18;
+
+  box-shadow:
+    0 0 0 0 rgba(213,154,24,0.55),
+    0 0 12px rgba(213,154,24,0.65);
+
+  animation: livePulse 1.7s ease-in-out infinite;
+}
+
+
+@keyframes livePulse {
+
+  0% {
+    transform: scale(0.85);
+
+    box-shadow:
+      0 0 0 0 rgba(213,154,24,0.55),
+      0 0 8px rgba(213,154,24,0.45);
+  }
+
+  50% {
+    transform: scale(1.15);
+
+    box-shadow:
+      0 0 0 8px rgba(213,154,24,0),
+      0 0 18px rgba(213,154,24,0.75);
+  }
+
+  100% {
+    transform: scale(0.85);
+
+    box-shadow:
+      0 0 0 0 rgba(213,154,24,0),
+      0 0 8px rgba(213,154,24,0.45);
+  }
+}
+
+
+/* -----------------------------------------
+   MOBILE
+----------------------------------------- */
+
+@media (max-width: 700px) {
+
+  .rail-video-wrap {
+    min-height: 300px;
+    border-radius: 22px;
+  }
+
+  .rail-video {
+    min-height: 300px;
+  }
+
+  .video-badge {
+    top: 14px;
+    right: 14px;
+
+    padding: 8px 11px;
+
+    font-size: 8px;
+  }
+
+  .rail-curve-1 {
+    width: 280px;
+    height: 280px;
+  }
+
+  .rail-curve-2 {
+    width: 220px;
+    height: 220px;
+  }
+}
+
+
+/* -----------------------------------------
+   REDUCED MOTION
+----------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .rail-video-wrap,
+  .rail-curve-1,
+  .rail-curve-2,
+  .video-dot {
+    animation: none;
+  }
+
+  .rail-video {
+    transition: none;
+  }
+}
+
+/* ============================================================
+   MOBILE CINEMATIC VIEWPORT ENGINE (MOBILE & TABLET)
+============================================================ */
+@media (max-width: 899px) {
+  :root {
+    --pad: 18px;
+  }
+
+  html, body {
+    overflow-x: hidden !important;
+    width: 100%;
+  }
+
+  /* Nav Floating Header */
+  .nav-holder {
+    padding: 12px var(--pad) !important;
+  }
+  .header {
+    padding: 8px 16px !important;
+    border-radius: 30px !important;
+    background: var(--glass-bg) !important;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--line-2) !important;
+  }
+  .sec-ind {
+    display: none !important;
+  }
+
+  /* Hero Section */
+  .hero {
+    min-height: 100svh;
+    padding: 95px var(--pad) 40px !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .hero-desktop-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px;
+  }
+  .ht-first {
+    font-size: clamp(38px, 12vw, 56px) !important;
+  }
+  .ht-second {
+    font-size: clamp(24px, 7.5vw, 36px) !important;
+  }
+  .hero-portrait {
+    max-width: 240px;
+    margin: 10px auto 0;
+  }
+  .portrait {
+    aspect-ratio: 1/1;
+    border-radius: 16px;
+    clip-path: none !important;
+  }
+  .portrait img {
+    filter: grayscale(0.2) contrast(1.05) brightness(0.9);
+  }
+  .portrait-label {
+    opacity: 1 !important;
+    transform: none !important;
+    font-size: 8px;
+  }
+  .hero-meta, .hero-side, .hero-index, .hero-scroll {
+    display: none !important;
+  }
+
+  /* Stats Grid */
+  .about-stats {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 8px !important;
+  }
+  .stat-box {
+    padding: 14px 4px !important;
+  }
+  .stat-box b {
+    font-size: clamp(24px, 7vw, 32px) !important;
+  }
+  .stat-box span:not([data-count]) {
+    font-size: 8px !important;
+    letter-spacing: 0.08em;
+  }
+
+  /* ============================================================
+     CASE STUDY (SMART IT SERVICE DESK) - 100% VISIBLE SIDEWAYS SLIDER
+  ============================================================ */
+  .work-head {
+    padding: 60px var(--pad) 20px !important;
+  }
+
+  /* Laptop maadhiriye horizontal scroll mobile-layum irukkum */
+  .case-pin {
+    height: 100vh !important;
+    height: 100svh !important;
+    position: relative;
+    overflow: hidden;
+  }
+  .case-track {
+    display: flex !important;
+    flex-direction: row !important;
+    height: 100% !important;
+    will-change: transform;
+  }
+  .panel {
+    width: 92vw !important; /* Screen-oda margin theriya card view */
+    margin-right: 4vw;
+    height: 82svh !important;
+    max-height: 82svh !important;
+    margin-top: 9svh;
+    padding: 24px 20px !important;
+    border: 1px solid var(--line-2) !important;
+    border-radius: 16px !important;
+    background: var(--bg-2) !important;
+    overflow-y: auto !important; /* Card kulla content cut aagadha mathiri scrollable */
+    -webkit-overflow-scrolling: touch;
+    flex-shrink: 0 !important;
+  }
+
+  /* Indicator UI bar visible on mobile */
+  .case-ui {
+    left: var(--pad) !important;
+    bottom: 2.2vh !important;
+    font-size: 9px !important;
+    padding: 4px 12px !important;
+  }
+  .case-bar {
+    width: 80px !important;
+  }
+
+  /* Panel 01: Intro */
+  .p-intro h3 {
+    font-size: 26px !important;
+    line-height: 1.1 !important;
+  }
+  .cs-sub {
+    font-size: 13.5px !important;
+    line-height: 1.6;
+  }
+  .cs-meta {
+    flex-direction: column !important;
+    gap: 8px !important;
+    margin-top: 14px !important;
+  }
+
+  /* Panel 04: Architecture SVG scaling */
+  .arch {
+    width: 100% !important;
+    min-width: 320px;
+    transform: scale(0.95);
+    transform-origin: left center;
+  }
+
+  /* Panel 06: Ticket Workflow */
+  .wf li {
+    grid-template-columns: 1fr 34px 1fr !important;
+    padding: 5px 0 !important;
+  }
+  .wf-c h5 {
+    font-size: 11px !important;
+  }
+  .wf-c span {
+    font-size: 7.5px !important;
+  }
+
+  /* Panel 08: Smart IT Admin Console Mockup (Mobile-la display on) */
+  .mock {
+    display: block !important;
+    transform: none !important;
+    margin-top: 16px;
+  }
+  .mock-body {
+    grid-template-columns: 1fr !important; /* Sidebar-a top tab-a mathum */
+    min-height: auto;
+  }
+  .mock-nav {
+    flex-direction: row !important;
+    overflow-x: auto;
+    border-right: none;
+    border-bottom: 1px solid var(--line);
+    padding: 6px;
+  }
+  .mock-nav span {
+    white-space: nowrap;
+    font-size: 8px;
+    padding: 4px 8px;
+  }
+  .mock-chart {
+    height: 50px !important;
+  }
+
+  /* Railway project */
+  .route {
+    display: none !important; /* Incomplete dots disappear */
+  }
+  .ticket-stub {
+    flex-direction: column !important;
+    width: 100% !important;
+  }
+  .ts-side {
+    border-left: none !important;
+    border-top: 1px dashed var(--line-2) !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    padding: 10px 16px !important;
+  }
+  .ticket-stub::before, .ticket-stub::after {
+    display: none !important;
+  }
+  .rail-video-wrap {
+    min-height: 220px !important;
+    height: 220px !important;
+  }
+
+  /* Stock radar chart */
+  .chart-wrap {
+    padding: 14px !important;
+  }
+  .tick-col {
+    position: static !important;
+    margin-top: 12px !important;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 8px !important;
+  }
+
+  /* Certifications Accordion */
+  .doc-head {
+    display: grid !important;
+    grid-template-columns: 75px 1fr 20px !important;
+    grid-template-areas: "no title plus" "org org plus" !important;
+    row-gap: 4px !important;
+    padding: 14px !important;
+  }
+  .d-no { grid-area: no; }
+  .d-title { grid-area: title; font-size: 13px !important; }
+  .d-org { grid-area: org; text-align: left !important; font-size: 10px; }
+  .d-year { display: none; }
+  .d-plus { grid-area: plus; }
+
+  /* Contact & CTA */
+  .contact-title {
+    font-size: clamp(40px, 12vw, 68px) !important;
+  }
+  .contact-ctas {
+    flex-direction: column !important;
+  }
+  .btn {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+  .finale-portrait {
+    width: 170px !important;
+  }
 }

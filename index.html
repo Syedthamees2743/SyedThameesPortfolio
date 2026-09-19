@@ -33,7 +33,7 @@
 <!-- INTRO SEQUENCE -->
 <div id="intro" aria-hidden="true">
   <div class="intro-ambient"></div>
-  <figure class="intro-portrait"><img src="https://picsum.photos/seed/st-portrait/640/800.jpg" width="640" height="800" alt=""></figure>
+  <figure class="intro-portrait"><img src="./assets/images/Intro.png" width="640" height="800" alt=""></figure>
   <div class="intro-name">
     <span class="mask"><span class="in-l1">SYED</span></span>
     <span class="mask"><span class="in-l2">THAMEESUDEEN</span></span>
@@ -53,7 +53,7 @@
     <div class="nav-controls">
       <div class="sec-ind" aria-hidden="true"><span class="si-num">01</span><span class="si-name">ABOUT</span></div>
       
-      <!-- Theme Toggle -->
+      <!-- Instant Dark / Light Mode Button -->
       <button class="theme-btn" id="themeToggle" type="button" aria-label="Toggle Theme">
         <svg id="themeIcon" viewBox="0 0 24 24">
           <path id="themeIconPath" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
@@ -117,7 +117,7 @@
 
     <div class="hero-portrait" data-depth="0.11">
       <figure class="portrait" data-cursor="hover">
-        <img id="heroImg" src="https://picsum.photos/seed/st-portrait/720/900.jpg" width="720" height="900" alt="Portrait of Syed Thameesudeen" fetchpriority="high">
+        <img id="heroImg" src="./assets/images/Intro.png" width="720" height="900" alt="Portrait of Syed Thameesudeen" fetchpriority="high">
         <div class="portrait-overlay" aria-hidden="true"></div>
         <figcaption class="portrait-label">SYED THAMEESUDEEN — KOCHI · 2026</figcaption>
       </figure>
@@ -145,7 +145,7 @@
   </h2>
   <div class="about-grid">
     <figure class="about-fig">
-      <img src="https://picsum.photos/seed/st-about/640/800.jpg" width="640" height="800" loading="lazy" alt="Syed Thameesudeen working at his desk">
+      <img src="./assets/images/profile-photo.png" width="640" height="800" loading="lazy" alt="Syed Thameesudeen working at his desk">
       <figcaption>KOCHI — 2026</figcaption>
     </figure>
     <div class="about-copy">
@@ -167,18 +167,19 @@
     </div>
   </div>
 
+  <!-- Number Counters In Horizontal Boxes (HUGE BOLD SCALE) -->
   <div class="about-stats">
     <div class="stat-box">
-      <div class="stat-num"><b data-count="3">0</b><i>+</i></div>
-      <span class="stat-label">Projects Built</span>
+      <b><span data-count="3">0</span><i>+</i></b>
+      <span>Projects Built</span>
     </div>
     <div class="stat-box">
-      <div class="stat-num"><b data-count="4">0</b></div>
-      <span class="stat-label">Certifications</span>
+      <b><span data-count="4">0</span></b>
+      <span>Certifications</span>
     </div>
     <div class="stat-box">
-      <div class="stat-num"><b data-count="15">0</b><i>+</i></div>
-      <span class="stat-label">Tech In Stack</span>
+      <b><span data-count="15">0</span><i>+</i></b>
+      <span>Tech In Stack</span>
     </div>
   </div>
 </section>
@@ -293,7 +294,7 @@
         <p class="arch-cap rv">JWT-SECURED REST LAYER BETWEEN REACT AND POSTGRESQL — SMTP NOTIFICATIONS</p>
       </article>
 
-      <!-- 05 FEATURES -->
+      <!-- 05 FEATURES (FIXED EMAIL NOTIFICATION DESIGN) -->
       <article class="panel p-features">
         <div class="p-head"><span class="p-num">05</span><span class="p-label">Features</span><span class="p-rule"></span></div>
         <div class="feat-list">
@@ -347,7 +348,7 @@
         </dl>
       </article>
 
-      <!-- 08 RESULT -->
+      <!-- 08 RESULT (UPGRADED CONSOLE TERMINAL) -->
       <article class="panel p-result">
         <div class="p-head"><span class="p-num">08</span><span class="p-label">Result</span><span class="p-rule"></span></div>
         <div class="p-body">
@@ -445,7 +446,7 @@
             <span>JAVASCRIPT</span>
           </div>
           
-          <div class="ticket-stub" id="ticketStub">
+          <div class="ticket-stub">
             <div class="ts-main">
               <span class="mono">AUTHENTICATED BOARDING PASS // SYSTEM GENERATED</span>
               <b>PNR 4265-8821-90</b>
@@ -462,9 +463,40 @@
           </div>
         </div>
         
-        <figure class="r-img" data-cursor="VIEW PROJECT">
-          <img id="railImg" src="https://picsum.photos/seed/railwaydoc/1300/800.jpg" alt="Railway Reservation System Interface preview" loading="lazy">
-        </figure>
+        <figure class="r-img rail-video-wrap" data-cursor="VIEW PROJECT">
+
+  <video
+    id="railVideo"
+    class="rail-video"
+    autoplay
+    muted
+    loop
+    playsinline
+    preload="metadata"
+    poster="./assets/images/railway-poster.jpg"
+    aria-label="Railway Reservation System project preview"
+  >
+    <source
+      src="./assets/images/Django Mini Project.mp4"
+      type="video/mp4"
+    >
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Animated curve layer -->
+  <div class="rail-curve rail-curve-1"></div>
+  <div class="rail-curve rail-curve-2"></div>
+
+  <!-- Dark cinematic overlay -->
+  <div class="video-overlay"></div>
+
+  <!-- Live badge -->
+  <div class="video-badge">
+    <span class="video-dot"></span>
+    LIVE PROJECT PREVIEW
+  </div>
+
+</figure>
       </div>
     </article>
 
@@ -484,20 +516,13 @@
         <span>CHART VISUALS</span>
       </div>
 
-      <div class="chart-wrap" id="chartTerminal">
+      <div class="chart-wrap">
         <svg id="stockSvg" viewBox="0 0 900 380" role="img" aria-label="Market trend chart with projection">
           <defs>
             <linearGradient id="chartGlow" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stop-color="var(--accent)" stop-opacity="0.32"/>
+              <stop offset="0%" stop-color="var(--accent)" stop-opacity="0.25"/>
               <stop offset="100%" stop-color="var(--accent)" stop-opacity="0"/>
             </linearGradient>
-            <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
-              <feGaussianBlur stdDeviation="4" result="blur" />
-              <feMerge>
-                <feMergeNode in="blur"/>
-                <feMergeNode in="SourceGraphic"/>
-              </feMerge>
-            </filter>
           </defs>
           <path class="sg" d="M0,76 H900 M0,152 H900 M0,228 H900 M0,304 H900"/>
           <path class="sg" d="M112,0 V380 M225,0 V380 M337,0 V380 M450,0 V380 M562,0 V380 M675,0 V380 M787,0 V380"/>
@@ -525,7 +550,7 @@
   </div>
 </section>
 
-<!-- CERTIFICATIONS ARCHIVE -->
+<!-- ================= CERTIFICATIONS ARCHIVE (COMPLETE 4 RECORDS) ================= -->
 <section id="certs" tabindex="-1" aria-label="Certification archive">
   <div class="sec-head" style="padding: 9vh 5vw 4vh; max-width: 1100px; margin: 0 auto;">
     <p class="mono sec-index" style="margin-bottom: 14px;"><span class="acc" style="color: var(--accent);">05 /</span> CREDENTIALS</p>
@@ -533,7 +558,7 @@
   </div>
 
   <div class="cert-list">
-    <!-- ARC-001 -->
+    <!-- ARC-001: PYTHON DJANGO FULL STACK (FUTURA LABS) -->
     <article class="doc" data-cursor="OPEN FILE">
       <button class="doc-head" aria-expanded="false">
         <span class="d-no">ARCH-001</span>
@@ -562,7 +587,7 @@
       </div></div></div>
     </article>
 
-    <!-- ARC-002 -->
+    <!-- ARC-002: REACT.JS FOR ECOMMERCE APPS (UDEMY) - RESTORED -->
     <article class="doc" data-cursor="OPEN FILE">
       <button class="doc-head" aria-expanded="false">
         <span class="d-no">ARCH-002</span>
@@ -591,7 +616,7 @@
       </div></div></div>
     </article>
 
-    <!-- ARC-003 -->
+    <!-- ARC-003: THE COMPLETE FULL STACK BOOTCAMP (UDEMY) -->
     <article class="doc" data-cursor="OPEN FILE">
       <button class="doc-head" aria-expanded="false">
         <span class="d-no">ARCH-003</span>
@@ -620,7 +645,7 @@
       </div></div></div>
     </article>
 
-    <!-- ARC-004 -->
+    <!-- ARC-004: AI & MACHINE LEARNING INTERNSHIP (NEURAL TRANSFORMERS) -->
     <article class="doc" data-cursor="OPEN FILE">
       <button class="doc-head" aria-expanded="false">
         <span class="d-no">ARCH-004</span>
@@ -702,7 +727,7 @@
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
 <script>
-  (function(){
+(function(){
 'use strict';
 const qs  = (s,c=document)=> c.querySelector(s);
 const qsa = (s,c=document)=> [...c.querySelectorAll(s)];
@@ -841,7 +866,7 @@ window.addEventListener('scroll', () => {
   });
 })();
 
-/* Menu */
+/* Clean Professional Menu */
 const menu=qs('#menu'), menuBtn=qs('#menuBtn');
 let menuTl=null, menuOpen=false;
 if(!REDUCED){
@@ -1039,9 +1064,7 @@ if(FINE && !REDUCED){
   });
 }
 
-/* ============================================================
-   MASTER SCROLL & CINEMATIC PROJECTS ANIMATION
-============================================================ */
+/* Master Scroll Animations */
 const mm=gsap.matchMedia();
 mm.add({all:'(min-width: 0px)', reduce:'(prefers-reduced-motion: reduce)'},(ctx)=>{
   const {reduce}=ctx.conditions;
@@ -1058,39 +1081,25 @@ mm.add({all:'(min-width: 0px)', reduce:'(prefers-reduced-motion: reduce)'},(ctx)
   gsap.from('.as-line:nth-child(2) .w',{x:110,opacity:0,duration:1.1,scrollTrigger:{trigger:'.about-statement',start:'top 72%'}});
   gsap.from('.as-line:nth-child(3) .w',{x:-40,opacity:0,duration:1,scrollTrigger:{trigger:'.about-statement',start:'top 66%'}});
   gsap.from('.about-fig, .about-copy, .about-focus',{y:44,opacity:0,duration:1,stagger:.14,scrollTrigger:{trigger:'.about-grid',start:'top 82%'}});
-  
-  gsap.from('.about-stats .stat-box',{
-    y:35,
-    opacity:0,
-    duration:.8,
-    stagger:.12,
-    scrollTrigger:{trigger:'.about-stats',start:'top 88%'}
-  });
+  gsap.from('.about-stats',{y:36,opacity:0,duration:.9,scrollTrigger:{trigger:'.about-stats',start:'top 88%'}});
 
-  qsa('.stat-box [data-count]').forEach(el => {
+  /* Dedicated About Numbers Counting Animation */
+  qsa('[data-count]').forEach(el => {
     const target = +el.dataset.count;
-    const parentBox = el.closest('.stat-box');
     const obj = { val: 0 };
-    
-    gsap.timeline({
+    gsap.to(obj, {
+      val: target,
+      duration: 2.2,
+      ease: 'power2.out',
       scrollTrigger: {
-        trigger: parentBox,
+        trigger: el,
         start: 'top 85%',
         once: true
-      }
-    })
-    .fromTo(el, 
-      { scale: 0.5, opacity: 0 }, 
-      { scale: 1, opacity: 1, duration: 0.8, ease: 'back.out(1.8)' }
-    )
-    .to(obj, {
-      val: target,
-      duration: 2.0,
-      ease: 'power2.out',
+      },
       onUpdate: () => {
         el.textContent = Math.round(obj.val);
       }
-    }, "<");
+    });
   });
 
   gsap.from('.exp-sticky > *',{y:30,opacity:0,stagger:.1,duration:.9,scrollTrigger:{trigger:'.exp-grid',start:'top 75%'}});
@@ -1100,122 +1109,52 @@ mm.add({all:'(min-width: 0px)', reduce:'(prefers-reduced-motion: reduce)'},(ctx)
   });
   gsap.from('.exp-impact',{y:30,opacity:0,duration:.9,scrollTrigger:{trigger:'.exp-impact',start:'top 85%'}});
 
-  /* ------------------------------------------------------------
-     UPGRADED CINEMATIC 01: SMART IT SERVICE DESK (PINNED PANELS)
-  ------------------------------------------------------------ */
-  const track = qs('#caseTrack');
-  const dist = () => track.scrollWidth - innerWidth;
-  
-  const horiz = gsap.to(track, {
-    x: () => -dist(),
-    ease: 'none',
-    scrollTrigger: {
-      trigger: '#casePin',
-      start: 'top top',
-      end: () => '+=' + dist(),
-      pin: true,
-      scrub: 0.8,
-      anticipatePin: 1,
-      invalidateOnRefresh: true
-    }
-  });
+  // UNIFIED HORIZONTAL PINNING FOR CASE STUDY
+  const track=qs('#caseTrack');
+  const dist=()=>track.scrollWidth-innerWidth;
+  const horiz=gsap.to(track,{x:()=>-dist(),ease:'none',scrollTrigger:{
+    trigger:'#casePin',start:'top top',end:()=>'+='+dist(),pin:true,scrub:1,anticipatePin:1,invalidateOnRefresh:true
+  }});
 
-  const wfItems = qsa('#wf li'), wfFill = qs('#wfFill');
+  const wfItems=qsa('#wf li'), wfFill=qs('#wfFill');
   function wfProgress(p){
-    gsap.set(wfFill, { scaleY: p });
-    wfItems.forEach((li, i) => li.classList.toggle('is-on', p >= (i + 0.5) / 8));
+    gsap.set(wfFill,{scaleY:p});
+    wfItems.forEach((li,i)=>li.classList.toggle('is-on',p>=(i+.6)/8));
   }
 
   ScrollTrigger.create({
-    trigger: '#casePin',
-    start: 'top top',
-    end: () => '+=' + dist(),
-    scrub: true,
-    invalidateOnRefresh: true,
-    onUpdate: s => {
-      gsap.set('#caseFill', { scaleX: s.progress });
-      qs('#caseIdx').textContent = String(1 + Math.round(s.progress * 7)).padStart(2, '0');
-      const wfPanel = qs('.p-workflow');
-      if (wfPanel && wfPanel.getBoundingClientRect().right > 0 && wfPanel.getBoundingClientRect().left < innerWidth) {
-        wfProgress(gsap.utils.clamp(0, 1, (s.progress - 0.52) / 0.24));
+    trigger:'#casePin',start:'top top',end:()=>'+='+dist(),scrub:true,invalidateOnRefresh:true,
+    onUpdate:s=>{
+      gsap.set('#caseFill',{scaleX:s.progress});
+      qs('#caseIdx').textContent=String(1+Math.round(s.progress*7)).padStart(2,'0');
+      const wfPanel=qs('.p-workflow');
+      if(wfPanel && wfPanel.getBoundingClientRect().right>0 && wfPanel.getBoundingClientRect().left<innerWidth){
+        wfProgress(gsap.utils.clamp(0,1,(s.progress-.52)/.24));
       }
     }
   });
 
-  // Staggered 3D Reveal on Panel Elements
-  qsa('.case-track .rv').forEach(el => {
-    gsap.fromTo(el,
-      { y: 48, opacity: 0, rotationX: -10, transformOrigin: 'top center' },
-      {
-        y: 0,
-        opacity: 1,
-        rotationX: 0,
-        duration: 0.9,
-        ease: 'power3.out',
-        scrollTrigger: {
-          trigger: el,
-          containerAnimation: horiz,
-          start: 'left 84%'
-        }
-      }
-    );
+  qsa('.case-track .rv').forEach(el=>{
+    gsap.from(el,{
+      y:38,
+      opacity:0,
+      duration:0.85,
+      scrollTrigger:{trigger:el,containerAnimation:horiz,start:'left 82%'}
+    });
   });
 
-  // Architecture Dynamic Laser Flow
-  const archPanel = qs('.p-arch');
-  qsa('.arch .edge:not(.flow)').forEach(p => {
-    const l = p.getTotalLength();
-    gsap.set(p, { strokeDasharray: l, strokeDashoffset: l });
-  });
-  
-  gsap.to('.arch .edge:not(.flow)', {
-    strokeDashoffset: 0,
-    stagger: 0.1,
-    ease: 'none',
-    scrollTrigger: {
-      trigger: archPanel,
-      containerAnimation: horiz,
-      start: 'left 75%',
-      end: 'left 20%',
-      scrub: 0.5
-    }
-  });
+  const archPanel=qs('.p-arch');
+  qsa('.arch .edge:not(.flow)').forEach(p=>{const l=p.getTotalLength();gsap.set(p,{strokeDasharray:l,strokeDashoffset:l});});
+  gsap.to('.arch .edge:not(.flow)',{strokeDashoffset:0,stagger:.1,ease:'none',
+    scrollTrigger:{trigger:archPanel,containerAnimation:horiz,start:'left 70%',end:'left 15%',scrub:true}});
+  gsap.from('.arch-node',{opacity:0,y:12,stagger:.09,duration:.6,
+    scrollTrigger:{trigger:archPanel,containerAnimation:horiz,start:'left 60%'}});
+  gsap.from('#mockChart i',{scaleY:.15,transformOrigin:'bottom',stagger:.05,duration:.7,ease:'power3.out',
+    scrollTrigger:{trigger:'.p-result',containerAnimation:horiz,start:'left 60%'}});
 
-  gsap.fromTo('.arch-node', 
-    { opacity: 0, scale: 0.85, transformOrigin: 'center' },
-    {
-      opacity: 1,
-      scale: 1,
-      stagger: 0.08,
-      duration: 0.6,
-      ease: 'back.out(1.5)',
-      scrollTrigger: { trigger: archPanel, containerAnimation: horiz, start: 'left 60%' }
-    }
-  );
-
-  // Dynamic Dashboard Chart Pop-in
-  gsap.fromTo('#mockChart i', 
-    { scaleY: 0.05, opacity: 0.3 },
-    {
-      scaleY: 1,
-      opacity: 1,
-      transformOrigin: 'bottom',
-      stagger: 0.04,
-      duration: 0.8,
-      ease: 'elastic.out(1, 0.6)',
-      scrollTrigger: { trigger: '.p-result', containerAnimation: horiz, start: 'left 60%' }
-    }
-  );
-
-  /* ------------------------------------------------------------
-     UPGRADED CINEMATIC 02: RAILWAY INTERCITY TRAIN PASS
-  ------------------------------------------------------------ */
-  const railTL = gsap.timeline({
-    scrollTrigger: {
-      trigger: '#projRail',
-      start: 'top 75%',
-      end: 'bottom 50%',
-      scrub: 0.5,
+  // P02 RAILWAY ANIMATION
+  gsap.fromTo('#trainDot', { left: '0%' }, { left: '100%', ease: 'none',
+    scrollTrigger: { trigger: '#projRail', start: 'top 70%', end: 'bottom 55%', scrub: 0.4,
       onUpdate: s => {
         const idx = Math.min(4, Math.floor(s.progress * 5 + 0.001));
         qsa('.station').forEach((st, i) => st.classList.toggle('past', i <= idx));
@@ -1223,62 +1162,26 @@ mm.add({all:'(min-width: 0px)', reduce:'(prefers-reduced-motion: reduce)'},(ctx)
       }
     }
   });
+  gsap.to('#railImg', { yPercent: -10, ease: 'none',
+    scrollTrigger: { trigger: '#projRail', start: 'top bottom', end: 'bottom top', scrub: true }
+  });
 
-  railTL.fromTo('#trainDot', 
-    { left: '0%', scale: 0.8 }, 
-    { left: '100%', scale: 1.25, ease: 'power1.inOut' }, 0
-  );
-
-  gsap.fromTo('#ticketStub',
-    { x: -40, opacity: 0, rotate: -2 },
-    {
-      x: 0,
-      opacity: 1,
-      rotate: 0,
-      duration: 1,
-      ease: 'power3.out',
-      scrollTrigger: { trigger: '#ticketStub', start: 'top 85%' }
-    }
-  );
-
-  gsap.fromTo('#railImg', 
-    { yPercent: 12, scale: 1.15 }, 
-    { 
-      yPercent: -12, 
-      scale: 1, 
-      ease: 'none',
-      scrollTrigger: { trigger: '#projRail', start: 'top bottom', end: 'bottom top', scrub: 0.5 }
-    }
-  );
-
-  /* ------------------------------------------------------------
-     UPGRADED CINEMATIC 03: FINANCIAL RADAR SCAN & CHART GLOW
-  ------------------------------------------------------------ */
+  // P03 STOCK PREDICTOR CHART ANIMATION
   const sLine = qs('#stockLine'), sProj = qs('#stockProj');
   if (sLine) {
     const sLen = sLine.getTotalLength(), pLen = sProj.getTotalLength();
     gsap.set(sLine, { strokeDasharray: sLen, strokeDashoffset: sLen });
     gsap.set(sProj, { strokeDasharray: pLen, strokeDashoffset: pLen, opacity: 0 });
-
-    const chartTL = gsap.timeline({
-      scrollTrigger: {
-        trigger: '#projStock',
-        start: 'top 70%',
-        end: 'top 10%',
-        scrub: 0.4
-      }
+    gsap.to(sLine, { strokeDashoffset: 0, ease: 'none',
+      scrollTrigger: { trigger: '#projStock', start: 'top 80%', end: 'top 20%', scrub: 0.4 }
+    });
+    gsap.to(sProj, { strokeDashoffset: 0, opacity: 1, ease: 'none',
+      scrollTrigger: { trigger: '#projStock', start: 'top 30%', end: 'top 0%', scrub: 0.4 }
+    });
+    gsap.fromTo('.sp-pt', { scale: 0, transformOrigin: 'center' }, { scale: 1, stagger: 0.12, duration: 0.4,
+      scrollTrigger: { trigger: '#projStock', start: 'top 55%' }
     });
 
-    chartTL
-      .to(sLine, { strokeDashoffset: 0, ease: 'none' })
-      .to(sProj, { strokeDashoffset: 0, opacity: 1, ease: 'none' }, '-=0.1')
-      .fromTo('.sp-pt', 
-        { scale: 0, opacity: 0 }, 
-        { scale: 1, opacity: 1, stagger: 0.1, transformOrigin: 'center', ease: 'back.out(2)' }, 
-        '-=0.4'
-      );
-
-    // Live Tabular Ticker Simulator with Pulsing Animation
     const tkVals = qsa('.tk-v'), tkBase = [24850, 81620, 51940, 1640];
     let liveTk = false, tkInterval = null;
     new IntersectionObserver(([e]) => {
@@ -1290,17 +1193,14 @@ mm.add({all:'(min-width: 0px)', reduce:'(prefers-reduced-motion: reduce)'},(ctx)
             const n = tkBase[i] + d;
             v.textContent = n.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
             v.classList.toggle('dn', d < 0);
-            
-            // Subtle micro-pulse on tick
-            gsap.fromTo(v, { scale: 1.08 }, { scale: 1, duration: 0.35, ease: 'power2.out' });
           });
-        }, 850);
+        }, 900);
       }
       if (!liveTk && tkInterval) { clearInterval(tkInterval); tkInterval = null; }
-    }, { rootMargin: '80px' }).observe(qs('#projStock'));
+    }, { rootMargin: '60px' }).observe(qs('#projStock'));
   }
 
-  // Contact & Finale Animations
+  // Contact & Finale
   gsap.from('.contact-title .ct-l > span',{yPercent:118,duration:1.1,stagger:.12,scrollTrigger:{trigger:'#contact',start:'top 70%'}});
   gsap.from('.contact-ctas .btn',{y:26,opacity:0,stagger:.1,duration:.8,scrollTrigger:{trigger:'.contact-ctas',start:'top 88%'}});
   gsap.from('.contact-meta',{opacity:0,y:20,duration:.8,scrollTrigger:{trigger:'.contact-meta',start:'top 92%'}});
